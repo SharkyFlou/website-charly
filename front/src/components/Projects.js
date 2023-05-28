@@ -12,14 +12,14 @@ function Projects() {
                     <div className='projects__wrapper'>
                         <ul className='projects__items'>
                             <ProjectItem
-                                src='/project/chess.jpg'
+                                src='/images/chess.jpg'
                                 text='Chess'
                                 label='Chess'
                                 alt='A chess board'
                                 path='/projects'
                             />
                             <ProjectItem
-                                src='/project/chess.jpg'
+                                src='/images/chess.jpg'
                                 text='Chess'
                                 label='Chess'
                                 alt='A chess board'
@@ -28,21 +28,21 @@ function Projects() {
                         </ul>
                         <ul className='projects__items'>
                             <ProjectItem
-                                src='/project/chess.jpg'
+                                src='/images/chess.jpg'
                                 text='Chess'
                                 label='Chess'
                                 alt='A chess board'
                                 path='/projects'
                             />
                             <ProjectItem
-                                src='/project/chess.jpg'
+                                src='/images/chess.jpg'
                                 text='Chess'
                                 label='Chess'
                                 alt='A chess board'
                                 path='/projects'
                             />
                             <ProjectItem
-                                src='/project/chess.jpg'
+                                src='/images/chess.jpg'
                                 text='Chess'
                                 label='Chess'
                                 alt='A chess board'

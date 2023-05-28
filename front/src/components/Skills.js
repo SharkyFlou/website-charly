@@ -10,25 +10,25 @@ function Skills() {
                 <h1>My Skills</h1>
                 <div className='skills__container'>
                     <SkillItem 
-                        src='/images/logos/csharp.png'
+                        src='/images/csharp.png'
                         text='C#'
                         level='Expeeeert'
                         alt=' noooo'
                     />
                     <SkillItem 
-                        src='/images/logos/csharp.png'
+                        src='/images/csharp.png'
                         text='C#'
                         level='Expert'
                         alt='C sharp logo'
                     />
                     <SkillItem 
-                        src='/images/logos/csharp.png'
+                        src='/images/csharp.png'
                         text='C#'
                         level='Expert'
                         alt='C sharp logo'
                     />
                     <SkillItem 
-                        src='/images/logos/csharp.png'
+                        src='/images/csharp.png'
                         text='C#'
                         level='Expert'
                         alt='C sharp logo'
