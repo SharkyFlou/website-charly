@@ -1,0 +1,34 @@
+.footer{
+    background-color: #252e48;
+    color: #fff;
+    padding: 2rem 2rem;
+}
+
+.footer__section{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 6rem;
+}
+
+.footer__link{
+    color: #fff;
+    text-decoration: none;
+    text-shadow: #000 0px 0px 2px;
+    text-align: center;
+}
+
+.footer__link:hover{
+    color: #0467fb;
+    transition: 0.3s ease-out;
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer__section {
+        flex-direction: column;
+        padding: 0rem 2rem;
+    }
+
+    .footer__link {
+        margin-bottom: 1rem;
+    }
+}
