@@ -5,12 +5,12 @@ import './Projects.css'
 function Projects() {
     return (
         <>
-            <div className='bar__cards' />
-            <div className='cards' id='projects'>
+            <div className='bar__projects' />
+            <div className='projects' id='projects'>
                 <h1>Check out my Projects!</h1>
-                <div className='cards__container'>
-                    <div className='cards__wrapper'>
-                        <ul className='cards__items'>
+                <div className='projects__container'>
+                    <div className='projects__wrapper'>
+                        <ul className='projects__items'>
                             <ProjectItem
                                 src='/project/chess.jpg'
                                 text='Chess'
@@ -26,7 +26,7 @@ function Projects() {
                                 path='/projects'
                             />
                         </ul>
-                        <ul className='cards__items'>
+                        <ul className='projects__items'>
                             <ProjectItem
                                 src='/project/chess.jpg'
                                 text='Chess'

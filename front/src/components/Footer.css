@@ -1,6 +1,6 @@
 .footer{
-    background-color: #252e48;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
     padding: 2rem 2rem;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .footer__link{
-    color: #fff;
+    color: var(--tertiary-color);
     text-decoration: none;
     text-shadow: #000 0px 0px 2px;
     text-align: center;

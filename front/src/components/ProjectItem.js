@@ -5,13 +5,13 @@ import './Projects.css'
 function ProjectItem({ path, src, text, label, alt}) {
   return (
     <>
-        <li className='cards__item'>
-            <Link className='cards__item__link' to={path}>
-                <figure className='cards__item__pic-wrap' data-category={label}>
-                    <img src={src} alt={alt} className='cards__item__img'/>
+        <li className='projects__item'>
+            <Link className='projects__item__link' to={path}>
+                <figure className='projects__item__pic-wrap' data-category={label}>
+                    <img src={src} alt={alt} className='projects__item__img'/>
                 </figure>
-                <div className='cards__item__info'>
-                    <h5 className='cards__item__text'>{text}</h5>
+                <div className='projects__item__info'>
+                    <h5 className='projects__item__text'>{text}</h5>
                 </div>
             </Link>
         </li>

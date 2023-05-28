@@ -5,6 +5,12 @@
   font-family: 'PT Sans', sans-serif;
 }
 
+:root{
+  --primary-color: #242424;
+  --secondary-color: #252e48;
+  --tertiary-color: #fff;
+}
+
 .home,
 .services,
 .products,

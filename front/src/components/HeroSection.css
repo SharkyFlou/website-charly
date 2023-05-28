@@ -27,7 +27,7 @@ video{
 }
 
 .hero-container > h1,p{
-    color: #fff;
+    color: var(--tertiary-color);
     text-shadow: #000 0px 0px 2px;
     display: flex;
     flex-direction: column;
