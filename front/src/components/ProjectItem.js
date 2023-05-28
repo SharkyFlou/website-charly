@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Projects.css'
 
-function CardItem({ path, src, text, label, alt}) {
+function ProjectItem({ path, src, text, label, alt}) {
   return (
     <>
         <li className='cards__item'>
@@ -19,4 +19,4 @@ function CardItem({ path, src, text, label, alt}) {
   )
 }
 
-export default CardItem
+export default ProjectItem

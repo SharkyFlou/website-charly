@@ -66,13 +66,13 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/#experiences" className="nav-links" onClick={closeMobileMenu('experience')}>
-                                Experiences
+                            <Link to="/#career" className="nav-links" onClick={closeMobileMenu('career')}>
+                                Career
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/#resume" className="nav-links" onClick={closeMobileMenu('resume')}>
-                                Resume
+                            <Link to="/#skills" className="nav-links" onClick={closeMobileMenu('skills')}>
+                                Skills
                             </Link>
                         </li>
                         <li className="nav-item">

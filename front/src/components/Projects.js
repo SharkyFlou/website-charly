@@ -1,5 +1,5 @@
 import React from 'react'
-import CardItem from './CardItem'
+import ProjectItem from './ProjectItem'
 import './Projects.css'
 
 function Projects() {
@@ -11,14 +11,14 @@ function Projects() {
                 <div className='cards__container'>
                     <div className='cards__wrapper'>
                         <ul className='cards__items'>
-                            <CardItem
+                            <ProjectItem
                                 src='/project/chess.jpg'
                                 text='Chess'
                                 label='Chess'
                                 alt='A chess board'
                                 path='/projects'
                             />
-                            <CardItem
+                            <ProjectItem
                                 src='/project/chess.jpg'
                                 text='Chess'
                                 label='Chess'
@@ -27,21 +27,21 @@ function Projects() {
                             />
                         </ul>
                         <ul className='cards__items'>
-                            <CardItem
+                            <ProjectItem
                                 src='/project/chess.jpg'
                                 text='Chess'
                                 label='Chess'
                                 alt='A chess board'
                                 path='/projects'
                             />
-                            <CardItem
+                            <ProjectItem
                                 src='/project/chess.jpg'
                                 text='Chess'
                                 label='Chess'
                                 alt='A chess board'
                                 path='/projects'
                             />
-                            <CardItem
+                            <ProjectItem
                                 src='/project/chess.jpg'
                                 text='Chess'
                                 label='Chess'
