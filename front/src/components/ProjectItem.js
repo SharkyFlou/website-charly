@@ -8,7 +8,7 @@ function ProjectItem({ path, src, text, label, alt}) {
         <li className='projects__item'>
             <Link className='projects__item__link' to={path}>
                 <figure className='projects__item__pic-wrap' data-category={label}>
-                    <img src={src} alt={alt} className='projects__item__img'/>
+                    <img src={process.env.PUBLIC_URL + src} alt={alt} className='projects__item__img'/>
                 </figure>
                 <div className='projects__item__info'>
                     <h5 className='projects__item__text'>{text}</h5>

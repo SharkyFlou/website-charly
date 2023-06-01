@@ -16,7 +16,7 @@ export const Button = ({
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
     return (
-        <Link to="/#contact" className='btn-mobile'>
+        <Link to={process.env.PUBLIC_URL + "/#contact"} className='btn-mobile'>
             <button className={
                 `btn ${checkButtonStyle} ${checkButtonSize}`
             }

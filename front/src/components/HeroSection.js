@@ -10,18 +10,29 @@ function HeroSection() {
             <source src="/videos/video-1.mp4" type="video/mp4" /> 
         </video>
         */}
-            <h1>WELCOME ON  CHARLY FLU'S WEBSITE</h1>
-            <p>Quick presentation ?</p>
-            <div className="hero-btns">
-                <Button className='btns' buttonStyle='btn--outline'
-                    buttonSize='btn--large'>
-                    LET ME INTRODUCE MYSELF
-                </Button>
-                <Button className='btns' buttonStyle='btn--primary'
-                    buttonSize='btn--large'>
-                    MY CONTACT
-                    <i class="fa-solid fa-address-book"></i>
-                </Button>
+            <div className='about__container'>
+                <div className='about__img__container'>
+                    <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img' />
+                </div>
+                <div className='about__text'>
+                    <h1>Hi, welcome on my website</h1>
+                    <p>My name is Charly FLU, I'm a developer.</p>
+                    <p>I'm currently studying at the University of Robert Schuman in France. </p>
+                    <p>I'm looking for an internship in the field of web development.</p>
+                    <p>I built this website to show you my skills and my projects.</p>
+                    
+                    <div className="hero-btns">
+                        <Button className='btns' buttonStyle='btn--outline'
+                            buttonSize='btn--large'>
+                            MY FAVOURITE PROJECTS
+                        </Button>
+                        <Button className='btns' buttonStyle='btn--primary'
+                            buttonSize='btn--large'>
+                            MY SKILLS
+                            <i class="fa-solid fa-address-book"></i>
+                        </Button>
+                    </div>
+                </div>
             </div>
 
         </div>

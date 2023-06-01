@@ -6,9 +6,6 @@ video{
     z-index: -1;
 }
 
-.btn--outline{
-    text-shadow: #000 0px 0px 2px;
-}
 
 .btn--outline:hover{
     text-shadow: none;
@@ -23,20 +20,56 @@ video{
     flex-direction: column;
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
-    object-fit: co;
+    object-fit: cover;
+}
+
+.about__container{
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 20vh;
+    height : 60vh;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.about__img__container{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__img__container img{
+    width: auto;
+    height: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;    
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(146, 146, 146, 0.95);
+    transition: all 0.3s;
+}
+
+.about__img__container img:hover{
+    box-shadow: 0 8px 30px rgb(180, 180, 180);
+    transition: all 0.5s;
+}
+
+.about__text{
+    width:fit-content;
 }
 
 .hero-container > h1,p{
     color: var(--tertiary-color);
-    text-shadow: #000 0px 0px 2px;
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
 .hero-container > h1{
     font-size: 2.5rem;
-    margin-top: 1rem;
+    margin-top: 80px;
 }
 
 .hero-container > p{
@@ -49,9 +82,10 @@ video{
     margin-top: 1rem;
 }
 
-.hero-btns .btn{
-    margin: 0.5rem;
+.btn--primary{
+    margin-left: 0.5rem;
 }
+
 
 .fa-solid {
     margin-left : 0.5rem;
@@ -60,7 +94,6 @@ video{
 @media screen and (max-width: 960px) {
     .hero-container > h1{
         font-size: 2rem;
-        margin-top: 0.6rem;
     }
 
     .hero-container > p{
@@ -72,7 +105,6 @@ video{
 @media screen and (max-width: 768px) {
     .hero-container > h1{
         font-size: 1.5rem;
-        margin-top: 0.5rem;
     }
 
     .hero-container > p{
@@ -82,11 +114,16 @@ video{
 
     .btn-mobile{
         display: block;
-        margin: 0.5rem;
         text-decoration: none;
     }
 
     .btn{
-        width: 100%;
+        width: 95%;
+        margin:0;
+        margin-top: 0.5rem;
+    }
+
+    .about__container{
+        height:70vh;
     }
 }

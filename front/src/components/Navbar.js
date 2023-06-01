@@ -32,6 +32,17 @@ function Navbar() {
 
     window.addEventListener('resize', showButton);
 
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        const currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-80px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
     const handleClickScroll = (name) => {
         const element = document.getElementById(name);
         if (element) {
@@ -45,9 +56,9 @@ function Navbar() {
 
     return (
         <>
-            <nav className="navbar">
+            <nav className="navbar" id="navbar">
                 <div className="navbar-container">
-                    <Link to="/#home" className="navbar-logo" onClick={closeMobileMenu('home')}>
+                    <Link to={process.env.PUBLIC_URL + "/#home"} className="navbar-logo" onClick={closeMobileMenu('home')}>
                         Charly
                         <i className="fa-solid fa-house"></i>
                     </Link>
@@ -56,27 +67,27 @@ function Navbar() {
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className="nav-item">
-                            <Link to="/#home" className="nav-links" onClick={closeMobileMenu('home')}>
+                            <Link to={process.env.PUBLIC_URL + "/#home"} className="nav-links" onClick={closeMobileMenu('home')}>
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/#projects" className="nav-links" onClick={closeMobileMenu('projects')}>
+                            <Link to={process.env.PUBLIC_URL + "/#projects"}className="nav-links" onClick={closeMobileMenu('projects')}>
                                 Projects
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/#career" className="nav-links" onClick={closeMobileMenu('career')}>
+                            <Link to={process.env.PUBLIC_URL + "/#career"} className="nav-links" onClick={closeMobileMenu('career')}>
                                 Career
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/#skills" className="nav-links" onClick={closeMobileMenu('skills')}>
+                            <Link to={process.env.PUBLIC_URL + "/#skills"} className="nav-links" onClick={closeMobileMenu('skills')}>
                                 Skills
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/#contact" className="nav-links-mobile" onClick={closeMobileMenu('contact')}>
+                            <Link to={process.env.PUBLIC_URL + "/#contact"} className="nav-links-mobile" onClick={closeMobileMenu('contact')}>
                                 Contact
                             </Link>
                         </li>
