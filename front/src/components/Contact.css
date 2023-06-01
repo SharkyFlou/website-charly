@@ -1,7 +1,7 @@
 .contact{
     /*background: url('/public/images/img-cliff.jpg') center center/cover no-repeat;*/
     background-color: var(--tertiary-color);
-    height : 70vh;
+    height : 60vh;
     width: 100%;
 }
 
@@ -67,5 +67,11 @@
     }
     .contact__container{
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .contact{
+        height: 80vh;
     }
 }

@@ -119,6 +119,9 @@ h1 {
     .projects__item {
         margin-bottom: 2rem;
     }
+    .projects{
+        padding: 1rem;
+    }
 }
 
 .bar__projects{

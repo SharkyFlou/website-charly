@@ -11,11 +11,21 @@ import Career from './components/Career';
 
 
 function App() {
+    const handleClickScroll = (name) => {
+      const element = document.getElementById(name);
+      if (element) {
+          const offsetTop = element.offsetTop;
+          const scrollPosition = offsetTop - 60;
+          window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+      } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+  };
   return (
     <>
       <Router>
-        <Navbar />
-        <HeroSection />
+        <Navbar scrollFunc={handleClickScroll}/>
+        <HeroSection scrollFunc={handleClickScroll}/>
         <Projects />
         <Career />
         <Skills />

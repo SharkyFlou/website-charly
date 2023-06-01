@@ -3,7 +3,7 @@ import { Button } from './Button'
 import './HeroSection.css'
 import '../App.css'
 
-function HeroSection() {
+function HeroSection({scrollFunc}) {
     return (
         <div className='hero-container'>
             {/*<video autoPlay loop muted > 
@@ -23,11 +23,19 @@ function HeroSection() {
                     
                     <div className="hero-btns">
                         <Button className='btns' buttonStyle='btn--outline'
-                            buttonSize='btn--large'>
+                            buttonSize='btn--large'
+                            link='/#projects'
+                            scrollFunc={scrollFunc}
+                            paramScrollFunc='projects'
+                            >
                             MY FAVOURITE PROJECTS
                         </Button>
                         <Button className='btns' buttonStyle='btn--primary'
-                            buttonSize='btn--large'>
+                            buttonSize='btn--large'
+                            link='/#skills'
+                            scrollFunc={scrollFunc}
+                            paramScrollFunc='skills'
+                            >
                             MY SKILLS
                             <i class="fa-solid fa-address-book"></i>
                         </Button>

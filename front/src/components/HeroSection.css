@@ -6,7 +6,6 @@ video{
     z-index: -1;
 }
 
-
 .btn--outline:hover{
     text-shadow: none;
     transition: all 0.3s ease-out;
@@ -92,29 +91,23 @@ video{
 }
 
 @media screen and (max-width: 960px) {
-    .hero-container > h1{
-        font-size: 2rem;
-    }
-
-    .hero-container > p{
-        font-size: 1.2rem;
-        margin-top: 0.4rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .hero-container > h1{
+    .hero-container h1{
         font-size: 1.5rem;
+        text-align: center;
     }
 
-    .hero-container > p{
+    .hero-container p{
+        text-align: center;
+        padding: 0 1rem;
         font-size: 1rem;
         margin-top: 0.3rem;
     }
 
     .btn-mobile{
-        display: block;
+        display: flex;
         text-decoration: none;
+        justify-content: center;
+        align-items: center;
     }
 
     .btn{
@@ -124,6 +117,21 @@ video{
     }
 
     .about__container{
-        height:70vh;
+        height:85vh;
+        flex-direction: column;
+        justify-content: center;
     }
+
+    .hero-container{
+        height: 150vh;
+    }
+    .about__img__container{
+        height: 25%;
+    }
+    
+    .about__img__container img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
 }

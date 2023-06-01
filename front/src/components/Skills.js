@@ -33,6 +33,36 @@ function Skills() {
                         level='Expert'
                         alt='C sharp logo'
                     />
+                    <SkillItem 
+                        src='/images/csharp.png'
+                        text='C#'
+                        level='Expert'
+                        alt='C sharp logo'
+                    />
+                    <SkillItem 
+                        src='/images/csharp.png'
+                        text='C#'
+                        level='Expert'
+                        alt='C sharp logo'
+                    />
+                    <SkillItem 
+                        src='/images/csharp.png'
+                        text='C#'
+                        level='Expert'
+                        alt='C sharp logo'
+                    />
+                    <SkillItem 
+                        src='/images/csharp.png'
+                        text='C#'
+                        level='Expert'
+                        alt='C sharp logo'
+                    />
+                    <SkillItem 
+                        src='/images/csharp.png'
+                        text='C#'
+                        level='Expert'
+                        alt='C sharp logo'
+                    />
                 </div>
 
             </div>
