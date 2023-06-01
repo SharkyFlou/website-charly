@@ -13,9 +13,7 @@ function Navbar({scrollFunc}) {
 
     const closeMobileMenu = (name) => () => {
         setClick(false);
-        if (name && typeof name === 'string') {
-            scrollFunc(name);
-        }
+        scrollFunc(name);
     };
 
     const showButton = () => {
@@ -81,7 +79,7 @@ function Navbar({scrollFunc}) {
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button onClick={closeMobileMenu('contact')} buttonStyle="btn--outline" >CONTACT</Button>}
+                    {button && <Button onClick={closeMobileMenu('contact')} buttonStyle="btn--outline" link={process.env.PUBLIC_URL + "/contact"} >CONTACT</Button>}
                 </div>
             </nav>
         </>

@@ -11,12 +11,21 @@ import Career from './components/Career';
 
 
 function App() {
-    const handleClickScroll = (name) => {
-      const element = document.getElementById(name);
+    const handleClickScroll = (idName) => {
+      if (!idName || typeof idName != 'string') {
+        return;
+      }
+      const element = document.getElementById(idName);
       if (element) {
           const offsetTop = element.offsetTop;
-          const scrollPosition = offsetTop - 60;
+          const scrollPosition = offsetTop - 10;
           window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+          //wait 0.1s, very bad solution, but it works : fix a problem when it
+          // stop scrolling because of the navbar hiding
+          setTimeout(() => {
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+          }, 100);
+
       } else {
           window.scrollTo({ top: 0, behavior: 'smooth' });
       }

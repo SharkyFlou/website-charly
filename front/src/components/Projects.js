@@ -6,8 +6,8 @@ function Projects() {
     return (
         <>
             <div className='bar__projects' />
-            <div className='projects' id='projects'>
-                <h1>Check out my Projects!</h1>
+            <div className='projects'>
+                <h1 id='projects'>Projects</h1>
                 <div className='projects__container'>
                     <div className='projects__wrapper'>
                         <ul className='projects__items'>

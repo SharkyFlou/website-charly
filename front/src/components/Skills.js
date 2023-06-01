@@ -5,9 +5,9 @@ import SkillItem from './SkillItem'
 function Skills() {
     return (
         <>
-            <div className='bar__skills' id='skills'/> 
+            <div className='bar__skills'/> 
             <div className='skills' >
-                <h1>My Skills</h1>
+                <h1 id='skills'>My Skills</h1>
                 <div className='skills__container'>
                     <SkillItem 
                         src='/images/csharp.png'

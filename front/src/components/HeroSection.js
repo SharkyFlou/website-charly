@@ -4,6 +4,10 @@ import './HeroSection.css'
 import '../App.css'
 
 function HeroSection({scrollFunc}) {
+    const forwardToSccroll = (idName) => () => {
+        scrollFunc(idName);
+    };
+
     return (
         <div className='hero-container'>
             {/*<video autoPlay loop muted > 
@@ -25,20 +29,19 @@ function HeroSection({scrollFunc}) {
                         <Button className='btns' buttonStyle='btn--outline'
                             buttonSize='btn--large'
                             link='/#projects'
-                            scrollFunc={scrollFunc}
-                            paramScrollFunc='projects'
+                            onClick={forwardToSccroll('projects')}
                             >
                             MY FAVOURITE PROJECTS
                         </Button>
                         <Button className='btns' buttonStyle='btn--primary'
                             buttonSize='btn--large'
                             link='/#skills'
-                            scrollFunc={scrollFunc}
-                            paramScrollFunc='skills'
+                            onClick={forwardToSccroll('skills')}
                             >
                             MY SKILLS
                             <i class="fa-solid fa-address-book"></i>
                         </Button>
+
                     </div>
                 </div>
             </div>

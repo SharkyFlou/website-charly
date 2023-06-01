@@ -30,3 +30,10 @@ html, body {
   justify-content: center;
   font-size: 3rem;
 }
+
+h1 {
+  text-align: center;
+  color: var(--tertiary-color);
+  font-size: 2.5rem;
+  padding-top: 3rem;
+}

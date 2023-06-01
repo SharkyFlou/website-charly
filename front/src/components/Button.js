@@ -11,15 +11,13 @@ export const Button = ({
     onClick,
     buttonStyle,
     buttonSize,
-    link,
-    scrollFunc,
-    paramScrollFunc
+    link
 }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
     return (
-        <Link to={process.env.PUBLIC_URL + link} className='btn-mobile' /*onClick={scrollFunc(paramScrollFunc)}*/>
+        <Link to={process.env.PUBLIC_URL + link} className='btn-mobile'>
             <button className={
                 `btn ${checkButtonStyle} ${checkButtonSize}`
             }

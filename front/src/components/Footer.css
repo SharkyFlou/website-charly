@@ -2,6 +2,7 @@
     background-color: var(--secondary-color);
     color: var(--tertiary-color);
     padding: 2rem 2rem;
+    text-align: center;
 }
 
 .footer__section{
