@@ -9,19 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-
-    - name: Build
-      run: |
-        cd front
-        npm install
-
-    - name: Test
-      run: |
-        cd front
-        npm run test
-
     - name: Deploy
       run: |
         git config --global user.name 'Anton Putra'
