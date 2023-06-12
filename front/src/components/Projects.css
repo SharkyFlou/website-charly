@@ -50,6 +50,10 @@
     overflow: hidden;
 }
 
+.projects h1{
+    padding-top: 0;
+}
+
 .projects__item__pic-wrap::after {
     content: attr(data-category);
     position: absolute;
@@ -85,12 +89,28 @@
 
 .projects__item__info {
     padding: 20px 30px 30px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: space-between;
 }
 
-.projects__item__text {
+
+.projects__item__text, .language__item__link{
     color: var(--tertiary-color);
     font-size: 18px;
     line-height: 24px;
+}
+
+.language__item__link{
+    color : var(--cyan-color);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.language__item__link:hover{
+    color : var(--dark-cyan-color);
+    transition: all 0.3s ease-in-out;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -120,4 +140,5 @@
     margin: -4vw 0px -4vw 0px;
     transform: rotate(-4deg) scale(1.2, 1);
     background-color: var(--secondary-color);
+    z-index: 1;
 }

@@ -46,8 +46,7 @@ function Navbar({scrollFunc}) {
             <nav className="navbar" id="navbar">
                 <div className="navbar-container">
                     <Link to={process.env.PUBLIC_URL + "/#home"} className="navbar-logo" onClick={closeMobileMenu('home')}>
-                        Charly
-                        <i className="fa-solid fa-house"></i>
+                        <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img'/>
                     </Link>
                     <div className="menu-icon" onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

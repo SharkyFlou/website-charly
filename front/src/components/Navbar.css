@@ -82,6 +82,10 @@
     display: none;
 }
 
+.logo__home__img{
+    max-height: 50px;
+}
+
 @media screen and (max-width: 960px) {
     .NavbarItems {
         position: relative;

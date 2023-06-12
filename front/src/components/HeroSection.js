@@ -2,9 +2,10 @@ import React from 'react'
 import { Button } from './Button'
 import './HeroSection.css'
 import '../App.css'
+import { Link } from 'react-router-dom';
 
 function HeroSection({scrollFunc}) {
-    const forwardToSccroll = (idName) => () => {
+    const forwardToScroll = (idName) => () => {
         scrollFunc(idName);
     };
 
@@ -21,7 +22,7 @@ function HeroSection({scrollFunc}) {
                 <div className='about__text'>
                     <h1>Hi, welcome on my website</h1>
                     <p>My name is Charly FLU, I'm a developer.</p>
-                    <p>I'm currently studying at the University of Robert Schuman in France. </p>
+                    <p className="single__line__text">I'm currently studying at the <Link className="link__about" to="https://iutrs.unistra.fr">University of Robert Schuman</Link> in France. </p>
                     <p>I'm looking for an internship in the field of web development.</p>
                     <p>I built this website to show you my skills and my projects.</p>
                     
@@ -29,14 +30,14 @@ function HeroSection({scrollFunc}) {
                         <Button className='btns' buttonStyle='btn--outline'
                             buttonSize='btn--large'
                             link='/#projects'
-                            onClick={forwardToSccroll('projects')}
+                            onClick={forwardToScroll('projects')}
                             >
                             MY FAVOURITE PROJECTS
                         </Button>
                         <Button className='btns' buttonStyle='btn--primary'
                             buttonSize='btn--large'
                             link='/#skills'
-                            onClick={forwardToSccroll('skills')}
+                            onClick={forwardToScroll('skills')}
                             >
                             MY SKILLS
                             <i class="fa-solid fa-address-book"></i>

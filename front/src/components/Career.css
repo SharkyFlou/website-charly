@@ -58,3 +58,9 @@
     position: absolute;
     border-radius: 50%;
 }
+
+@media screen and (max-width: 960px) {
+    .middle__bar__arrow {
+        height: 91vh;
+    }
+}
