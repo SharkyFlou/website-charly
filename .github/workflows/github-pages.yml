@@ -13,10 +13,14 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build
-      run: npm install
+      run: |
+        cd front
+        npm install
 
     - name: Test
-      run: npm run test
+      run: |
+        cd front
+        npm run test
 
     - name: Deploy
       run: |
