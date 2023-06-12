@@ -1,15 +1,23 @@
----
-name: Build and Deploy React App to GitHub Pages
+name: Github Page Deploy Workflow
+
 on:
   push:
-    branches: [ main ]
-jobs:
-  build-push-gcr:
-    name: Build and Deploy
-    runs-on: ubuntu-latest
+    branches: [main]
 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
     steps:
-    - name: Deploy
-      working-directory: /front
-      run:
-        npm run deploy
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy
+        uses: crazy-max/ghaction-github-pages@v1
+        with:
+          target_branch: gh-pages
+          build_dir: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
