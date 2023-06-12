@@ -114,7 +114,7 @@ p {
 @media screen and (max-width: 960px) {
 
     .btn{
-        border-radius: 6px;
+        border-radius: 6px; 
     }
     .hero-container h1 {
         font-size: 1.5rem;
