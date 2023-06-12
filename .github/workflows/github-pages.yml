@@ -8,16 +8,22 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      working-directory: /home/runner/work/website-charly/website-charly/front/
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-      - run: npm run build
+
+      - name: Build
+        run: npm run build
+        working-directory: ./front
+
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v1
         with:
           target_branch: gh-pages
-          build_dir: build
+          build_dir: front/build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
