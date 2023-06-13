@@ -1,14 +1,13 @@
 .contact{
     /*background: url('/public/images/img-cliff.jpg') center center/cover no-repeat;*/
     background-color: var(--tertiary-color);
-    height : 50vh;
     width: 100%;
+    padding: 4rem;
 }
 
 .contact h1{
     color: var(--primary-color);
     text-align: center;
-    margin-top: 3rem;
 }
 
 .contact__container{
@@ -63,28 +62,24 @@
     width: 100%;
     margin: -4vw 0px -4vw 0px;
     transform: rotate(-4deg) scale(1.2, 1);
-    background-color: var(--secondary-color);
-}
-
-@media only screen and (max-width: 400px) {
-    .contact{
-        height: 100vh;
-    }
-    .contact__container{
-        flex-direction: column;
-    }
+    background-color: var(--tertiary-color);
 }
 
 @media screen and (max-width: 960px) {
-    .contact{
-        height: 80vh;
-    }
-
     .contact__item__link:hover{
         max-width: 6rem;
         color: var(--tertiary-color);
         background-color: var(--primary-color);
         border-color: var(--primary-color);
         transition: all 0.5s ease-out;
+    }
+    .contact{
+        padding: 4rem 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contact{
+        padding: 4rem 1rem;
     }
 }

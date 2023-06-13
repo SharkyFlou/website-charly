@@ -33,13 +33,13 @@ video {
 
 .hero-container {
     background: url('/public/images/img-cliff-2.jpg') center center/cover no-repeat;
-    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     /*box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);*/
     object-fit: cover;
+    padding-bottom: 8rem;
 }
 
 .about__container {
@@ -145,10 +145,7 @@ p {
         height: 85vh;
         flex-direction: column;
         justify-content: center;
-    }
-
-    .hero-container {
-        height: 150vh;
+        text-align: center;
     }
 
     .about__img__container {

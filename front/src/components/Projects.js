@@ -12,7 +12,7 @@ function Projects() {
                     <div className='projects__wrapper'>
                         <ul className='projects__items'>
                             <ProjectItem
-                                src='/images/chess.jpg'
+                                src='/images/projects/chess.jpg'
                                 text="A completly working chess game made in Java Swing. Detects check, checkmate, stalemate, and castling. Also detects if a move is illegal and don't allow it."
                                 label='Chess'
                                 alt='A chess board'
@@ -20,7 +20,7 @@ function Projects() {
                                 language='Javaswing'
                             />
                             <ProjectItem
-                                src='/images/espagnol-super-facil.jpg'
+                                src='/images/projects/espagnol-super-facil.jpg'
                                 text="Espagnol Super Facil is an desktop application to learn Spanish made using WinForm.
                                  It's a group project I made for my studies.
                                  I was in charge of the structure of the application and the connection between the database and the application."
@@ -32,7 +32,7 @@ function Projects() {
                         </ul>
                         <ul className='projects__items'>
                             <ProjectItem
-                                src='/images/marsgriculteur-2.jpg'
+                                src='/images/projects/marsgriculteur-2.jpg'
                                 text='MarsGriculteur is a game made in Unity. 
                                 It is a group project I made for my studies.
                                 I was in charge the market system and events, I also designed the map and the items .'
@@ -42,7 +42,7 @@ function Projects() {
                                 language='Unity'
                             />
                             <ProjectItem
-                                src='/images/spotidata-2.jpg'
+                                src='/images/projects/spotidata-2.jpg'
                                 text='Spotidata is a web application made with the framework Express, using in React for the front end, and Node.js for the back-end.
                                 It allows you to get lots of statistics about your Spotify.
                                 This was made for school in a group of 3 people.'
@@ -53,7 +53,7 @@ function Projects() {
                                 language='Node.js'
                             />
                             <ProjectItem
-                                src='/images/rec-asteroids-2.jpg'
+                                src='/images/projects/rec-asteroids-2.jpg'
                                 text='Recursive asteroids is an aglorithm that control an spaceships to avoid asteriods.
                                 It calculates recusrvilvely each possible path, or stop when it find a path that avoid all the asteroids.'
                                 label='Recursive '

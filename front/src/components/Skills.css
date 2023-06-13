@@ -27,10 +27,9 @@
 .skill__img{
     display: block;
     width: 100%;
-    max-width: 100%;
+    max-width: 60%;
     height: 100%;
-    max-height: 100%;
-    object-fit: cover;
+    max-height: 60%;
 }
 
 .img__container{
@@ -43,6 +42,9 @@
     overflow: hidden;
     text-decoration: none;
     margin: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .skill{
