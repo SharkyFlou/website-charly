@@ -35,7 +35,7 @@ function Skills() {
                     />
                     <SkillItem 
                         src='/images/logos/javascript.png'
-                        text='C#'
+                        text='Javascript'
                         level='Intermediate'
                         alt='javascript logo'
                     />
@@ -82,7 +82,7 @@ function Skills() {
                         alt='bash logo'
                     />
                     <SkillItem 
-                        src='/images/logos/UML.png'
+                        src='/images/logos/uml.png'
                         text='UML'
                         level='Advanced'
                         alt='UML logo'
