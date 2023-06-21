@@ -3,6 +3,34 @@ import ProjectItem from './ProjectItem'
 import './Projects.css'
 
 function Projects() {
+    const languagesChess = [
+        { name: 'Java', link: 'https://www.java.com/fr/' },
+        { name: 'JavaSwing', link: 'https://docs.oracle.com/javase/6/docs/technotes/guides/swing/' },
+        { name: 'SQLite', link: 'https://www.sqlite.org/index.html' }
+      ];
+
+    const languagesEspagnol = [
+        { name: 'C#', link: 'https://learn.microsoft.com/en-us/dotnet/csharp/' },
+        { name: 'WinForm', link: 'https://learn.microsoft.com/en-us/dotnet/desktop/winforms/?view=netframeworkdesktop-4.8' }
+      ];
+
+    const languagesMars = [
+        { name: 'Unity', link: 'https://unity.com' },
+        { name: 'C#', link: 'https://learn.microsoft.com/en-us/dotnet/csharp/' },
+        { name: 'MySQL', link: 'https://www.mysql.com' }
+        ];
+
+    const languagesSpotidata = [
+        { name: 'Node.js', link: 'https://nodejs.org' },
+        { name: 'React', link: 'https://fr.reactjs.org' },
+        { name: 'Express', link: 'https://expressjs.com' },
+        { name: 'JavaScript', link: 'https://developer.mozilla.org/fr/docs/Web/JavaScript' }
+    ];
+
+    const languagesAsteroids = [
+        { name: 'C', link: '/https://www.iso.org/standard/74528.htmllanguages/javascript' },
+        { name: 'ncurses', link: 'https://invisible-island.net/ncurses/' },
+    ];
     return (
         <>
             <div className='bar__projects' />
@@ -16,8 +44,8 @@ function Projects() {
                                 text="A completly working chess game made in Java Swing. Detects check, checkmate, stalemate, and castling. Also detects if a move is illegal and don't allow it."
                                 label='Chess'
                                 alt='A chess board'
-                                path='/projects'
-                                language='Javaswing'
+                                path='https://google.com'
+                                languages={languagesChess}
                             />
                             <ProjectItem
                                 src='/images/projects/espagnol-super-facil.jpg'
@@ -26,8 +54,8 @@ function Projects() {
                                  I was in charge of the structure of the application and the connection between the database and the application."
                                 label='Espagnol Super Facil'
                                 alt='Application to learn Spanish'
-                                path='/projects'
-                                language='C#'
+                                path='https://google.com'
+                                languages={languagesEspagnol}
                             />
                         </ul>
                         <ul className='projects__items'>
@@ -38,8 +66,8 @@ function Projects() {
                                 I was in charge the market system and events, I also designed the map and the items .'
                                 label='MarsGriculteur'
                                 alt='A 2d game made in Unity'
-                                path='/projects'
-                                language='Unity'
+                                path='https://google.com'
+                                languages={languagesMars}
                             />
                             <ProjectItem
                                 src='/images/projects/spotidata-2.jpg'
@@ -49,8 +77,8 @@ function Projects() {
                                 
                                 label='Spotidata'
                                 alt='Spotidata web application'
-                                path='/projects'
-                                language='Node.js'
+                                path='https://github.com/HugoLAMOUREUX/Spotidata'
+                                languages={languagesSpotidata}
                             />
                             <ProjectItem
                                 src='/images/projects/rec-asteroids-2.jpg'
@@ -58,8 +86,8 @@ function Projects() {
                                 It calculates recusrvilvely each possible path, or stop when it find a path that avoid all the asteroids.'
                                 label='Recursive '
                                 alt='A chess board'
-                                path='/projects'
-                                language='C'
+                                path='https://google.com'
+                                languages={languagesAsteroids}
                             />
                         </ul>
                     </div>

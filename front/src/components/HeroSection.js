@@ -22,7 +22,7 @@ function HeroSection({scrollFunc}) {
                 <div className='about__text'>
                     <h1>Hi, welcome on my website</h1>
                     <p>My name is Charly FLU, I'm a developer.</p>
-                    <p className="single__line__text">I'm currently studying at the <Link className="link__about" to="https://iutrs.unistra.fr">University of Robert Schuman</Link> in France. </p>
+                    <p className="single__line__text">I'm currently studying at the <Link className="link__about" to="https://iutrs.unistra.fr" target="_blank">University of Robert Schuman</Link> in France. </p>
                     <p>I'm looking for an internship in the field of web development.</p>
                     <p>I built this website to show you my skills and my projects.</p>
                     <p>This is still under development !</p>
