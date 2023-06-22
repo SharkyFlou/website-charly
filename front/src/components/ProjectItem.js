@@ -6,7 +6,7 @@ function ProjectItem({ path, src, text, label, alt, languages }) {
     return (
         <>
             <li className='projects__item'>
-                <Link className='projects__item__link' to={path}>
+                <Link className='projects__item__link' to={path} target="_blank">
                     <figure className='projects__item__pic-wrap' data-category={label}>
                         <img src={process.env.PUBLIC_URL + src} alt={alt} className='projects__item__img' />
                     </figure>

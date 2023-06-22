@@ -41,32 +41,32 @@ function Projects() {
                         <ul className='projects__items'>
                             <ProjectItem
                                 src='/images/projects/chess.jpg'
-                                text="A completly working chess game made in Java Swing. Detects check, checkmate, stalemate, and castling. Also detects if a move is illegal and don't allow it."
-                                label='Chess'
+                                text="A completly working chess game made in Java Swing. Detects check, checkmate, stalemate, en passant captures, and castling. Also detects if a move is illegal and don't allow it."
+                                label='Chess game'
                                 alt='A chess board'
-                                path='https://google.com'
+                                path='https://github.com/SharkyFlou/chess-game'
                                 languages={languagesChess}
                             />
                             <ProjectItem
                                 src='/images/projects/espagnol-super-facil.jpg'
                                 text="Espagnol Super Facil is an desktop application to learn Spanish made using WinForm.
-                                 It's a group project I made for my studies.
-                                 I was in charge of the structure of the application and the connection between the database and the application."
+                                It's a group project I made for my studies.
+                                I was in charge of the structure of the application and the connection between the database and the application."
                                 label='Espagnol Super Facil'
                                 alt='Application to learn Spanish'
-                                path='https://google.com'
+                                path='https://github.com/SharkyFlou/Espagnol-Super-Facil'
                                 languages={languagesEspagnol}
                             />
                         </ul>
                         <ul className='projects__items'>
                             <ProjectItem
                                 src='/images/projects/marsgriculteur-2.jpg'
-                                text='MarsGriculteur is a game made in Unity. 
+                                text='MarsGriculteur is a tycoon game made in Unity. 
                                 It is a group project I made for my studies.
-                                I was in charge the market system and events, I also designed the map and the items .'
+                                I was in charge the market system and events, I also designed the map and the items.'
                                 label='MarsGriculteur'
                                 alt='A 2d game made in Unity'
-                                path='https://google.com'
+                                path='https://github.com/SharkyFlou/mars-griculteur'
                                 languages={languagesMars}
                             />
                             <ProjectItem
@@ -74,7 +74,6 @@ function Projects() {
                                 text='Spotidata is a web application made with the framework Express, using in React for the front end, and Node.js for the back-end.
                                 It allows you to get lots of statistics about your Spotify.
                                 This was made for school in a group of 3 people.'
-                                
                                 label='Spotidata'
                                 alt='Spotidata web application'
                                 path='https://github.com/HugoLAMOUREUX/Spotidata'
@@ -82,11 +81,12 @@ function Projects() {
                             />
                             <ProjectItem
                                 src='/images/projects/rec-asteroids-2.jpg'
-                                text='Recursive asteroids is an aglorithm that control an spaceships to avoid asteriods.
-                                It calculates recusrvilvely each possible path, or stop when it find a path that avoid all the asteroids.'
-                                label='Recursive '
-                                alt='A chess board'
-                                path='https://google.com'
+                                text='Recursive asteroids is C aglorithm that control a spaceship to avoid asteriods.
+                                It calculates recusrvilvely each possible path, or stop when it find a path that can go to the end of the screen. 
+                                Repeat itself each iteration'
+                                label='Recursive algo'
+                                alt='A console screen with a spaceship and asteroids'
+                                path='https://github.com/SharkyFlou/asteroids-algo'
                                 languages={languagesAsteroids}
                             />
                         </ul>
