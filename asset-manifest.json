@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b8ab8556.css",
+    "main.js": "/static/js/main.4945d792.js",
+    "static/media/img-cliff-2.jpg": "/static/media/img-cliff-2.000476d4334d37f0ff0d.jpg",
+    "index.html": "/index.html",
+    "main.b8ab8556.css.map": "/static/css/main.b8ab8556.css.map",
+    "main.4945d792.js.map": "/static/js/main.4945d792.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b8ab8556.css",
+    "static/js/main.4945d792.js"
+  ]
+}
