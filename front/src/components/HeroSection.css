@@ -39,7 +39,7 @@ video {
     align-items: center;
     /*box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);*/
     object-fit: cover;
-    padding-bottom: 8rem;
+    padding:0 4rem 8rem 4rem;
 }
 
 .about__container {

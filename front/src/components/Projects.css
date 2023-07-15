@@ -1,6 +1,7 @@
 .projects {
     padding: 4rem;
     padding-bottom: 2rem;
+    padding-top: 0;
     background: var(--secondary-color);
 }
 

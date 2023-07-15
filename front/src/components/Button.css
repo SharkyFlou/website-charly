@@ -7,17 +7,20 @@
 }
 
 .btn--primary{
-    background-color: var(--tertiary-color);
     color: var(--secondary-color);
     border: 1px solid var(--tertiary-color);
+    background: linear-gradient(0deg, var(--tertiary-color), var(--tertiary-color)) no-repeat left bottom / 100% var(--bg-h);
+    transition: background-size 0.35s, color 0.35s ease-in-out;
+    --bg-h: 100%;
 }
 
-.btn--outline{
-    background-color: transparent;
+.btn--outline {
     color: var(--tertiary-color);
     padding : 8px 20px;
     border: 1px solid var(--tertiary-color);
-    transition: all 0.3s ease-out;
+    background: linear-gradient(0deg, var(--tertiary-color), var(--tertiary-color)) no-repeat left bottom / 0 var(--bg-h);
+    transition: background-size 0.35s, color 0.35s ease-in-out;
+    --bg-h: 100%;
 }
 
 
@@ -31,14 +34,14 @@
     font-size: 20px;
 }
 
-.btn--outline:hover{
-    background: var(--tertiary-color);
-    color : var(--secondary-color);
-    transition: all 0.3s ease-out;
+.btn--outline:hover,
+.btn--outline:focus-visible{
+    background-size: 100% var(--bg-h);
+    color:var(--secondary-color);
 }
 
-.btn--primary:hover{
-    background: var(--secondary-color);
+.btn--primary:hover,
+.btn--primary:focus-visible{
+    background-size: 0% var(--bg-h);
     color : var(--tertiary-color);
-    transition: all 0.3s ease-out;
 }

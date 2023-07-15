@@ -20,7 +20,7 @@ function HeroSection({scrollFunc}) {
                     <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img' />
                 </div>
                 <div className='about__text'>
-                    <h1>Hi, welcome on my website</h1>
+                    <h1>Hi, welcome on my online portfolio !</h1>
                     <p>My name is Charly FLU, I'm a developer.</p>
                     <p className="single__line__text">I'm currently studying at the <Link className="link__about" to="https://iutrs.unistra.fr" target="_blank">University of Robert Schuman</Link> in France. </p>
                     <p>I'm looking for an internship in the field of web development.</p>

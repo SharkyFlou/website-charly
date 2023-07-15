@@ -3,6 +3,7 @@
     background-color: var(--tertiary-color);
     width: 100%;
     padding: 4rem;
+    padding-top: 0;
 }
 
 .contact h1{

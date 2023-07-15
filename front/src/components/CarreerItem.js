@@ -4,7 +4,7 @@ import './Career.css'
 function CareerItem() {
   return (
     <>
-
+        
     </>
   )
 }
