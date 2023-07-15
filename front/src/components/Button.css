@@ -9,18 +9,22 @@
 .btn--primary{
     color: var(--secondary-color);
     border: 1px solid var(--tertiary-color);
-    background: linear-gradient(0deg, var(--tertiary-color), var(--tertiary-color)) no-repeat left bottom / 100% var(--bg-h);
-    transition: background-size 0.35s, color 0.35s ease-in-out;
-    --bg-h: 100%;
+    background: var(--tertiary-color);
+    background-image: linear-gradient(var(--secondary-color),var(--secondary-color));
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: all 0.35s;
 }
 
 .btn--outline {
     color: var(--tertiary-color);
     padding : 8px 20px;
     border: 1px solid var(--tertiary-color);
-    background: linear-gradient(0deg, var(--tertiary-color), var(--tertiary-color)) no-repeat left bottom / 0 var(--bg-h);
-    transition: background-size 0.35s, color 0.35s ease-in-out;
-    --bg-h: 100%;
+    background: transparent;
+    background-image: linear-gradient(var(--tertiary-color),var(--tertiary-color));
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: all 0.35s;
 }
 
 
@@ -36,12 +40,12 @@
 
 .btn--outline:hover,
 .btn--outline:focus-visible{
-    background-size: 100% var(--bg-h);
+    background-size: 100% 100%;
     color:var(--secondary-color);
 }
 
 .btn--primary:hover,
 .btn--primary:focus-visible{
-    background-size: 0% var(--bg-h);
+    background-size: 100% 100%;
     color : var(--tertiary-color);
 }

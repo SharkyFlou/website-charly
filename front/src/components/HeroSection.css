@@ -112,6 +112,9 @@ p {
 }
 
 @media screen and (max-width: 960px) {
+    .hero-container {
+        padding: 0 2rem 4rem 2rem;
+    }
 
     .btn{
         border-radius: 6px; 

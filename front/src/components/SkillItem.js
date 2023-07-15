@@ -6,6 +6,10 @@ function SkillItem({src, text, level, alt}) {
     <div className='skill'>
         <div className='img__container'>
           <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill__img'/>
+          <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill__img'/>
+          <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill__img'/>
+          <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill__img'/>
+          <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill__img'/>
         </div>
         <div className='skill_caption'>
           <h5 className='skill__text'>{text}</h5>

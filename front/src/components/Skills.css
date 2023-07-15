@@ -45,6 +45,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: rotate(-30deg) skew(25deg) scale(.8);
+    transition: 0.5s;
+    overflow: visible;
 }
 
 .skill{
@@ -58,12 +61,30 @@
 }
 
 .skill .img__container img { 
-    transform: rotate(0deg);    
-    transition: transform 1s;  
+    position: absolute;
+    width: 100%;
+    transition: 0.5s;
 }
-.skill .img__container img:hover { 
-    transform: rotate(360deg);
-    transition: transform 1s;  
+
+.skill .img__container img:nth-child(1){
+    filter: brightness(0);
+}
+
+.img__container:hover img:nth-child(5){
+    transform: translate(80px, -80px);
+    opacity: 1;
+}
+.img__container:hover img:nth-child(4){
+    transform: translate(60px, -60px);
+    opacity: .8;
+}
+.img__container:hover img:nth-child(3){
+    transform: translate(40px, -40px);
+    opacity: .6;
+}
+.img__container:hover img:nth-child(2){
+    transform: translate(20px, -20px);
+    opacity: .4;
 }
 
 @media screen and (max-width: 960px) {

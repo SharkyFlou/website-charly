@@ -76,11 +76,13 @@
     }
     .contact{
         padding: 4rem 2rem;
+        padding-top: 0;
     }
 }
 
 @media screen and (max-width: 400px) {
     .contact{
         padding: 4rem 1rem;
+        padding-top: 0;
     }
 }
