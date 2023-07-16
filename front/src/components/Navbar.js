@@ -48,9 +48,16 @@ function Navbar({scrollFunc}) {
                     <Link to={process.env.PUBLIC_URL + "/#home"} className="navbar-logo" onClick={closeMobileMenu('home')}>
                         <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img'/>
                     </Link>
-                    <div className="menu-icon" onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+
+                    <div className={click ? 'menu-icon open' : 'menu-icon'} id="nav-icon" onClick={handleClick}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
+
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className="nav-item">
                             <Link to={process.env.PUBLIC_URL + "/#home"} className="nav-links" onClick={closeMobileMenu('home')}>

@@ -1,10 +1,18 @@
 import React from 'react'
 import './Career.css'
 
-function CareerItem() {
+function CareerItem({ src, text, level, alt }) {
   return (
     <>
-        
+      <div className='career__item'>
+        <div className='img__container'>
+          <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill__img' />
+        </div>
+        <div className='career_caption'>
+          <h5 className='career__text'>{text}</h5>
+          <h5 className='career__date'>{level}</h5>
+        </div>
+      </div>
     </>
   )
 }
