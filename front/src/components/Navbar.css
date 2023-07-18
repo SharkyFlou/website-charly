@@ -16,7 +16,7 @@
     padding-left: 10px;
 }
 
-/* Navbar icon */
+/* Nav hamburger */
 
 #nav-icon {
     width: 55px;
@@ -66,11 +66,11 @@
 }
 
 #nav-icon span:nth-child(3), #nav-icon span:nth-child(4) {
-  top: 18px;
+  top: 16px;
 }
 
 #nav-icon span:nth-child(5), #nav-icon span:nth-child(6) {
-  top: 36px;
+  top: 32px;
 }
 
 #nav-icon.open span:nth-child(1),#nav-icon.open span:nth-child(6) {
@@ -109,15 +109,15 @@
 
 #nav-icon.open span:nth-child(5) {
   left: 5px;
-  top: 29px;
+  top: 25px;
 }
 
 #nav-icon.open span:nth-child(6) {
   left: calc(50% - 5px);
-  top: 29px;
+  top: 25px;
 }
 
-/* Not anymore */
+/* End of nav hamburger */
 
 .navbar-container {
     display: flex;
@@ -125,25 +125,6 @@
     align-items: center;
     height: 80px;
     max-width: 1500px;
-}
-
-.navbar-logo {
-    color: var(--tertiary-color);
-    justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    
-}
-
-
-
-.fa-typo3 {
-    margin-left: 0.5rem;
-    font-size: 1.8rem;
 }
 
 .nav-menu {
@@ -187,18 +168,21 @@
     display: none;
 }
 
-.logo__home__img{
-    max-height: 3rem;
-}
 
 @media screen and (max-width: 960px) {
 
-    .logo__home__img{
-        margin-top: 5rem;
+    .c-glitch{
+        height: 60px;
+        width: 60px;
+        margin-top: 0.8rem;
         margin-left: 1rem;
         position: absolute;
-        max-height: 4rem;
         display: block;
+    }
+
+    .c-glitch__img{
+        height: 60px;
+        width: 60px;
     }
 
     .NavbarItems {

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
+import './Glitch.css';
 import './Navbar.css';
+
 
 function Navbar({scrollFunc}) {
     const [click, setClick] = useState(false);
@@ -46,7 +48,13 @@ function Navbar({scrollFunc}) {
             <nav className="navbar" id="navbar">
                 <div className="navbar-container">
                     <Link to={process.env.PUBLIC_URL + "/#home"} className="navbar-logo" onClick={closeMobileMenu('home')}>
-                        <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img'/>
+                        <div src={process.env.PUBLIC_URL + "/images/logo.png"}  className='logo__home__img' class="c-glitch">
+                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img' class="c-glitch__img"/>
+                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img' class="c-glitch__img"/>
+                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img' class="c-glitch__img"/>
+                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img' class="c-glitch__img"/>
+                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img' class="c-glitch__img"/>
+                        </div>
                     </Link>
 
                     <div className={click ? 'menu-icon open' : 'menu-icon'} id="nav-icon" onClick={handleClick}>
