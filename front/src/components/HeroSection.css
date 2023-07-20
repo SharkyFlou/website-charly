@@ -45,7 +45,7 @@ video {
 .about__container {
     background-color: rgba(0, 0, 0, 0.6);
     margin-top: 20vh;
-    height: 60vh;
+    padding: 2rem 1rem;
     width: 90%;
     max-width: 1120px;
     display: flex;
@@ -87,12 +87,12 @@ p {
     flex-direction: column;
 }
 
-.hero-container>h1 {
+.hero-container h1 {
     font-size: 2.5rem;
     margin-top: 80px;
 }
 
-.hero-container>p {
+.hero-container p {
     font-size: 1.5rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 0.5rem;
@@ -110,6 +110,10 @@ p {
     margin-left: 0.5rem;
 }
 @media screen and (min-width: 1400px){
+    .about__container{
+        padding: 3rem 1rem;
+    }
+
     .me__img {
         width: 17rem;
         height: 17rem;
@@ -135,14 +139,15 @@ p {
     }
 
     .hero-container h1 {
-        font-size: 1.5rem;
+        margin-top: 0;
+        font-size: 2.2rem;
         text-align: center;
     }
 
     .hero-container p {
         text-align: center;
         padding: 0 1rem;
-        font-size: 1rem;
+        font-size: 1.3rem;
         margin-top: 0.3rem;
     }
 
@@ -160,7 +165,6 @@ p {
     }
 
     .about__container {
-        height: 75vh;
         flex-direction: column;
         justify-content: center;
         text-align: center;
@@ -172,16 +176,20 @@ p {
 }
 
 @media screen and (max-width: 550px) {
-    .about__container {
-        height: 85vh;
+    .hero-container h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-container p {
+        font-size: 1.2rem;
     }
 
     .me__img {
-        width: 12rem;
-        height: 12rem;
+        width: 9rem;
+        height: 9rem;
     }
 
     .me__englobe{
-        margin-bottom: 3rem;
+        margin-bottom: 0;
     }
 }
