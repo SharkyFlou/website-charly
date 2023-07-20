@@ -8,20 +8,12 @@
 }
 
 .c-glitch {
-  height: 55px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  width: 55px;
-}
-
-.c-glitch{
-  background: url('/public/images/logo.png') center center/cover no-repeat;
 }
 
 .c-glitch__img {
-  width: 55px;
-  height: 55px;
   background-blend-mode: none;
   background-color: transparent;
   left: 0;

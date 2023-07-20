@@ -3,12 +3,17 @@
     color: var(--tertiary-color);
     padding: 2rem 2rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .footer__section{
     display: flex;
     justify-content: space-between;
+    width: 100%;
     padding: 2rem 6rem;
+    max-width: 1120px;
 }
 
 .footer__link{

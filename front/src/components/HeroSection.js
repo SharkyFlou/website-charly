@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from './Button'
 import './HeroSection.css'
+import './Glitch.css'
 import '../App.css'
 import { Link } from 'react-router-dom';
 
@@ -17,7 +18,13 @@ function HeroSection({scrollFunc}) {
         */}
             <div className='about__container'>
                 <div className='about__img__container'>
-                    <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img' />
+                    <div src={process.env.PUBLIC_URL + "/images/charly-flu.jpg"} className="me__img c-glitch me__englobe"> 
+                        <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
+                        <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
+                        <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
+                        <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
+                        <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
+                    </div>
                 </div>
                 <div className='about__text'>
                     <h1>Hi, welcome on my online portfolio !</h1>

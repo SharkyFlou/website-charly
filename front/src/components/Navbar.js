@@ -5,7 +5,7 @@ import './Glitch.css';
 import './Navbar.css';
 
 
-function Navbar({scrollFunc}) {
+function Navbar({ scrollFunc }) {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 
@@ -33,7 +33,7 @@ function Navbar({scrollFunc}) {
     window.addEventListener('resize', showButton);
 
     let prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
+    window.onscroll = function () {
         const currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             document.getElementById("navbar").style.top = "0";
@@ -48,12 +48,12 @@ function Navbar({scrollFunc}) {
             <nav className="navbar" id="navbar">
                 <div className="navbar-container">
                     <Link to={process.env.PUBLIC_URL + "/#home"} className="navbar-logo" onClick={closeMobileMenu('home')}>
-                        <div src={process.env.PUBLIC_URL + "/images/logo.png"}  className='logo__home__img' class="c-glitch">
-                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img' class="c-glitch__img"/>
-                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img' class="c-glitch__img"/>
-                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img' class="c-glitch__img"/>
-                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img' class="c-glitch__img"/>
-                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className='logo__home__img' class="c-glitch__img"/>
+                        <div src={process.env.PUBLIC_URL + "/images/logo.png"} className="logo__home__img c-glitch logo__englobe">
+                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className="logo__home__img c-glitch__img" />
+                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className="logo__home__img c-glitch__img" />
+                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className="logo__home__img c-glitch__img" />
+                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className="logo__home__img c-glitch__img" />
+                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className="logo__home__img c-glitch__img" />
                         </div>
                     </Link>
 
@@ -73,7 +73,7 @@ function Navbar({scrollFunc}) {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={process.env.PUBLIC_URL + "/#projects"}className="nav-links" onClick={closeMobileMenu('projects')}>
+                            <Link to={process.env.PUBLIC_URL + "/#projects"} className="nav-links" onClick={closeMobileMenu('projects')}>
                                 Projects
                             </Link>
                         </li>

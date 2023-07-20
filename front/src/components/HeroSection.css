@@ -22,7 +22,7 @@ video {
 .link__about:where(:hover, :focus-visible) {
     background-size: 100% var(--bg-h);
     background-position-x: left;
-    color:var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 
@@ -39,7 +39,7 @@ video {
     align-items: center;
     /*box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);*/
     object-fit: cover;
-    padding:0 4rem 8rem 4rem;
+    padding: 0 4rem 8rem 4rem;
 }
 
 .about__container {
@@ -47,6 +47,7 @@ video {
     margin-top: 20vh;
     height: 60vh;
     width: 90%;
+    max-width: 1120px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -60,20 +61,19 @@ video {
     justify-content: center;
 }
 
-.about__img__container img {
-    width: auto;
-    height: auto;
+.me__englobe{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    background: url('/public/images/charly-flu.jpg') center center/cover no-repeat;
+}
+
+.me__img {
+    width: 14rem;
+    height: 14rem;
     display: block;
-    max-width: 80%;
-    max-height: 80%;
     border-radius: 50%;
     box-shadow: 0 6px 20px rgba(146, 146, 146, 0.95);
     transition: all 0.3s;
-}
-
-.about__img__container img:hover {
-    box-shadow: 0 8px 30px rgb(180, 180, 180);
-    transition: all 0.5s;
 }
 
 .about__text {
@@ -109,15 +109,31 @@ p {
 .fa-solid {
     margin-left: 0.5rem;
 }
+@media screen and (min-width: 1400px){
+    .me__img {
+        width: 17rem;
+        height: 17rem;
+    }
+}
 
 @media screen and (max-width: 960px) {
+    .me__img {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    .me__englobe{
+        margin-bottom: 4rem;
+    }
+
     .hero-container {
         padding: 0 2rem 4rem 2rem;
     }
 
-    .btn{
-        border-radius: 6px; 
+    .btn {
+        border-radius: 6px;
     }
+
     .hero-container h1 {
         font-size: 1.5rem;
         text-align: center;
@@ -144,7 +160,7 @@ p {
     }
 
     .about__container {
-        height: 85vh;
+        height: 75vh;
         flex-direction: column;
         justify-content: center;
         text-align: center;
@@ -153,10 +169,19 @@ p {
     .about__img__container {
         height: 25%;
     }
+}
 
-    .about__img__container img {
-        max-width: 100%;
-        max-height: 100%;
+@media screen and (max-width: 550px) {
+    .about__container {
+        height: 85vh;
     }
 
+    .me__img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .me__englobe{
+        margin-bottom: 3rem;
+    }
 }
