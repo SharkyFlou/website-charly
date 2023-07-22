@@ -1,7 +1,7 @@
 import React from 'react'
 import './Career.css'
 
-function CareerItem({ src, text, level, alt }) {
+function CareerItem({ src, text, year, alt }) {
   return (
     <>
       <div className='career__item'>
@@ -10,7 +10,7 @@ function CareerItem({ src, text, level, alt }) {
         </div>
         <div className='career_caption'>
           <h5 className='career__text'>{text}</h5>
-          <h5 className='career__date'>{level}</h5>
+          <h5 className='career__date'>{year}</h5>
         </div>
       </div>
     </>
