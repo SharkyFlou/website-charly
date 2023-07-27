@@ -30,8 +30,7 @@ function HeroSection({scrollFunc}) {
                     <h1>Hi, welcome on my online portfolio !</h1>
                     <p>My name is Charly FLU, I'm a developer.</p>
                     <p className="single__line__text">I'm currently studying at the <Link className="link__about" to="https://iutrs.unistra.fr" target="_blank">University of Robert Schuman</Link> in France. </p>
-                    <p>I'm looking for an internship in the field of web development.</p>
-                    <p>I built this website to show you my skills and my projects.</p>
+                    <p>I built this website to show you my skills and my projects, and most of all, because I always wanted to have my own website to experiment things.</p>
                     <p className="warning">This is still under development !</p>
                     
                     <div className="hero-btns">

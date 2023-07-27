@@ -62,7 +62,7 @@ function Career() {
           <div className='career__wrapper wrapper__career__left'>
             <CareerItem src='/images/career/iut-robert-schuman-2022.jpg'
               text='I will finish my BUT in computer science at the IUT Robert Schuman in Illkirch-Graffenstaden.
-              The last year is a work-study program, and Im doing it at the company ABAS near Strasbourg'
+              The last year is a work-study program, and Im doing it at a company near Strasbourg'
               year='2023-now'
               className='career__left' />
           </div>

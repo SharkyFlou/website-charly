@@ -93,17 +93,19 @@ p {
 
 .hero-container h1 {
     font-size: 2rem;
+    padding-bottom: 0.5rem;
 }
 
 .hero-container p {
     font-size: 1.2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 0.5rem;
+    line-height: 1.4rem;
 }
 
 .hero-container p.warning {
     color:crimson;
     font-weight: bolder;
+    text-shadow: 0 0 10px crimson;
 }
 
 .hero-btns {
@@ -154,9 +156,7 @@ p {
 
     .hero-container p {
         text-align: center;
-        padding: 0 1rem;
         font-size: 1.3rem;
-        margin-top: 0.3rem;
     }
 
     .btn-mobile {
