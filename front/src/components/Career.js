@@ -3,6 +3,8 @@ import './Career.css'
 import CareerItem from './CarreerItem'
 
 function Career() {
+ 
+
   return (
     <>
       <div className='bar__career' />

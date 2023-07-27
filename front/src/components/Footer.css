@@ -1,6 +1,6 @@
 .footer{
-    background-color: var(--secondary-color);
-    color: var(--tertiary-color);
+    background-color: var(--background-secondary-color);
+    color: var(--color-on-secondary);
     padding: 2rem 2rem;
     text-align: center;
     display: flex;
@@ -20,7 +20,7 @@
     color: lightblue;
     text-decoration: none;
     text-align: center;
-    background: linear-gradient(0deg, var(--tertiary-color), var(--tertiary-color)) no-repeat right bottom / 0 var(--bg-h);
+    background: linear-gradient(0deg, var(--background-tertiary-color), var(--background-tertiary-color)) no-repeat right bottom / 0 var(--bg-h);
     transition: background-size 0.35s, color 0.35s ease-in-out;
     --bg-h: 100%;
 }
@@ -29,7 +29,7 @@
 .footer__link:where(:hover, :focus-visible) {
     background-size: 100% var(--bg-h);
     background-position-x: left;
-    color:var(--secondary-color);
+    color: var(--color-on-tertiary);
 }
 
 @media only screen and (max-width: 1024px) {

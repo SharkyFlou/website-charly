@@ -14,7 +14,7 @@ video {
 .link__about {
     color: lightblue;
     text-decoration: none;
-    background: linear-gradient(0deg, var(--tertiary-color), var(--tertiary-color)) no-repeat right bottom / 0 var(--bg-h);
+    background: linear-gradient(0deg, var(--background-tertiary-color), var(--background-tertiary-color)) no-repeat right bottom / 0 var(--bg-h);
     transition: background-size 0.35s, color 0.35s ease-in-out;
     --bg-h: 100%;
 }
@@ -22,7 +22,7 @@ video {
 .link__about:where(:hover, :focus-visible) {
     background-size: 100% var(--bg-h);
     background-position-x: left;
-    color: var(--secondary-color);
+    color: var(--color-on-tertiary);
 }
 
 
@@ -37,9 +37,12 @@ video {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);*/
     object-fit: cover;
     padding: 0 4rem 8rem 4rem;
+}
+
+body.dark .hero-container {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.7);
 }
 
 .about__container {
@@ -82,7 +85,7 @@ video {
 
 .hero-container h1,
 p {
-    color: var(--tertiary-color);
+    color: var(--color-on-primary);
     display: flex;
     flex-direction: column;
 }
@@ -95,6 +98,11 @@ p {
     font-size: 1.2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 0.5rem;
+}
+
+.hero-container p.warning {
+    color:crimson;
+    font-weight: bolder;
 }
 
 .hero-btns {

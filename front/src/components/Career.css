@@ -1,5 +1,5 @@
 .career {
-    background-color: var(--tertiary-color);
+    background-color: var(--background-tertiary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +7,7 @@
 
 .career h1 {
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    color: var(--color-on-tertiary);
     margin-bottom: 2rem;
 }
 
@@ -16,12 +16,12 @@
     width: 100%;
     margin: -4vw 0px -4vw 0px;
     transform: rotate(-4deg) scale(1.2, 1);
-    background-color: var(--tertiary-color);
+    background-color: var(--background-tertiary-color);
 }
 
 
 .career{
-    --len-arrow: 88rem;
+    --len-arrow: 94rem;
     --space-between-career: -2rem;
 }
 /* Arrow */
@@ -31,7 +31,7 @@
     left: calc(50% - 1rem);
     width: 2rem;
     height: var(--len-arrow);
-    background-color: var(--secondary-color);
+    background-color: var(--background-secondary-color);
     position: absolute;
 }
 
@@ -40,7 +40,7 @@
     left: calc(50% - 1.75rem);
     width: 2rem;
     height: 11rem;
-    background-color: var(--secondary-color);
+    background-color: var(--background-secondary-color);
     position: absolute;
     transform: rotate(45deg);
     transform-origin: bottom center;
@@ -51,7 +51,7 @@
     left: calc(50% - 0.5rem);
     width: 2rem;
     height: 11rem;
-    background-color: var(--secondary-color);
+    background-color: var(--background-secondary-color);
     position: absolute;
     transform: rotate(-45deg);
     transform-origin: bottom center;
@@ -62,14 +62,14 @@
     left: calc(50% - 2rem);
     width: 4rem;
     aspect-ratio: 1;
-    background-color: var(--secondary-color);
+    background-color: var(--background-secondary-color);
     position: absolute;
     border-radius: 50%;
 }
 
 @media screen and (max-width: 960px) {
     .career{
-        --len-arrow: 110rem;
+        --len-arrow: 118rem;
     }
 
     .middle__bar__arrow {
@@ -80,6 +80,8 @@
     .right__side__arrow {
         width: 2rem;
         left: -2rem ;
+        margin-top: calc(var(--len-arrow) + 8rem);
+        height: 8rem;
     }
 
     .left__side__arrow {
@@ -110,12 +112,13 @@
     display: flex;
     flex-flow: column;
     max-width: 1120px;
+    font-size: 17px;
 }
 
 .career__item {
     width: 21rem;
     border-radius: 10px;
-    background-color: var(--secondary-color);
+    background-color: var(--background-secondary-color);
     box-shadow: 0 0 20px 10px rgba(56, 125, 255, 0.2);
     color: var(--tertiary-color);
 
@@ -142,13 +145,30 @@
     transition: all 0.5s ease-in-out;
 }
 
-.career__container .career__item:hover img {
-    top: -2rem;
-    left: -2rem;
-    transform: scale(1.14);
-    box-shadow: 2rem 2rem 20px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.5s ease-in-out;
+/* If on desktop*/
+@media screen and (min-width: 960px) {
+    .career__container .career__item:hover img {
+        top: -2rem;
+        left: -2rem;
+        transform: scale(1.13);
+        box-shadow: 2rem 2rem 20px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease-in-out;
+    }
 }
+
+/* If on mobile*/
+@media screen and (max-width: 960px) {
+    /*Allow to unclick the hover effect*/
+    .career__container .career__item.clicked:hover img{
+        top: -2rem;
+        left: -2rem;
+        transform: scale(1.13);
+        box-shadow: 2rem 2rem 20px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+
 
 .career__text {
     padding-top: 2rem;
@@ -156,6 +176,7 @@
 }
 
 .career_caption {
+    color: var(--color-on-secondary);
     left: -1rem;
     top: -1rem;
     position: relative;

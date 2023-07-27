@@ -1,0 +1,33 @@
+.dark-mode-toggle{
+    width: 8rem;
+    height: 3rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    margin-left: 1rem;
+    border : 2px solid #000;
+    text-align: center;
+    font-size: 18px;
+    top:50px;
+    cursor: pointer;
+    
+}
+
+.dark-mode-toggle__container{
+    position: absolute;
+    top: calc(80px + 10px);
+    right: 10px;
+}
+
+.dark-mode-toggle p{
+    color:#000;
+}
+
+body.dark .dark-mode-toggle{
+    background-color: #000;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+body.dark .dark-mode-toggle p {
+    color: #fff;
+}

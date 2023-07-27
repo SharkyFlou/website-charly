@@ -2,7 +2,7 @@
     padding: 4rem;
     padding-bottom: 2rem;
     padding-top: 0;
-    background: var(--secondary-color);
+    background: var(--background-secondary-color);
 }
 
 
@@ -53,6 +53,8 @@
 
 .projects h1{
     padding-top: 0;
+    color: var(--color-on-secondary);
+
 }
 
 .projects__item__pic-wrap::after {
@@ -64,8 +66,8 @@
     max-width: calc((100%) - 60px);
     font-size: 12px;
     font-weight: 700;
-    color: var(--tertiary-color);
-    background-color: var(--primary-color);
+    color: var(--color-on-primary);
+    background-color: var(--background-primary-color);
     box-sizing: border-box;
 }
 
@@ -97,7 +99,7 @@
 
 
 .projects__item__text, .language__item__link{
-    color: var(--tertiary-color);
+    color: var(--color-on-secondary);
     font-size: 18px;
     line-height: 24px;
 }
@@ -140,6 +142,6 @@
     width: 100%;
     margin: -4vw 0px -4vw 0px;
     transform: rotate(-4deg) scale(1.2, 1);
-    background-color: var(--secondary-color);
+    background-color: var(--background-secondary-color);
     z-index: 1;
 }

@@ -32,7 +32,7 @@ function HeroSection({scrollFunc}) {
                     <p className="single__line__text">I'm currently studying at the <Link className="link__about" to="https://iutrs.unistra.fr" target="_blank">University of Robert Schuman</Link> in France. </p>
                     <p>I'm looking for an internship in the field of web development.</p>
                     <p>I built this website to show you my skills and my projects.</p>
-                    <p>This is still under development !</p>
+                    <p className="warning">This is still under development !</p>
                     
                     <div className="hero-btns">
                         <Button className='btns' buttonStyle='btn--outline'

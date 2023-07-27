@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from './Button';
 import './Glitch.css';
 import './Navbar.css';
+import { DarkModeToggle } from './DarkModeToggle';
 
 
 function Navbar({ scrollFunc }) {
@@ -94,7 +95,10 @@ function Navbar({ scrollFunc }) {
                         </li>
                     </ul>
                     {button && <Button onClick={closeMobileMenu('contact')} buttonStyle="btn--outline" link={process.env.PUBLIC_URL + "/#contact"} >CONTACT</Button>}
+                    
+                    
                 </div>
+                <DarkModeToggle/>
             </nav>
         </>
     );

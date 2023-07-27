@@ -1,10 +1,18 @@
 import React from 'react'
+import { useState } from 'react'
 import './Career.css'
 
 function CareerItem({ src, text, year, alt }) {
+  /*Allow mobile to click for putting/removing the hover effect*/
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => {
+      setClick(!click);
+  };
+
   return (
     <>
-      <div className='career__item'>
+      <div className={click ? "career__item clicked":"career__item"} onClick={handleClick}>
         <div className='img__container'>
           <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill__img' />
         </div>
