@@ -32,7 +32,8 @@ video {
 }
 
 .hero-container {
-    background: url('/public/images/img-cliff-2.jpg') center center/cover no-repeat;
+    /*background: url('/public/images/img-cliff-2.jpg') center center/cover no-repeat;*/
+    background: var(--background-tertiary-color);
     width: 100%;
     display: flex;
     flex-direction: column;

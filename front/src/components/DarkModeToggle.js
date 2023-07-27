@@ -21,7 +21,6 @@ export const DarkModeToggle = () => {
         onClick={toggleDark}
         icons={{ checked: "🌙", unchecked: "🔆" }}
         aria-label="Dark mode toggle">
-        <p> Toggle dark mode</p>
       </div>
     </div>
   );

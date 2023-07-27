@@ -1,15 +1,16 @@
 .dark-mode-toggle{
-    width: 8rem;
-    height: 3rem;
-    border-radius: 1rem;
-    background-color: #fff;
+    /*big wide picture that shows only half, either the sun at right, or when click the moon at left*/
+    background: url('/public/images/toggle-dark-mode.jpg') right center/cover no-repeat;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1.2rem;
     margin-left: 1rem;
-    border : 2px solid #000;
+    border: 3px solid #000 ;
     text-align: center;
     font-size: 18px;
     top:50px;
     cursor: pointer;
-    
+    transition: all ease-in-out 0.3s;
 }
 
 .dark-mode-toggle__container{
@@ -18,16 +19,8 @@
     right: 10px;
 }
 
-.dark-mode-toggle p{
-    color:#000;
-}
 
 body.dark .dark-mode-toggle{
-    background-color: #000;
-    border: 2px solid #fff;
-    color: #fff;
-}
-
-body.dark .dark-mode-toggle p {
-    color: #fff;
+    border-color: #fff;
+    background: url('/public/images/toggle-dark-mode.jpg') left center/cover no-repeat;
 }
