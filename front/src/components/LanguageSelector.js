@@ -7,8 +7,8 @@ import { withTranslation  } from 'react-i18next';
 
 const LanguageSelector = ({t}) => {
     const countries = [
-        { value: 'en', label: '', image: process.env.PUBLIC_URL + "/flags/en.png" },
-        { value: 'fr', label: '', image: process.env.PUBLIC_URL + "/flags/fr.png" }
+        { value: 'en', image: process.env.PUBLIC_URL + "/flags/en.png" },
+        { value: 'fr', image: process.env.PUBLIC_URL + "/flags/fr.png" }
     ];
 
     const changeLanguage = (lng) => {
@@ -26,10 +26,10 @@ const LanguageSelector = ({t}) => {
                 defaultValue={currentLanguageObj}
                 options={countries}
                 className="language__selector__dropdown"
+                isSearchable={false}
                 formatOptionLabel={country => (
                     <div className="country__option" onClick={() => changeLanguage(country.value)}>
                         <img src={country.image} className="dropdown__selector__language" alt={"country" + country.value} />
-                        <span>{country.label}</span>
                     </div>
                 )}
             />
