@@ -4,9 +4,10 @@ import { Button } from './Button';
 import './Glitch.css';
 import './Navbar.css';
 import { DarkModeToggle } from './DarkModeToggle';
+import LanguageSelector from './LanguageSelector';
 
 
-function Navbar({ scrollFunc }) {
+function Navbar({ scrollFunc, t }) {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 
@@ -70,35 +71,36 @@ function Navbar({ scrollFunc }) {
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className="nav-item">
                             <Link to={process.env.PUBLIC_URL + "/#home"} className="nav-links" onClick={closeMobileMenu('home')}>
-                                Home
+                                {t("navbar__home")}
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link to={process.env.PUBLIC_URL + "/#projects"} className="nav-links" onClick={closeMobileMenu('projects')}>
-                                Projects
+                            {t("navbar__projects")}
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link to={process.env.PUBLIC_URL + "/#career"} className="nav-links" onClick={closeMobileMenu('career')}>
-                                Career
+                            {t("navbar__career")}
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link to={process.env.PUBLIC_URL + "/#skills"} className="nav-links" onClick={closeMobileMenu('skills')}>
-                                Skills
+                            {t("navbar__skills")}
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link to={process.env.PUBLIC_URL + "/#contact"} className="nav-links-mobile" onClick={closeMobileMenu('contact')}>
-                                Contact
+                            {t("navbar__contact")}
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button onClick={closeMobileMenu('contact')} buttonStyle="btn--outline" link={process.env.PUBLIC_URL + "/#contact"} >CONTACT</Button>}
+                    {button && <Button onClick={closeMobileMenu('contact')} buttonStyle="btn--outline" link={process.env.PUBLIC_URL + "/#contact"} >{t("navbar__contact")}</Button>}
                     
                     
                 </div>
-                <DarkModeToggle/>
+                <DarkModeToggle t={t}/>
+                <LanguageSelector/>
             </nav>
         </>
     );

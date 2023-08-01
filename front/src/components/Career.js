@@ -2,7 +2,7 @@ import React from 'react'
 import './Career.css'
 import CareerItem from './CarreerItem'
 
-function Career() {
+function Career({t}) {
  
 
   return (
@@ -14,60 +14,58 @@ function Career() {
         <div className='left__side__arrow' />
         <div className='right__side__arrow' />
         <div className='start__round__arrow' />
-        <h1 id='career'>Career</h1>
+        <h1 id='career'>{t("career__title")}</h1>
         <div className='career__container'>
           <div className='career__wrapper wrapper__career__left'>
             <CareerItem src='/images/career/lycee-jean-baptiste-schwilgue.jpg'
-              text='I obtained my baccalauréat with first class honors, specializing in computer science and mathematics, with the option of expert math and math in English.
-              I obtained it at the Lycée Jean Baptiste Schwilgue in Sélestat.'
+              text={t('career__schwilgue')}
               year='2019-2021'
-              alt='Jean Baptiste Schwilgue Selestat'
+              alt={t("career__schilgue__alt")}
               className='career__left' />
           </div>
           <div className='career__wrapper wrapper__career__right'>
             <CareerItem src='/images/career/tabacco-field.jpg'
-              text='I was a tobacco picker for a whole month as part of a summer job. 
-                I discovered the hardness of working in the field and the importance of teamwork.'
+              text={t('career__tabacco')}
               year='2019'
+              alt={t("career__tabacco__alt")}
               className='career__right' />
           </div>
           <div className='career__wrapper wrapper__career__left'>
             <CareerItem src='/images/career/pizza-stella.jpg'
-              text='I worked as a pizza maker for 1 month at Pizza Stella in Krafft as a summer job. 
-              I learned how to work as part of a team, how not to get in the way of my colleagues and how to behave with customers.'
+              text={t('career__pizza')}
               year='2020'
+              alt={t("career__pizza__alt")}
               className='career__left' />
           </div>
           <div className='career__wrapper wrapper__career__right'>
             <CareerItem src='/images/career/iut-robert-schuman.jpg'
-              text='A year and a half of my BUT in computer science was spent at the IUT Robert Schuman in Illkirch-Graffenstaden.
-                There I learned advanced programming basics and advanced mathematics.'
+              text={t('career__iut__2021')}
               year='2021-2022'
+              alt={t("career__iut__2021__alt")}
               className='career__right' />
           </div>
           <div className='career__wrapper wrapper__career__left'>
             <CareerItem src='/images/career/mtu-campus.jpg'
-              text='I spent half a year on Erasmus at MTU in Cork, Ireland,
-                where I improved my English, and continued my BUT in computer science.'
+              text={t('career__mtu')}
               year='2023'
+              alt={t("career__mtu__alt")}
               className='career__left' />
           </div>
           <div className='career__wrapper wrapper__career__right'>
             <CareerItem src='/images/career/hindserhof.jpg'
-              text='I worked as a cook for over two months at the Hindserhof restaurant in Hindisheim as part of a summer job.
-                I learned how to manage a team, work under pressure and improvise with the means at hand.'
-              year='2023-now'
+              text={t('career__hindserhof')}
+              year='2022-2023'
+              alt={t("career__hindserhof__alt")}
               className='career__right' />
           </div>
           <div className='career__wrapper wrapper__career__left'>
             <CareerItem src='/images/career/iut-robert-schuman-2022.jpg'
-              text='I will finish my BUT in computer science at the IUT Robert Schuman in Illkirch-Graffenstaden.
-              The last year is a work-study program, and Im doing it at a company near Strasbourg'
-              year='2023-now'
+              text={t('career__iut__2023')}
+              year={'2023-' + t('career__today')}
+              alt={t("career__iut__2023__alt")}
               className='career__left' />
           </div>
         </div>
-
       </div>
     </>
   )

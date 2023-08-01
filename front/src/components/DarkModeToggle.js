@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./DarkModeToggle.css"
 
-export const DarkModeToggle = () => {
+export const DarkModeToggle = ({t}) => {
   const [isDark, setIsDark] = useState(true); 
 
   const toggleDark = () => {
@@ -17,9 +17,9 @@ export const DarkModeToggle = () => {
     <div className="dark-mode-toggle__container">
       <div
         className={`dark-mode-toggle ${isDark ? "dark" : "light"}`}
+        alt={t("navbar__darkmode")}
         checked={isDark}
         onClick={toggleDark}
-        icons={{ checked: "🌙", unchecked: "🔆" }}
         aria-label="Dark mode toggle">
       </div>
     </div>

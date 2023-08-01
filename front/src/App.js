@@ -8,9 +8,9 @@ import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Career from './components/Career';
+import { withTranslation  } from 'react-i18next';
 
-
-function App() {
+function App({t}) {
     const handleClickScroll = (idName) => {
       if (!idName || typeof idName != 'string') {
         return;
@@ -33,16 +33,16 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar scrollFunc={handleClickScroll}/>
-        <HeroSection scrollFunc={handleClickScroll}/>
-        <Projects />
-        <Career />
-        <Skills />
-        <Contact />
-        <Footer />
+        <Navbar scrollFunc={handleClickScroll}  t={t}/>
+        <HeroSection scrollFunc={handleClickScroll}  t={t}/>
+        <Projects t={t} />
+        <Career  t={t}/>
+        <Skills  t={t}/>
+        <Contact  t={t}/>
+        <Footer  t={t}/>
       </Router>
     </>
   );
 }
 
-export default App;
+export default withTranslation()(App);

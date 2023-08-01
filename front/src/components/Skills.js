@@ -2,7 +2,7 @@ import React from 'react'
 import './Skills.css'
 import SkillItem from './SkillItem'
 
-function Skills() {
+function Skills({t}) {
     return (
         <>
             <div className='bar__skills'/> 
@@ -12,115 +12,115 @@ function Skills() {
                     <SkillItem 
                         src='/images/logos/java.png'
                         text='Java'
-                        level='Advanced +'
+                        level={t("skill__level__advanced")+ " +"}
                         alt='java logo'
                     />
                     <SkillItem 
                         src='/images/logos/c.png'
                         text='C'
-                        level='Advanced'
+                        level={t("skill__level__advanced")}
                         alt='C logo'
                     />
                     <SkillItem 
                         src='/images/logos/c++.png'
                         text='C++'
-                        level='Intermediate +'
+                        level={t("skill__level__intermediate")+" +"}
                         alt='C++ logo'
                     />
                     <SkillItem 
                         src='/images/logos/csharp.png'
                         text='C#'
-                        level='Intermediate +'
+                        level={t("skill__level__intermediate")+" +"}
                         alt='C sharp logo'
                     />
                     <SkillItem 
                         src='/images/logos/javascript.png'
                         text='Javascript'
-                        level='Intermediate'
+                        level={t("skill__level__intermediate")}
                         alt='javascript logo'
                     />
                     <SkillItem 
                         src='/images/logos/html5.png'
                         text='HTLM5'
-                        level='Advanced +'
+                        level={t("skill__level__advanced")+ " +"}
                         alt='HTML5 logo'
                     />
                     <SkillItem 
                         src='/images/logos/css.png'
                         text='CSS'
-                        level='Intermediate +'
+                        level={t("skill__level__intermediate")+" +"}
                         alt='CSS logo'
                     />
                     <SkillItem 
                         src='/images/logos/sql.png'
                         text='SQL'
-                        level='Intermediate +'
+                        level={t("skill__level__intermediate")+" +"}
                         alt='SQL logo'
                     />
                     <SkillItem 
                         src='/images/logos/python.png'
                         text='Python'
-                        level='Intermediate'
+                        level={t("skill__level__intermediate")}
                         alt='Python logo'
                     />
                     <SkillItem 
                         src='/images/logos/php.png'
                         text='PHP'
-                        level='Beginner +'
+                        level={t("skill__level__intermediate")}
                         alt='PHP logo'
                     />
                     <SkillItem 
                         src='/images/logos/git.png'
                         text='git'
-                        level='Advanced'
+                        level={t("skill__level__advanced")}
                         alt='git logo'
                     />
                     <SkillItem 
                         src='/images/logos/bash.png'
                         text='bash'
-                        level='Intermediate'
+                        level={t("skill__level__intermediate")}
                         alt='bash logo'
                     />
                     <SkillItem 
                         src='/images/logos/uml.png'
                         text='UML'
-                        level='Advanced'
+                        level={t("skill__level__advanced")}
                         alt='UML logo'
                     />
                     <SkillItem 
                         src='/images/logos/junit5.png'
                         text='Junit5'
-                        level='Beginner +'
+                        level={t("skill__level__beginner")+" +"}
                         alt='Junit5 logo'
                     />
                     <SkillItem 
                         src='/images/logos/nodejs.png'
                         text='node.js'
-                        level='Intermediate'
+                        level={t("skill__level__intermediate")}
                         alt='Python logo'
                     />
                     <SkillItem 
                         src='/images/logos/laravel.png'
                         text='Laravel'
-                        level='Beginner +'
+                        level={t("skill__level__beginner")+" +"}
                         alt='Laravel logo'
                     />
                     <SkillItem 
                         src='/images/logos/reactjs.png'
                         text='react.js'
-                        level='Intermediate'
+                        level={t("skill__level__intermediate")}
                         alt='React logo'
                     />
                     <SkillItem 
                         src='/images/logos/aspnet.png'
                         text='ASP.net'
-                        level='Intermediate'
+                        level={t("skill__level__intermediate")}
                         alt='ASP.net logo'
                     />
                     <SkillItem 
                         src='/images/logos/unity.png'
                         text='Unity'
-                        level='Intermediate +'
+                        level={t("skill__level__intermediate")+" +"}
                         alt='Unity logo'
                     />
                 </div>

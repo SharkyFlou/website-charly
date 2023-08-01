@@ -1,0 +1,31 @@
+.language__selector{
+    width: 8rem;
+    height: 2rem;
+    border-radius: 6px;
+    position: absolute;
+    top: calc(80px + 1rem);
+    right: 4rem;
+}
+
+.language__selector img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.language__selector__dropdown{
+    width: 6rem;
+    height: 2rem;
+    border-radius: 6px;
+}
+
+.country__option{
+    display: block;
+    width:6rem;
+    height: 2rem;
+}
+
+.dropdown__selector__language{
+    display: block;
+    width:1rem;
+    height: 1rem;
+}
