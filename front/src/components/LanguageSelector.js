@@ -7,17 +7,20 @@ import { withTranslation  } from 'react-i18next';
 
 const LanguageSelector = ({t}) => {
     const countries = [
-        { value: 'en', image: process.env.PUBLIC_URL + "/flags/en.png" },
-        { value: 'fr', image: process.env.PUBLIC_URL + "/flags/fr.png" }
+        { value: 'fr', image: process.env.PUBLIC_URL + "/flags/fr.png" },
+        { value: 'en', image: process.env.PUBLIC_URL + "/flags/en.png" }
     ];
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
-    }
+    }  
 
 
     const currentLanguage = i18n.language;
-    const currentLanguageObj = countries.find(country => country.value === currentLanguage);
+    let currentLanguageObj = countries.find(country => country.value === currentLanguage);
+    if(currentLanguageObj === undefined) {
+        currentLanguageObj = countries[0];
+    }
 
 
     return (

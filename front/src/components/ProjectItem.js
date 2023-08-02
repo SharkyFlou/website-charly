@@ -6,10 +6,12 @@ function ProjectItem({ path, src, text, label, alt, languages }) {
     return (
         <>
             <li className='projects__item'>
-                <Link className='projects__item__link' to={path} target="_blank">
-                    <figure className='projects__item__pic-wrap' data-category={label}>
-                        <img src={process.env.PUBLIC_URL + src} alt={alt} className='projects__item__img' />
-                    </figure>
+                <div className='projects__item__container'>
+                    <Link to={path} target="_blank">
+                        <figure className='projects__item__pic-wrap' data-category={label}>
+                            <img src={process.env.PUBLIC_URL + src} alt={alt} className='projects__item__img' />
+                        </figure>
+                    </Link>
                     <div className='projects__item__info'>
                         <h5 className='projects__item__text'>{text}</h5>
 
@@ -19,7 +21,7 @@ function ProjectItem({ path, src, text, label, alt, languages }) {
                             </Link>
                         ))}
                     </div>
-                </Link>
+                </div>
             </li>
         </>
     )

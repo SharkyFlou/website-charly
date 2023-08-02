@@ -32,7 +32,7 @@
     border-radius: 10px;
 }
 
-.projects__item__link {
+.projects__item__container {
     display: flex;
     flex-flow: column;
     width: 100%;

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect  } from "react";
 import "./DarkModeToggle.css"
 
-export const DarkModeToggle = ({t}) => {
-  const [isDark, setIsDark] = useState(true); 
+export const DarkModeToggle = ({ t }) => {
+  const [isDark, setIsDark] = useState(true);
 
   const toggleDark = () => {
     setIsDark(!isDark);
@@ -11,7 +11,17 @@ export const DarkModeToggle = ({t}) => {
     } else {
       document.body.classList.remove('dark');
     }
-};
+  };
+
+  /* If user prefers dark mode, set dark mode */
+
+  useEffect(()=>{
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      toggleDark();
+    }
+    // eslint-disable-next-line
+  },[])
+  
 
   return (
     <div className="dark-mode-toggle__container">

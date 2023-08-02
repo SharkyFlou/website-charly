@@ -7,10 +7,10 @@ function Footer({t}) {
         <div className='footer'>
             <div className='footer__section'>
                 <Link to="https://github.com/SharkyFlou/website-charly/blob/main/LICENSE" className='footer__link' target="_blank">
-                {t("footer__license__pt1")} <i class="fa-solid fa-scale-balanced"></i> {t("footer__license__pt2")}
+                {t("footer__license__pt1")} <i className="fa-solid fa-scale-balanced"></i> {t("footer__license__pt2")}
                 </Link>
                 <Link to="https://github.com/SharkyFlou/website-charly" className='footer__link' target="_blank">
-                {t("footer__github")} <i class="fa-brands fa-github"></i>
+                {t("footer__github")} <i className="fa-brands fa-github"></i>
                 </Link>
             </div>
             <p>

@@ -9,10 +9,15 @@ import LanguageSelector from './LanguageSelector';
 
 function Navbar({ scrollFunc, t }) {
     const [click, setClick] = useState(false);
+    const [clickUtil, setClickUtil] = useState(false);
     const [button, setButton] = useState(true);
 
     const handleClick = () => {
         setClick(!click);
+    };
+
+    const handleClickUtile = () => {
+        setClickUtil(!clickUtil);
     };
 
     const closeMobileMenu = (name) => () => {
@@ -76,31 +81,34 @@ function Navbar({ scrollFunc, t }) {
                         </li>
                         <li className="nav-item">
                             <Link to={process.env.PUBLIC_URL + "/#projects"} className="nav-links" onClick={closeMobileMenu('projects')}>
-                            {t("navbar__projects")}
+                                {t("navbar__projects")}
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link to={process.env.PUBLIC_URL + "/#career"} className="nav-links" onClick={closeMobileMenu('career')}>
-                            {t("navbar__career")}
+                                {t("navbar__career")}
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link to={process.env.PUBLIC_URL + "/#skills"} className="nav-links" onClick={closeMobileMenu('skills')}>
-                            {t("navbar__skills")}
+                                {t("navbar__skills")}
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link to={process.env.PUBLIC_URL + "/#contact"} className="nav-links-mobile" onClick={closeMobileMenu('contact')}>
-                            {t("navbar__contact")}
+                                {t("navbar__contact")}
                             </Link>
                         </li>
                     </ul>
                     {button && <Button onClick={closeMobileMenu('contact')} buttonStyle="btn--outline" link={process.env.PUBLIC_URL + "/#contact"} >{t("navbar__contact")}</Button>}
-                    
-                    
+
+
                 </div>
-                <DarkModeToggle t={t}/>
-                <LanguageSelector/>
+                <div className={clickUtil ? "utility__container show" : "utility__container hidden"}>
+                    <i class="fa-solid fa-arrow-left" onClick={handleClickUtile}/>
+                    <LanguageSelector />
+                    <DarkModeToggle t={t} />
+                </div>
             </nav>
         </>
     );

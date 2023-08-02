@@ -1,6 +1,6 @@
 .navbar {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-  height: 80px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,8 +13,8 @@
 }
 
 .logo__home__img {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
 }
 
 .logo__englobe{
@@ -28,9 +28,9 @@
 /* Nav hamburger */
 
 #nav-icon {
-  width: 55px;
-  height: 35px;
-  margin-top: 1.4rem;
+  width: 50px;
+  height: 30px;
+  margin-top: 1rem;
   margin-right: 1.4rem;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -46,7 +46,7 @@
 #nav-icon span {
   display: block;
   position: absolute;
-  height: 7px;
+  height: 6px;
   width: 51%;
   background: var(--color-on-primary);
   opacity: 1;
@@ -77,12 +77,12 @@
 
 #nav-icon span:nth-child(3),
 #nav-icon span:nth-child(4) {
-  top: 16px;
+  top: 14px;
 }
 
 #nav-icon span:nth-child(5),
 #nav-icon span:nth-child(6) {
-  top: 32px;
+  top: 28px;
 }
 
 #nav-icon.open span:nth-child(1),
@@ -123,12 +123,12 @@
 
 #nav-icon.open span:nth-child(5) {
   left: 5px;
-  top: 25px;
+  top: 22px;
 }
 
 #nav-icon.open span:nth-child(6) {
   left: calc(50% - 5px);
-  top: 25px;
+  top: 22px;
 }
 
 /* End of nav hamburger */
@@ -137,7 +137,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: 60px;
   max-width: 1120px;
 }
 
@@ -153,7 +153,7 @@
 }
 
 .nav-item {
-  height: 80px;
+  height: 60px;
 }
 
 .nav-links {
@@ -182,21 +182,54 @@
   display: none;
 }
 
+.utility__container{
+  position: absolute;
+  top:calc(60px + 1rem);
+  right: calc(-20rem + 2rem);
+  width: 20rem;
+  height: 4.50rem;
+  border-radius: 2.25rem;
+  border: 1px solid var();
+  background-color: var(--background-primary-color);
+  color: var(--color-on-primary);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:left;
+  align-items: center;
+  align-content: center;
+  transition: all 0.3s ease-out;
+}
+
+.utility__container i {
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.utility__container.hidden i:hover {
+  padding-left: 0.2rem;
+}
+
+.utility__container.show{
+  right: calc(-20rem + 14rem);
+  transition: all 0.2s ease-out;
+}
+.utility__container.show i{
+  transform: rotate(180deg);
+  transition: all 0.2s ease-out;
+}
+
 @media screen and (max-width: 960px) {
 
   .logo__englobe {
-    height: 60px;
-    width: 60px;
     margin-top: 0.8rem;
     margin-left: 1rem;
     position: absolute;
     display: block;
   }
 
-  .logo__home__img {
-    height: 60px;
-    width: 60px;
-  }
+
 
   .NavbarItems {
     position: relative;
@@ -209,7 +242,7 @@
     width: 100%;
     height: 100vh;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;

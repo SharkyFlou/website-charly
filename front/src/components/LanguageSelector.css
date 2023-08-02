@@ -1,10 +1,6 @@
 .language__selector{
-    width: 8rem;
-    height: 2rem;
     border-radius: 6px;
-    position: absolute;
-    top: calc(80px + 1rem);
-    right: 4rem;
+    margin-right: 1rem;
 }
 
 .language__selector img{
@@ -14,14 +10,12 @@
 
 .language__selector__dropdown{
     width: 6rem;
-    height: 2rem;
     border-radius: 6px;
 }
 
 .country__option{
     display: block;
     width:6rem;
-    height: 2rem;
 }
 
 .dropdown__selector__language{

@@ -28,7 +28,7 @@ function Projects({t}) {
     ];
 
     const languagesAsteroids = [
-        { name: 'C', link: '/https://www.iso.org/standard/74528.htmllanguages/javascript' },
+        { name: 'C', link: 'https://www.open-std.org/jtc1/sc22/wg14/' },
         { name: 'ncurses', link: 'https://invisible-island.net/ncurses/' },
     ];
     return (
