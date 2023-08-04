@@ -10,18 +10,6 @@ function HeroSection({scrollFunc, t}) {
         scrollFunc(idName);
     };
 
-    const translations = {
-        "home__title": "Charly FLU",
-        "home__intro__pt1": "Étudiant en 2ème année de DUT Réseaux et Télécommunications à l'IUT Robert Schuman de Strasbourg.",
-        "home__intro__pt2": "Je suis actuellement en recherche d'un stage de 10 semaines à partir du 11 avril 2022.",
-        "home__intro__pt3": "IUT Robert Schuman",
-        "home__intro__pt4": "de Strasbourg",
-        "home__intro__pt5": "Je suis à la recherche d'un stage dans le domaine des réseaux et de la cybersécurité.",
-        "home__intro__pt6": "Les dates de stage sont modifiables en fonction des disponibilités de l'entreprise.",
-        "home__projects__title": "Mes projets",
-        "home__skills__title": "Mes compétences",
-    };
-
 
     return (
         <div className='hero-container'>
@@ -42,9 +30,10 @@ function HeroSection({scrollFunc, t}) {
                 <div className='about__text'>
                     <h1>{t("home__title")}</h1>
                     <p>{t("home__intro__pt1")}</p>
-                    <p className="single__line__text">{t("home__intro__pt2")} <Link className="link__about" to="https://iutrs.unistra.fr" target="_blank">{t("home__intro__pt3")}</Link> {translations["home__intro__pt4"]} </p>
+                    <p className="single__line__text">{t("home__intro__pt2")} <Link className="link__about" to="https://iutrs.unistra.fr" target="_blank">{t("home__intro__pt3")}</Link> {t("home__intro__pt4")} </p>
+                    <p className="single__line__text">{t("home__intro__pt6")} <Link className="link__about" to="https://abas-bs.com/fr" target="_blank">{t("home__intro__pt7")}</Link> {t("home__intro__pt8")} </p>
                     <p>{t("home__intro__pt5")}</p>
-                    <p className="warning">{t("home__intro__pt6")}</p>
+                    <p className="warning">{t("home__intro__pt9")}</p>
                     
                     <div className="hero-btns">
                         <Button className='btns' buttonStyle='btn--outline'

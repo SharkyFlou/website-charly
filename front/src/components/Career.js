@@ -2,8 +2,8 @@ import React from 'react'
 import './Career.css'
 import CareerItem from './CarreerItem'
 
-function Career({t}) {
- 
+function Career({ t }) {
+
 
   return (
     <>
@@ -11,9 +11,16 @@ function Career({t}) {
 
       <div className='career'>
         <div className='middle__bar__arrow' />
+        <div className='middle__bar__arrow light' />
+
         <div className='left__side__arrow' />
+        <div className='left__side__arrow light' />
+
         <div className='right__side__arrow' />
+        <div className='right__side__arrow light' />
+
         <div className='start__round__arrow' />
+        <div className='start__round__arrow light' />
         <h1 id='career'>{t("career__title")}</h1>
         <div className='career__container'>
           <div className='career__wrapper wrapper__career__left'>
