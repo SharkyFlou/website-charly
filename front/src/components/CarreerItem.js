@@ -12,7 +12,7 @@ function CareerItem({ src, text, year, alt }) {
 
   return (
     <>
-      <div className={click ? "career__item clicked":"career__item"} onClick={handleClick}>
+      <div className={click ? "career__item clicked":"career__item"} onClick={handleClick} onMouseLeave={() => setClick(false)}>
         <div className='img__container'>
           <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill__img' />
         </div>

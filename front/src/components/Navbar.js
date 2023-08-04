@@ -105,7 +105,7 @@ function Navbar({ scrollFunc, t }) {
 
                 </div>
                 <div className={clickUtil ? "utility__container show" : "utility__container hidden"}>
-                    <i class="fa-solid fa-arrow-left" onClick={handleClickUtile}/>
+                    <i className="fa-solid fa-arrow-left" onClick={handleClickUtile}/>
                     <LanguageSelector />
                     <DarkModeToggle t={t} />
                 </div>

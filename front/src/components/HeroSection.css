@@ -47,7 +47,8 @@ body.dark .hero-container {
 }
 
 .about__container {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.815);
     margin-top: 8rem;
     padding: 2rem 1rem;
     width: 90%;
@@ -56,6 +57,12 @@ body.dark .hero-container {
     flex-direction: row;
     align-items: center;
     border-radius: 20px;
+}
+
+body.dark .about__container {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* slight blurry white shadow around it*/
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.1);
 }
 
 .about__img__container {
