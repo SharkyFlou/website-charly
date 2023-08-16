@@ -31,6 +31,44 @@ function Projects({t}) {
         { name: 'C', link: 'https://www.open-std.org/jtc1/sc22/wg14/' },
         { name: 'ncurses', link: 'https://invisible-island.net/ncurses/' },
     ];
+
+    const slidesChess = [
+        { src: '/images/projects/chess-1.jpg', alt: t("project__chess__img__alt") },
+        { src: '/images/projects/chess-1.jpg', alt: t("project__chess__img__alt") },
+        { src: '/images/projects/chess-1.jpg', alt: t("project__chess__img__alt") }
+    ]
+
+    const slidesEspagnol = [
+        { src: '/images/projects/espagnol-1.jpg', alt: t("project__espagnol__img__alt") },
+        { src: '/images/projects/espagnol-2.jpg', alt: t("project__espagnol__img__alt") },
+        { src: '/images/projects/espagnol-3.jpg', alt: t("project__espagnol__img__alt") },
+        { src: '/images/projects/espagnol-4.jpg', alt: t("project__espagnol__img__alt") }
+    ]
+
+    const slidesMars = [
+        { src: '/images/projects/marsgriculteur-1.jpg', alt: t("project__mars__img__alt") },
+        { src: '/images/projects/marsgriculteur-2.jpg', alt: t("project__mars__img__alt") },
+        { src: '/images/projects/marsgriculteur-3.jpg', alt: t("project__mars__img__alt") },
+        { src: '/images/projects/marsgriculteur-4.jpg', alt: t("project__mars__img__alt") },
+        { src: '/images/projects/marsgriculteur-5.jpg', alt: t("project__mars__img__alt") }
+    ];
+
+    const slidesSpotidata = [
+        { src: '/images/projects/spotidata-1.jpg', alt: t("project__spotidata__img__alt") },
+        { src: '/images/projects/spotidata-2.jpg', alt: t("project__spotidata__img__alt") },
+        { src: '/images/projects/spotidata-3.jpg', alt: t("project__spotidata__img__alt") },
+        { src: '/images/projects/spotidata-4.jpg', alt: t("project__spotidata__img__alt") },
+        { src: '/images/projects/spotidata-5.jpg', alt: t("project__spotidata__img__alt") }
+    ];
+
+    const slidesAsteroids = [
+        { src: '/images/projects/rec-asteroids-1.jpg', alt: t("project__asteroids__img__alt") },
+        { src: '/images/projects/rec-asteroids-2.jpg', alt: t("project__asteroids__img__alt") },
+        { src: '/images/projects/rec-asteroids-3.jpg', alt: t("project__asteroids__img__alt") }
+    ];
+
+
+
     return (
         <>
             <div className='bar__projects' />
@@ -40,7 +78,7 @@ function Projects({t}) {
                     <div className='projects__wrapper'>
                         <ul className='projects__items'>
                             <ProjectItem
-                                src='/images/projects/chess.jpg'
+                                slides={slidesChess}
                                 text={t("project__chess__desc")}
                                 label={t("project__chess__title")}
                                 alt={t("project__chess__img__alt")}
@@ -48,7 +86,7 @@ function Projects({t}) {
                                 languages={languagesChess}
                             />
                             <ProjectItem
-                                src='/images/projects/espagnol-super-facil.jpg'
+                                slides={slidesEspagnol}
                                 text={t("project__espagnol__desc")}
                                 label={t("project__espagnol__title")}
                                 alt={t("project__espagnol__img__alt")}
@@ -58,7 +96,7 @@ function Projects({t}) {
                         </ul>
                         <ul className='projects__items'>
                             <ProjectItem
-                                src='/images/projects/marsgriculteur-2.jpg'
+                                slides={slidesMars}
                                 text={t("project__mars__desc")}
                                 label={t("project__mars__title")}
                                 alt={t("project__mars__img__alt")}
@@ -66,7 +104,7 @@ function Projects({t}) {
                                 languages={languagesMars}
                             />
                             <ProjectItem
-                                src='/images/projects/spotidata-2.jpg'
+                                slides={slidesSpotidata}
                                 text={t("project__spotidata__desc")}
                                 label={t("project__spotidata__title")}
                                 alt={t("project__spotidata__img__alt")}
@@ -74,7 +112,7 @@ function Projects({t}) {
                                 languages={languagesSpotidata}
                             />
                             <ProjectItem
-                                src='/images/projects/rec-asteroids-2.jpg'
+                                slides={slidesAsteroids}
                                 text={t("project__asteroids__desc")}
                                 label={t("project__asteroids__title")}
                                 alt={t("project__asteroids__img__alt")}

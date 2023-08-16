@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Projects.css'
+import ImageSlider from './ImageSlider'
 
-function ProjectItem({ path, src, text, label, alt, languages }) {
+function ProjectItem({ path, slides, text, label, alt, languages }) {
+
+
     return (
         <>
             <li className='projects__item'>
                 <div className='projects__item__container'>
-                    <Link to={path} target="_blank">
-                        <figure className='projects__item__pic-wrap' data-category={label}>
-                            <img src={process.env.PUBLIC_URL + src} alt={alt} className='projects__item__img' />
-                        </figure>
-                    </Link>
+                    <figure className='projects__item__pic-wrap' data-category={label}>
+                        <ImageSlider slides={slides} path={path} />
+                    </figure>
                     <div className='projects__item__info'>
                         <h5 className='projects__item__text'>{text}</h5>
 

@@ -1,0 +1,113 @@
+.image__slider{
+    position: relative;
+    height: 27rem;
+    display: block;
+    background-size: cover;
+    background-position: center;
+}
+
+.slides__container{
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: center;
+}
+
+
+.slider__arrow.right__arrow{
+    right: 25px;
+}
+
+.slider__arrow{
+    position: absolute;
+    color: var(--color-on-primary);
+    top: calc(50% - ( 3rem / 2 ));
+    text-shadow: 0 0 14px rgb(0 0 0);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    z-index: 100;
+    font-size: 3rem;
+}
+
+.slider__arrow.left__arrow{
+    left: 25px;
+}
+
+.slider__arrow:hover{
+    font-size: 3.5rem;
+    text-shadow: 0 0 16px 10px rgb(0 0 0 0.5);
+    top: calc(50% - ( 3.5rem / 2 ));
+    transition: all 0.2s ease-in-out;
+}
+
+.slider__dots{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.slider__dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--color-on-primary);
+    box-shadow: 0px 0px 6px 1px rgb(0 0 0 / 58%);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.slider__dot:hover{
+    width: 18px;
+    height: 18px;
+    transition: all 0.2s ease-in-out;
+}
+
+.slider__dot.active__dot{
+    width: 22px;
+    height: 22px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+    .image__slider{
+        height: 25rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .image__slider{
+        height: 20rem;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .image__slider{
+        height: 16rem;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .image__slider{
+        height: 15rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .image__slider{
+        height: 10rem;
+    }
+}

@@ -10,7 +10,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    max-width: 1120px;
+    max-width: 800px;
     width: 90%;
     margin: 0 auto;
 }
@@ -23,12 +23,12 @@
 
 .projects__items {
     margin-bottom: 24px;
+
 }
 
 .projects__item {
     display: flex;
-    flex: 1;
-    margin: 0 1rem;
+    margin: 1rem 1rem;
     border-radius: 10px;
 }
 
@@ -47,7 +47,6 @@
 .projects__item__pic-wrap {
     position: relative;
     width: 100%;
-    padding-top: 67%;
     overflow: hidden;
 }
 
@@ -86,9 +85,6 @@
     transition: all 0.2s linear;
 }
 
-.projects__item__img:hover {
-    transform: scale(1.1);
-}
 
 .projects__item__info {
     padding: 20px 30px 30px;
@@ -122,11 +118,6 @@
     }
 }
 
-@media only screen and (min-width: 1024px) {
-    .projects__items {
-        display: flex;
-    }
-}
 
 @media only screen and (max-width: 1024px) {
     .projects__item {
