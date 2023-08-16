@@ -41,7 +41,7 @@ function Skills({t}) {
                     />
                     <SkillItem 
                         src='/images/logos/html5.png'
-                        text='HTLM5'
+                        text='HTML5'
                         level={t("skill__level__advanced")+ " +"}
                         alt='HTML5 logo'
                     />
