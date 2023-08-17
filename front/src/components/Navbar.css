@@ -167,6 +167,8 @@ body.dark .navbar {
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+  border-bottom: 0px solid var(--color-on-primary);
+  transition: all 0.2s ease-out;
 }
 
 .nav-links:hover {

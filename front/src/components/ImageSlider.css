@@ -113,15 +113,21 @@
 
 
 @media only screen and (min-width: 1400px) {
-    .image__slider{
+    ul:nth-child(1) .image__slider{
+        height: 20rem;
+    }
+
+    ul:nth-child(2) .image__slider{
         height: 15rem;
     }
 
     ul:nth-child(1) .image__slider__container{
-        width: calc((1120px / 3) - 40px * 1);
+        width: calc((1120px / 2) - 40px * 1);
+        height: 20rem;
     }
 
     ul:nth-child(2) .image__slider__container{
         width: calc((1120px / 3) - 40px * 2);
+        height: 15rem;
     }
 }
