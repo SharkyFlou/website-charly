@@ -19,12 +19,12 @@ function HeroSection({scrollFunc, t}) {
         */}
             <div className='about__container'>
                 <div className='about__img__container'>
-                    <div src={process.env.PUBLIC_URL + "/images/charly-flu.jpg"} className="me__img c-glitch me__englobe"> 
-                        <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
-                        <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
-                        <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
-                        <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
-                        <img src={process.env.PUBLIC_URL + '/images/charly-flu.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
+                    <div src={process.env.PUBLIC_URL + "/images/charly-flu-3.jpg"} className="me__img c-glitch me__englobe"> 
+                        <img src={process.env.PUBLIC_URL + '/images/charly-flu-3.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
+                        <img src={process.env.PUBLIC_URL + '/images/charly-flu-3.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
+                        <img src={process.env.PUBLIC_URL + '/images/charly-flu-3.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
+                        <img src={process.env.PUBLIC_URL + '/images/charly-flu-3.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
+                        <img src={process.env.PUBLIC_URL + '/images/charly-flu-3.jpg'} alt='Profile of Charly FLU' className='me__img c-glitch__img' />
                     </div>
                 </div>
                 <div className='about__text'>

@@ -34,8 +34,10 @@ function Projects({t}) {
 
     const slidesChess = [
         { src: '/images/projects/chess-1.jpg', alt: t("project__chess__img__alt") },
-        { src: '/images/projects/chess-1.jpg', alt: t("project__chess__img__alt") },
-        { src: '/images/projects/chess-1.jpg', alt: t("project__chess__img__alt") }
+        { src: '/images/projects/chess-2.jpg', alt: t("project__chess__img__alt") },
+        { src: '/images/projects/chess-3.jpg', alt: t("project__chess__img__alt") },
+        { src: '/images/projects/chess-4.jpg', alt: t("project__chess__img__alt") },
+        { src: '/images/projects/chess-5.jpg', alt: t("project__chess__img__alt") }
     ]
 
     const slidesEspagnol = [
