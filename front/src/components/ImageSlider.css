@@ -79,7 +79,6 @@
 
 
 
-
 @media only screen and (max-width: 900px) {
     .image__slider{
         height: 25rem;
@@ -109,5 +108,20 @@
 @media only screen and (max-width: 400px) {
     .image__slider{
         height: 10rem;
+    }
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .image__slider{
+        height: 15rem;
+    }
+
+    ul:nth-child(1) .image__slider__container{
+        width: calc((1120px / 3) - 40px * 1);
+    }
+
+    ul:nth-child(2) .image__slider__container{
+        width: calc((1120px / 3) - 40px * 2);
     }
 }

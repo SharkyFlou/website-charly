@@ -79,6 +79,8 @@ function Projects({t}) {
                         <ul className='projects__items'>
                             <ProjectItem
                                 slides={slidesChess}
+                                widthMaxSize={(1120/2)-40*1}
+                                timeWaitMore={0}
                                 text={t("project__chess__desc")}
                                 label={t("project__chess__title")}
                                 alt={t("project__chess__img__alt")}
@@ -87,6 +89,8 @@ function Projects({t}) {
                             />
                             <ProjectItem
                                 slides={slidesEspagnol}
+                                widthMaxSize={(1120/2)-40*1}
+                                timeWaitMore={200}
                                 text={t("project__espagnol__desc")}
                                 label={t("project__espagnol__title")}
                                 alt={t("project__espagnol__img__alt")}
@@ -97,6 +101,8 @@ function Projects({t}) {
                         <ul className='projects__items'>
                             <ProjectItem
                                 slides={slidesMars}
+                                widthMaxSize={(1120/3)-40*2}
+                                timeWaitMore={400}
                                 text={t("project__mars__desc")}
                                 label={t("project__mars__title")}
                                 alt={t("project__mars__img__alt")}
@@ -105,6 +111,8 @@ function Projects({t}) {
                             />
                             <ProjectItem
                                 slides={slidesSpotidata}
+                                widthMaxSize={(1120/3)-40*2}
+                                timeWaitMore={600}
                                 text={t("project__spotidata__desc")}
                                 label={t("project__spotidata__title")}
                                 alt={t("project__spotidata__img__alt")}
@@ -113,6 +121,8 @@ function Projects({t}) {
                             />
                             <ProjectItem
                                 slides={slidesAsteroids}
+                                widthMaxSize={(1120/3)-40*2}
+                                timeWaitMore={800}
                                 text={t("project__asteroids__desc")}
                                 label={t("project__asteroids__title")}
                                 alt={t("project__asteroids__img__alt")}

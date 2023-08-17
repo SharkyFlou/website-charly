@@ -10,7 +10,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    max-width: 800px;
+    max-width: 1120px;
     width: 90%;
     margin: 0 auto;
 }
@@ -23,7 +23,6 @@
 
 .projects__items {
     margin-bottom: 24px;
-
 }
 
 .projects__item {
@@ -117,6 +116,12 @@
         width: 84%;
     }
 }
+@media only screen and (min-width: 1400px) {
+    .projects__items {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
 
 
 @media only screen and (max-width: 1024px) {
@@ -127,6 +132,8 @@
         padding: 1rem;
     }
 }
+
+
 
 .bar__projects{
     height: 8vw;

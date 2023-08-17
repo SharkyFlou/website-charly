@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Projects.css'
 import ImageSlider from './ImageSlider'
 
-function ProjectItem({ path, slides, text, label, alt, languages }) {
+function ProjectItem({ path, slides, text, label, alt, languages, widthMaxSize, timeWaitMore }) {
 
 
     return (
@@ -11,7 +11,7 @@ function ProjectItem({ path, slides, text, label, alt, languages }) {
             <li className='projects__item'>
                 <div className='projects__item__container'>
                     <figure className='projects__item__pic-wrap' data-category={label}>
-                        <ImageSlider slides={slides} path={path} />
+                        <ImageSlider slides={slides} path={path} alt={alt} widthMaxSize={widthMaxSize} timeWaitMore={timeWaitMore}/>
                     </figure>
                     <div className='projects__item__info'>
                         <h5 className='projects__item__text'>{text}</h5>

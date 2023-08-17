@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 
 
 
-const ImageSider = ({ slides, path }) => {
+const ImageSider = ({ slides, path, alt, widthMaxSize, timeWaitMore }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [parentWidth, setWidth] = useState(0);
+
+    const [firstLoad, setFirstLoad] = useState(true);
 
     const timeRef = useRef(null);
     const elRef = useRef();
@@ -31,20 +33,33 @@ const ImageSider = ({ slides, path }) => {
 
     React.useEffect(() => {
         function handleResize() {
-            setWidth(elRef.current.parentElement.clientWidth);
+            if(window.innerWidth >= 1400){
+                setWidth(widthMaxSize);
+            }
+            else{
+                setWidth(elRef.current.parentElement.clientWidth);
+            }
+            
         }
     
         window.addEventListener('resize', handleResize)
       })
 
     useEffect(() => {
+        if (firstLoad) {
+            setFirstLoad(false);
+            setTimeout(() => {
+                goToNext();
+            }, timeWaitMore);
+        }
+
         if (timeRef.current) clearTimeout(timeRef.current);
         timeRef.current = setTimeout(() => {
             goToNext();
         }, 5000);
 
         return () => clearTimeout(timeRef.current);
-    }, [goToNext]);
+    }, [goToNext, firstLoad, timeWaitMore]);
 
     useEffect(() => {
         if (!elRef.current.parentElement.clientWidth) {
