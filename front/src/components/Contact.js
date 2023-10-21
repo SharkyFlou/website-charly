@@ -9,7 +9,7 @@ function Contact ({t}){
         <div  className='contact' >
             <h1 id='contact__title'>{t("Contact")}</h1>
             <div className='contact__container'>
-                <Link className='contact__item__link' to='https://www.linkedin.com/in/charly-flu-3004b0271/' target="_blank">
+                <Link className='contact__item__link' to='https://www.linkedin.com/in/charlyflu' target="_blank">
                     <i className="fa-brands fa-linkedin"></i>
                     in/charlyflu/
                 </Link>
