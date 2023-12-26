@@ -23,6 +23,11 @@
     background: linear-gradient(0deg, var(--background-tertiary-color), var(--background-tertiary-color)) no-repeat right bottom / 0 var(--bg-h);
     transition: background-size 0.35s, color 0.35s ease-in-out;
     --bg-h: 100%;
+    z-index: 3;
+}
+
+.footer p {
+    z-index: 3;
 }
 
 

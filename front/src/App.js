@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Career from './components/Career';
+import Rain from './components/Rain';
 import { withTranslation  } from 'react-i18next';
 
 function App({t}) {
@@ -33,6 +34,7 @@ function App({t}) {
   return (
     <>
       <Router>
+        <Rain/>
         <Navbar scrollFunc={handleClickScroll}  t={t}/>
         <HeroSection scrollFunc={handleClickScroll}  t={t}/>
         <Projects t={t} />

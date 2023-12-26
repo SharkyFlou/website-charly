@@ -51,6 +51,8 @@
     transform: rotate(-30deg) skew(25deg) scale(.8);
     transition: 0.5s;
     overflow: visible;
+    background-color: var(--background-secondary-color) ;
+
 }
 
 body.dark .skill .img__container{
@@ -65,6 +67,7 @@ body.dark .skill .img__container{
     justify-content: center;
     margin: 0 2rem;
     text-align: center;
+    z-index: 3;
 }
 
 .skill .img__container img { 

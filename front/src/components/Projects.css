@@ -26,9 +26,12 @@
 }
 
 .projects__item {
+    position: relative;
     display: flex;
     margin: 1rem 1rem;
     border-radius: 10px;
+    z-index: 3;
+    background-color: var(--background-secondary-color) ;
 }
 
 .projects__item__container {
@@ -92,6 +95,7 @@ body.dark .projects__item__container {
     display: flex;
     flex-flow: row wrap;
     align-content: center;
+    z-index: 3;
 }
 
 

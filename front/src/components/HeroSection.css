@@ -57,6 +57,7 @@ body.dark .hero-container {
     flex-direction: row;
     align-items: center;
     border-radius: 20px;
+    z-index: 3;
 }
 
 body.dark .about__container {
