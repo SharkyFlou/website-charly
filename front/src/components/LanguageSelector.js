@@ -18,8 +18,11 @@ const LanguageSelector = ({t}) => {
 
     const currentLanguage = i18n.language;
     let currentLanguageObj = countries.find(country => country.value === currentLanguage);
-    if(currentLanguageObj === undefined) {
-        currentLanguageObj = countries[0];
+    if(currentLanguageObj === undefined || currentLanguageObj === null) {
+        if(currentLanguage === "fr") 
+            currentLanguageObj = countries[0];
+        else
+            currentLanguageObj = countries[1];
     }
 
 

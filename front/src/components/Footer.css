@@ -1,6 +1,6 @@
 .footer{
-    background-color: var(--background-secondary-color);
-    color: var(--color-on-secondary);
+    background-color: #202020;
+    color: #ffffff;
     padding: 2rem 2rem;
     text-align: center;
     display: flex;
