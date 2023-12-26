@@ -82,12 +82,12 @@ body.dark .skill .img__container{
     box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.8); /* Add a thick, blurry shadow */
     transition: all 0.5s ease-in-out;
 }
-
+/*
 .skill .img__container:hover img:nth-child(1){
-    /*filter: brightness(0.5);
+    filter: brightness(0.5);
     transition: all 0.5s ease-in-out;
-    */
-}
+   
+} */
 
 .skill .img__container:hover img:nth-child(5){
     transform: translate(80px, -80px);
