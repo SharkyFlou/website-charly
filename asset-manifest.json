@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.b13d6944.css",
-    "main.js": "/static/js/main.8bcb9b7a.js",
+    "main.js": "/static/js/main.13a24da6.js",
     "static/media/charly-flu.jpg": "/static/media/charly-flu.59be36417b945613ca44.jpg",
     "static/media/toggle-dark-mode.jpg": "/static/media/toggle-dark-mode.d0860821f34d3f7c10ca.jpg",
     "static/media/logo.png": "/static/media/logo.d2de249a59a9d9bce99e.png",
     "index.html": "/index.html",
     "main.b13d6944.css.map": "/static/css/main.b13d6944.css.map",
-    "main.8bcb9b7a.js.map": "/static/js/main.8bcb9b7a.js.map"
+    "main.13a24da6.js.map": "/static/js/main.13a24da6.js.map"
   },
   "entrypoints": [
     "static/css/main.b13d6944.css",
-    "static/js/main.8bcb9b7a.js"
+    "static/js/main.13a24da6.js"
   ]
 }
