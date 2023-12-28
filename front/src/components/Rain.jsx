@@ -87,10 +87,6 @@ function Rain() {
         window.addEventListener('load', function () {
             letItRain();
         });
-        //same but for mobile
-        window.addEventListener('touchstart', function () {
-            letItRain();
-        });
     }
     // if it's september, october or november, let it leaf ?
     else if (month === 8 || month === 9 || month === 10) {
@@ -99,11 +95,6 @@ function Rain() {
         window.addEventListener('load', function () {
             letItRain();
         });
-        //same but for mobile
-        window.addEventListener('touchstart', function () {
-            letItRain();
-        });
-
     }
 
 
