@@ -10,15 +10,10 @@
     align-items: center;
 }
 .skills__container{
-    width: 100%;
-    padding: 4rem;
-    padding-bottom: 10rem;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    flex-wrap: wrap;
     max-width: 1120px;
     color: var(--color-on-secondary);
+    padding: 2rem;
+
 }
 
 .bar__skills{
@@ -107,9 +102,6 @@ body.dark .skill .img__container{
 }
 
 @media screen and (max-width: 960px) {
-    .skills__container{
-        padding: 2rem;
-    }
     .skill{
         margin: 0;
     }

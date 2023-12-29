@@ -1,0 +1,98 @@
+.tabs {
+  z-index: 3;
+  position: relative;
+  border: var(--color-on-secondary) solid 1px;
+  border-radius: 10px;
+  max-width: 100%;
+  margin-bottom: 4rem;
+  /*blurry background */
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+.tabs .tab-list {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: var(--color-on-secondary) solid 1px;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+
+  border: rgba(0,0,0,0) 1px solid;
+  transition: all 0.5s ease;
+  /* take all remaining space*/
+  flex: 1;
+  text-align: center;
+  flex-grow: 1;
+  flex-basis: 0;
+
+}
+
+.tab-list-active {
+  background-color: var(--background-primary-color);
+  color: var(--color-on-primary);
+  transition: all 0.5s ease;
+}
+
+.tab-list-item:hover {
+  background-color: var(--background-primary-color);
+  color: var(--color-on-primary);
+  transition: all 0.5s ease;
+}
+
+.dark .tab-list-active {
+  border: var(--color-on-primary) 1px solid;
+
+  transition: all 0.5s ease;
+}
+
+.dark .tab-list-item:hover {
+  border: var(--color-on-primary) 1px solid;
+  transition: all 0.5s ease;
+}
+
+.tab-list {
+  padding: 0;
+}
+
+.tab-content{
+  min-width: 1120px;
+  max-width: 1120px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .tabs{
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .tab-content{
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tab-list-item {
+    /* limit number of max charact to 15*/
+    max-width: 15ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
