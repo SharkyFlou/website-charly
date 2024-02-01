@@ -10,6 +10,7 @@ const SlideInOnScroll = ({ children }) => {
     const props = useSpring({
         opacity: inView ? 1 : 0,
         transform: inView ? 'translateY(0)' : 'translateY(50px)',
+        position: 'relative',
     });
 
     return <animated.div ref={ref} style={props} className={"slide__in__on__scroll"}>{children}</animated.div>;
