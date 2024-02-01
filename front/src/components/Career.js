@@ -72,6 +72,13 @@ function Career({ t }) {
               alt={t("career__iut__2023__alt")}
               className='career__left' />
           </div>
+          <div className='career__wrapper wrapper__career__right'>
+            <CareerItem src='/images/career/abas-forterro.jpg'
+              text={t('career__abas')}
+              year={'2023-' + t('career__today')}
+              alt={t("career__abas__2023__alt")}
+              className='career__right' />
+          </div>
         </div>
       </div>
     </>

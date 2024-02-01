@@ -21,7 +21,7 @@
 
 
 .career{
-    --len-arrow: 94rem;
+    --len-arrow: 104rem;
     --space-between-career: -2rem;
 }
 /* Arrow */
@@ -90,7 +90,7 @@ body.dark .middle__bar__arrow.light {
 
 @media screen and (max-width: 960px) {
     .career{
-        --len-arrow: 118rem;
+        --len-arrow: 140rem;
     }
 
     .middle__bar__arrow {
