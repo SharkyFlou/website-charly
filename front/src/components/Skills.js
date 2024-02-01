@@ -2,13 +2,17 @@ import React from 'react'
 import './Skills.css'
 import SkillItem from './SkillItem'
 import Tabs from './Tabs'
+import SlideInOnScroll from './SlideInOnScroll'
 
 function Skills({ t }) {
     return (
         <>
             <div className='bar__skills' />
             <div className='skills' >
-                <h1 id='skills'>{t("skills__title")}</h1>
+                <SlideInOnScroll>
+                    <h1 id='skills'>{t("skills__title")}</h1>
+                </SlideInOnScroll>
+                <SlideInOnScroll>
                 <div className='skills__container'>
                     <Tabs>
                         <div label={t("skill__tab__core__lang")} id="TAB_1">
@@ -204,6 +208,7 @@ function Skills({ t }) {
                         </div>
                     </Tabs>
                 </div>
+                </SlideInOnScroll>
             </div>
         </>
     )

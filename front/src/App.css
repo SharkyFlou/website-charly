@@ -64,3 +64,7 @@ p, h1{
 div{
   transition: background-color 0.35s ease-in-out;
 }
+
+.slide__in__on__scroll{
+  z-index: 3;
+}

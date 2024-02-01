@@ -1,6 +1,7 @@
 import React from 'react'
 import './Career.css'
 import CareerItem from './CarreerItem'
+import SlideInOnScroll from './SlideInOnScroll'
 
 function Career({ t }) {
 
@@ -21,7 +22,9 @@ function Career({ t }) {
 
         <div className='start__round__arrow' />
         <div className='start__round__arrow light' />
-        <h1 id='career'>{t("career__title")}</h1>
+        <SlideInOnScroll>
+          <h1 id='career'>{t("career__title")}</h1>
+        </SlideInOnScroll>
         <div className='career__container'>
           <div className='career__wrapper wrapper__career__left'>
             <CareerItem src='/images/career/lycee-jean-baptiste-schwilgue.jpg'
@@ -66,11 +69,11 @@ function Career({ t }) {
               className='career__right' />
           </div>
           <div className='career__wrapper wrapper__career__left'>
-            <CareerItem src='/images/career/iut-robert-schuman-2022.jpg'
-              text={t('career__iut__2023')}
-              year={'2023-' + t('career__today')}
-              alt={t("career__iut__2023__alt")}
-              className='career__left' />
+              <CareerItem src='/images/career/iut-robert-schuman-2022.jpg'
+                text={t('career__iut__2023')}
+                year={'2023-' + t('career__today')}
+                alt={t("career__iut__2023__alt")}
+                className='career__left' />
           </div>
           <div className='career__wrapper wrapper__career__right'>
             <CareerItem src='/images/career/abas-forterro.jpg'

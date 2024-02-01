@@ -2,12 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Projects.css'
 import ImageSlider from './ImageSlider'
+import SlideInOnScroll from './SlideInOnScroll'
 
 function ProjectItem({ path, slides, text, label, alt, languages, widthMaxSize, timeWaitMore }) {
 
 
     return (
-        <>
+        <SlideInOnScroll>
             <li className='projects__item'>
                 <div className='projects__item__container'>
                     <figure className='projects__item__pic-wrap' data-category={label}>
@@ -24,7 +25,7 @@ function ProjectItem({ path, slides, text, label, alt, languages, widthMaxSize, 
                     </div>
                 </div>
             </li>
-        </>
+        </SlideInOnScroll>
     )
 }
 

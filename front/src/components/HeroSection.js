@@ -4,6 +4,7 @@ import './HeroSection.css'
 import './Glitch.css'
 import '../App.css'
 import { Link } from 'react-router-dom';
+import SlideInOnScroll from './SlideInOnScroll'
 
 function HeroSection({scrollFunc, t}) {
     const forwardToScroll = (idName) => () => {
@@ -12,6 +13,7 @@ function HeroSection({scrollFunc, t}) {
 
 
     return (
+        <SlideInOnScroll>
         <div className='hero-container'>
             {/*<video autoPlay loop muted > 
             <source src="/videos/video-1.mp4" type="video/mp4" /> 
@@ -56,6 +58,7 @@ function HeroSection({scrollFunc, t}) {
                 </div>
             </div>
         </div>
+        </SlideInOnScroll>
     )
 }
 
