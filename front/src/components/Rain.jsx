@@ -80,16 +80,16 @@ function Rain() {
 
 
 
-    // if it's december or january, let it snow
-    // if (month === 11 || month === 0) {
-    //     needSnow = true;
-    //     //wait the page to be loaded
-    //     window.addEventListener('load', function () {
-    //         letItRain();
-    //     });
-    // }
-    // if it's september, october or november, let it leaf ?
-    if (month === 0 || month === 9 || month === 10) {
+    //if it's december or january, let it snow
+    if (month === 11 || month === 0) {
+        needSnow = true;
+        //wait the page to be loaded
+        window.addEventListener('load', function () {
+            letItRain();
+        });
+    }
+    //if it's september, october or november, let it leaf ?
+    if (month === 8 || month === 9 || month === 10) {
         needLeaf = true;
         //wait the page to be loaded
         window.addEventListener('load', function () {

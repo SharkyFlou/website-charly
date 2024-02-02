@@ -76,8 +76,9 @@ function Projects({ t }) {
         <>
             <div className='bar__projects' />
             <div className='projects'>
+                <div id='projects__id' />
                 <SlideInOnScroll>
-                    <h1 id='projects'>{t("projects__title")}</h1>
+                    <h1>{t("projects__title")}</h1>
                 </SlideInOnScroll>
                 <div className='projects__container'>
                     <div className='projects__wrapper'>

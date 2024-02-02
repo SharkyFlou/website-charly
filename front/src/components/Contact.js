@@ -8,8 +8,9 @@ function Contact({ t }) {
         <>
             <div className='bar__contact' />
             <div className='contact' >
+                <div  id='contact__id'/>
                 <SlideInOnScroll>
-                    <h1 id='contact__title'>{t("Contact")}</h1>
+                    <h1>{t("Contact")}</h1>
                 </SlideInOnScroll>
                 <SlideInOnScroll>
                     <div className='contact__container'>

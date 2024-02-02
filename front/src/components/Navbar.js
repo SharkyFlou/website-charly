@@ -5,9 +5,11 @@ import './Glitch.css';
 import './Navbar.css';
 import { DarkModeToggle } from './DarkModeToggle';
 import LanguageSelector from './LanguageSelector';
+import { scrollTo } from './Scroll';
 
 
-function Navbar({ scrollFunc, t }) {
+
+function Navbar({ t }) {
     const [menuMobile, setMenuMobile] = useState(false);
     const [clickUtil, setClickUtil] = useState(false);
     const [button, setButton] = useState(true);
@@ -20,9 +22,9 @@ function Navbar({ scrollFunc, t }) {
         setClickUtil(!clickUtil);
     };
 
-    const closeMobileMenu = (name) => () => {
+    const closeMobileMenu = (objectId) => () => {
         setMenuMobile(false);
-        scrollFunc(name);
+        scrollTo(objectId);
     };
 
     const showButton = () => {
@@ -78,27 +80,27 @@ function Navbar({ scrollFunc, t }) {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={process.env.PUBLIC_URL + "/#projects"} className="nav-links" onClick={closeMobileMenu('projects')}>
+                            <Link to={process.env.PUBLIC_URL + "/#projects"} className="nav-links" onClick={closeMobileMenu('projects__id')}>
                                 {t("navbar__projects")}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={process.env.PUBLIC_URL + "/#career"} className="nav-links" onClick={closeMobileMenu('career')}>
+                            <Link to={process.env.PUBLIC_URL + "/#career"} className="nav-links" onClick={closeMobileMenu('career__id')}>
                                 {t("navbar__career")}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={process.env.PUBLIC_URL + "/#skills"} className="nav-links" onClick={closeMobileMenu('skills')}>
+                            <Link to={process.env.PUBLIC_URL + "/#skills"} className="nav-links" onClick={closeMobileMenu('skills__id')}>
                                 {t("navbar__skills")}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={process.env.PUBLIC_URL + "/#contact"} className="nav-links-mobile" onClick={closeMobileMenu('contact__title')}>
+                            <Link to={process.env.PUBLIC_URL + "/#contact"} className="nav-links-mobile" onClick={closeMobileMenu('contact__id')}>
                                 {t("navbar__contact")}
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button onClick={closeMobileMenu('contact__title')} buttonStyle="btn--outline" link={process.env.PUBLIC_URL + "/#contact"} >{t("navbar__contact")}</Button>}
+                    {button && <Button onClick={closeMobileMenu('contact__id')} buttonStyle="btn--outline" link={process.env.PUBLIC_URL + "/#contact"} >{t("navbar__contact")}</Button>}
 
 
                 </div>

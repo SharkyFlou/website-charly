@@ -9,8 +9,9 @@ function Skills({ t }) {
         <>
             <div className='bar__skills' />
             <div className='skills' >
+                <div  id='skills__id'/>
                 <SlideInOnScroll>
-                    <h1 id='skills'>{t("skills__title")}</h1>
+                    <h1>{t("skills__title")}</h1>
                 </SlideInOnScroll>
                 <SlideInOnScroll>
                 <div className='skills__container'>
