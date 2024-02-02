@@ -6,6 +6,7 @@ function Rain() {
     const [isRaining, setisRaining] = useState(false);
     let needSnow = false;
     let needLeaf = false;
+    let needSakura = false;
 
     const letItRain = () => {
         const container = document.getElementById('rain-container');
@@ -47,6 +48,7 @@ function Rain() {
 
             container.appendChild(snowflake);
 
+            
             if (i % 3 === 0) {
                 snowflake.classList.add('blurry');
             }
@@ -70,6 +72,17 @@ function Rain() {
                 snowflake.style.width = 50 + 'px';
                 snowflake.style.height = 50 + 'px';
             }
+            else if(needSakura){
+                //set image of leaf
+                for (let y = 0; y < 7; y++) {
+                    if (i % 7 === y) {
+                        snowflake.style.backgroundImage = "url(" + process.env.PUBLIC_URL + "/images/rains/sakura" + (y + 1) + ".png)";
+                    }
+                }
+                //bigger size
+                snowflake.style.width = 50 + 'px';
+                snowflake.style.height = 50 + 'px';
+            }
 
             snowflake.classList.add(classNameAnim);
 
@@ -81,7 +94,7 @@ function Rain() {
 
 
     //if it's december or january, let it snow
-    if (month === 11 || month === 0) {
+    if (month === 11 || month === 0 || month === 1) {
         needSnow = true;
         //wait the page to be loaded
         window.addEventListener('load', function () {
@@ -96,6 +109,15 @@ function Rain() {
             letItRain();
         });
     }
+    //if it's march, april or may, let it sakura ?
+    if (month === 2 || month === 3 || month === 4) {
+        needSakura = true;
+        //wait the page to be loaded
+        window.addEventListener('load', function () {
+            letItRain();
+        });
+    }
+    
 
 
 
@@ -110,6 +132,10 @@ function Rain() {
             }
             {needLeaf && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={letItRain}>
                 <img src={process.env.PUBLIC_URL + "/images/rains/leaf1.png"} alt="" />
+            </button>
+            }
+            {needSakura && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={letItRain}>
+                <img src={process.env.PUBLIC_URL + "/images/rains/sakura_big.png"} alt="" />
             </button>
             }
         </>

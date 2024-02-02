@@ -68,7 +68,7 @@
 	animation-name: fall3;
 }
 
-.raindrop.blurry {
+.snowflake, .blurry {
     filter: blur(1px); /* Add a slight blur effect */
 }
 
