@@ -71,6 +71,72 @@ function Projects({ t }) {
     ];
 
 
+    const projects = [
+        {
+            title: t("project__chess__title"),
+            description: t("project__chess__desc"),
+            img: '/images/projects/chess-1.jpg',
+            alt: t("project__chess__img__alt"),
+            slides : slidesChess,
+            timeWaitMore: 0,
+            date : 2022,
+            languages : languagesChess,
+            path : 'https://github.com/SharkyFlou/chess-game',
+            rating : 4,
+        },
+        {
+            title: t("project__espagnol__title"),
+            description: t("project__espagnol__desc"),
+            img: '/images/projects/espagnol-1.jpg',
+            alt: t("project__espagnol__img__alt"),
+            slides : slidesEspagnol,
+            timeWaitMore: 200,
+            date : 2021,
+            languages : languagesEspagnol,
+            path : 'https://github.com/SharkyFlou/Espagnol-Super-Facil',
+            rating : 5,
+        },
+        {
+            title: t("project__mars__title"),
+            description: t("project__mars__desc"),
+            img: '/images/projects/marsgriculteur-1.jpg',
+            alt: t("project__mars__img__alt"),
+            slides : slidesMars,
+            timeWaitMore: 400,
+            date : 2021,
+            languages : languagesMars,
+            path : 'https://github.com/SharkyFlou/mars-griculteur',
+            rating : 4,
+        },
+        {
+            title: t("project__spotidata__title"),
+            description: t("project__spotidata__desc"),
+            img: '/images/projects/spotidata-1.jpg',
+            alt: t("project__spotidata__img__alt"),
+            slides : slidesSpotidata,
+            timeWaitMore: 600,
+            date : 2021,
+            languages : languagesSpotidata,
+            path : 'https://github.com/HugoLAMOUREUX/Spotidata'
+        },
+        {
+            title: t("project__asteroids__title"),
+            description: t("project__asteroids__desc"),
+            img: '/images/projects/rec-asteroids-1.jpg',
+            alt: t("project__asteroids__img__alt"),
+            slides : slidesAsteroids,
+            timeWaitMore: 800,
+            date : 2021,
+            languages : languagesAsteroids,
+            path : 'https://github.com/SharkyFlou/asteroids-algo',
+            rating : 3,
+        },
+        {
+            path:'https://github.com/SharkyFlou/asteroids-algo',
+        }
+    ]
+
+
 
     return (
         <>

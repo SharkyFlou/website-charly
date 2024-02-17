@@ -53,7 +53,7 @@ function HeroSection({ t }) {
                                 onClick={forwardToScroll('skills__id')}
                             >
                                 {t("home__skills__title")}
-                                <i className="fa-solid fa-address-book"></i>
+                                {/*<i className="fa-solid fa-address-book"></i>*/}
                             </Button>
 
                         </div>

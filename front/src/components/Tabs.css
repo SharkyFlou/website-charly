@@ -87,12 +87,11 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+/* @media screen and (max-width: 550px) {
   .tab-list-item {
-    /* limit number of max charact to 15*/
     max-width: 15ch;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-}
+} */

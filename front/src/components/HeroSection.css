@@ -65,6 +65,7 @@ body.dark .about__container {
     background-color: rgba(0, 0, 0, 0.8);
     /* slight blurry white shadow around it*/
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.1);
+    width: 100%;
 }
 
 .about__img__container {
@@ -130,7 +131,7 @@ p {
 }
 @media screen and (min-width: 1400px){
     .about__container{
-        padding: 3rem 1rem;
+        padding: 4rem 1rem;
     }
 
     .me__img {
@@ -150,7 +151,7 @@ p {
     }
 
     .hero-container {
-        padding: 0 2rem 4rem 2rem;
+        padding: 0 4rem 4rem 4rem;
     }
 
     .btn {
@@ -189,6 +190,12 @@ p {
 
     .about__img__container {
         height: 25%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .hero-container {
+        padding: 0 2rem 4rem 2rem;
     }
 }
 
