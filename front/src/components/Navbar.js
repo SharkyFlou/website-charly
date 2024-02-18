@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from './Button';
 import './Glitch.css';
 import './Navbar.css';
 import { DarkModeToggle } from './DarkModeToggle';
@@ -100,12 +99,16 @@ function Navbar({ t }) {
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button onClick={closeMobileMenu('contact__id')} buttonStyle="btn--outline" link={process.env.PUBLIC_URL + "/#contact"} >{t("navbar__contact")}</Button>}
+                    {button &&
+                        <Link to={process.env.PUBLIC_URL + "/#contact"} onClick={closeMobileMenu('contact__id')} className="contact-button" >
+                            {t("navbar__contact")}
+                            <span className="contact-animation"></span> {/* Animation element */}
+                        </Link>}
 
 
                 </div>
                 <div className={clickUtil ? "utility__container show" : "utility__container hidden"}>
-                    <i className="fa-solid fa-arrow-left" onClick={handleClickUtils}/>
+                    <i className="fa-solid fa-arrow-left" onClick={handleClickUtils} />
                     <LanguageSelector />
                     <DarkModeToggle t={t} />
                 </div>

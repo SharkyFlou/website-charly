@@ -22,7 +22,7 @@ body.dark .navbar {
   height: 45px;
 }
 
-.logo__englobe{
+.logo__englobe {
   background: url('/public/images/logo.png') center center/cover no-repeat;
 }
 
@@ -149,16 +149,11 @@ body.dark .navbar {
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(5, auto);
-  grid-gap: 10px;
   list-style: none;
   text-align: center;
   width: 60vw;
   justify-content: end;
   margin-right: 2rem;
-}
-
-.nav-item {
-  height: 60px;
 }
 
 .nav-links {
@@ -172,10 +167,7 @@ body.dark .navbar {
   transition: all 0.2s ease-out;
 }
 
-.nav-links:hover {
-  border-bottom: 4px solid var(--color-on-primary);
-  transition: all 0.2s ease-out;
-}
+
 
 .fa-bars {
   color: var(--color-on-primary);
@@ -189,9 +181,9 @@ body.dark .navbar {
   display: none;
 }
 
-.utility__container{
+.utility__container {
   position: absolute;
-  top:calc(60px + 1rem);
+  top: calc(60px + 1rem);
   right: calc(-20rem + 2rem);
   width: 20rem;
   height: 4.50rem;
@@ -202,7 +194,7 @@ body.dark .navbar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content:left;
+  justify-content: left;
   align-items: center;
   align-content: center;
   transition: all 0.3s ease-out;
@@ -218,20 +210,62 @@ body.dark .navbar {
   padding-left: 0.2rem;
 }
 
-.utility__container.show{
+.utility__container.show {
   right: calc(-20rem + 14rem);
   transition: all 0.2s ease-out;
 }
-.utility__container.show i{
+
+.utility__container.show i {
   transform: rotate(180deg);
   transition: all 0.2s ease-out;
 }
 
-body.dark .utility__container{
+body.dark .utility__container {
   border: 1px solid #fff;
 }
 
+.contact-button {
+  text-decoration: none;
+  color: var(--color-on-tertiary);
+  padding: 8px 20px;
+  border-radius: 15px;
+  background: var(--background-tertiary-color);
+  transition: .3s;
+
+}
+
+.contact-button:hover {
+  box-shadow: 5px 5px var(--color-on-secondary);
+  transition: .3s;
+}
+
+
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (min-width: 961px) {
+  .nav-item {
+    height: 60px;
+  }
+
+  .nav-links:hover {
+    border-bottom: 4px solid var(--color-on-primary);
+    transition: all 0.2s ease-out;
+  }
+}
+
 @media screen and (max-width: 960px) {
+  .navbar .btn-mobile {
+    display: none;
+  } 
 
   .logo__englobe {
     margin-top: 0.8rem;
@@ -300,6 +334,8 @@ body.dark .utility__container{
     font-size: 2rem;
   }
 
+  
+ 
   .nav-links-mobile {
     display: block;
     text-align: center;

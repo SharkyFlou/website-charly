@@ -10,8 +10,9 @@
     color: var(--color-on-tertiary);
     border: 1px solid var(--background-tertiary-color);
     background: var(--background-tertiary-color);
-    background-image: linear-gradient(var(--background-primary-color),var(--background-primary-color));
-    background-size: 0 100%;
+    background-size: 0% 100%;
+    background-position: -50% -50%;
+
     background-repeat: no-repeat;
     transition: all 0.35s;
 }
@@ -24,11 +25,11 @@ body.dark .btn--primary{
     color: var(--color-on-primary);
     padding : 8px 20px;
     border: 1px solid var(--background-tertiary-color);
-    background: transparent;
-    background-image: linear-gradient(var(--background-tertiary-color),var(--background-tertiary-color));
-    background-size: 0 100%;
+    background: var(--background-tertiary-color);
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     transition: all 0.35s;
+    text-decoration: none;
 }
 
 body.dark .btn--outline{
@@ -47,7 +48,7 @@ body.dark .btn--outline{
 
 .btn--outline:hover,
 .btn--outline:focus-visible{
-    background-size: 100% 100%;
+    background-size: 0% 100%;
     color:var(--color-on-tertiary);
 }
 
@@ -57,8 +58,8 @@ body.dark .btn--outline{
     color : var(--color-on-primary);
 }
 
-body.dark .btn--primary:hover,
+/* body.dark .btn--primary:hover,
 body.dark .btn--primary:focus-visible{
     background-size: 100% 100%;
     color : var(--color-on-primary);
-}
+} */

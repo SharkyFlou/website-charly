@@ -26,7 +26,7 @@ html, body {
   --cyan-color: #00b1ff;
   --dark-cyan-color: #006fba;
 }
-
+ 
 body.dark {
   --background-primary-color: #282323;
   --background-secondary-color: #202020;

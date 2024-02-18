@@ -6,11 +6,6 @@ video {
     z-index: -1;
 }
 
-.btn--outline:hover {
-    text-shadow: none;
-    transition: all 0.3s ease-out;
-}
-
 .link__about {
     color: lightblue;
     text-decoration: none;
@@ -59,6 +54,7 @@ body.dark .hero-container {
     align-items: center;
     border-radius: 20px;
     z-index: 3;
+    width: 100%;
 }
 
 body.dark .about__container {
