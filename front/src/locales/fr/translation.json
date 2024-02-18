@@ -49,7 +49,7 @@
     "career__hindserhof__alt": "Restaurant Hindserhof à Hindisheim",
     "career__iut__2023": "Je vais finir mon BUT en informatique à l'IUT Robert Schuman à Illkirch-Graffenstaden. La dernière année est en alternance que j'effectue au sein de l'entreprise Abas France.",
     "career__iut__2023__alt": "Fête de l'IUT 2022 Robert Schuman à Illkirch-Graffenstaden",
-    "career__abas": "Je travaille actuellement en alternance dans la société ABAS France en qualité qu'analyste programmeur spécialisé en Java. J'y apprends à travailler en équipe, à gérer mon temps et à comprendre les besoins des clients.",
+    "career__abas": "Je travaille actuellement en alternance dans la société ABAS France en qualité qu'analyste programmeur spécialisé en Java. J'y apprends à travailler en équipe, à gérer mon temps, à comprendre et satisfaire les besoins des clients.",
     "career__abas__alt": "Logo d'ABAS-Forterro et aperçu de l'ERP ABAS",
     "career__today":"aujourd'hui",
     "skills__title": "Compétences",
@@ -67,5 +67,5 @@
     "footer__license__pt2": "Licence MIT",
     "footer__github": "Voir le projet sur GitHub",
     "footer__built": "Construit par Charly FLU en utilisant uniquement React.js, HTML et CSS.",
-    "footer__thanks": "Merci d'avoir lu jusqu'au bout, j'espère que vous avez apprécié ce site web."
+    "footer__thanks": "Merci d'avoir parcouru tout mon site, j'espère que vous l'avez apprécié."
 }
