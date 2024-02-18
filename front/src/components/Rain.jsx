@@ -100,7 +100,7 @@ function Rain() {
 
     useEffect(() => {
         //if it's december or january, let it snow
-        if (month === 11 || month === 0 || month === 1) {
+        if (month === 11 || month === 0 || month === 0) {
             letItRain(true, false, false);
         }
         //if it's september, october or november, let it leaf ?
@@ -108,7 +108,7 @@ function Rain() {
             letItRain(false, true, false);
         }
         //if it's march, april or may, let it sakura ?
-        if (month === 2 || month === 3 || month === 4) {
+        if (month === 1 || month === 3 || month === 4) {
             letItRain(false, false, true);
         }
         // eslint-disable-next-line
