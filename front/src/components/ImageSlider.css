@@ -130,4 +130,9 @@
         width: calc((1120px / 3) - 40px * 2);
         height: 15rem;
     }
+
+    ul:nth-child(3) .image__slider__container{
+        width: calc((1120px / 4) - 40px * 1);
+        height: 15rem;
+    }
 }

@@ -112,6 +112,37 @@ body.dark .projects__item__container {
     margin-right: 1rem;
 }
 
+.projects__btns{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.btn__prj{
+    font-size: 18px;
+    background-color: transparent;
+    color: var(--color-on-secondary);
+    position: relative;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-on-secondary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+    margin: 0.5rem 1rem;
+}
+
+.btn__prj.active{
+    background-color: var(--color-on-secondary);
+    color: var(--background-secondary-color);
+}
+
+.btn__prj:hover{
+    transition: all 0.3s ease-in-out;
+}
+
 .language__item__link:hover{
     color : var(--dark-cyan-color);
     transition: all 0.3s ease-in-out;
