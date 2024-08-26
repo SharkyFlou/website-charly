@@ -10,15 +10,10 @@ import { scrollTo } from './Scroll';
 
 function Navbar({ t }) {
     const [menuMobile, setMenuMobile] = useState(false);
-    const [clickUtil, setClickUtil] = useState(false);
     const [button, setButton] = useState(true);
 
     const handleClick = () => {
         setMenuMobile(!menuMobile);
-    };
-
-    const handleClickUtils = () => {
-        setClickUtil(!clickUtil);
     };
 
     const closeMobileMenu = (objectId) => () => {
@@ -107,8 +102,8 @@ function Navbar({ t }) {
 
 
                 </div>
-                <div className={clickUtil ? "utility__container show" : "utility__container hidden"}>
-                    <i className="fa-solid fa-arrow-left" onClick={handleClickUtils} />
+                <div className={"utility__container"}>
+                    <i className="fa-solid fa-arrow-left"/>
                     <LanguageSelector />
                     <DarkModeToggle t={t} />
                 </div>
