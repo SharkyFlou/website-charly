@@ -21,7 +21,7 @@
 
 
 .career{
-    --len-arrow: 104rem;
+    --len-arrow: 130rem;
     --space-between-career: -2rem;
 }
 /* Arrow */
@@ -90,7 +90,7 @@ body.dark .middle__bar__arrow.light {
 
 @media screen and (max-width: 960px) {
     .career{
-        --len-arrow: 140rem;
+        --len-arrow: 178rem;
     }
 
     .middle__bar__arrow {
@@ -248,6 +248,12 @@ body.dark .career__item {
 }
 .career__wrapper:nth-child(8) {
     top: calc(var(--space-between-career) * 7);
+}
+.career__wrapper:nth-child(9) {
+    top: calc(var(--space-between-career) * 8);
+}
+.career__wrapper:nth-child(10) {
+    top: calc(var(--space-between-career) * 9);
 }
 
 

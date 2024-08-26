@@ -31,7 +31,7 @@ function Career({ t }) {
             <CareerItem src='/images/career/lycee-jean-baptiste-schwilgue.jpg'
               text={t('career__schwilgue')}
               year='2019-2021'
-              alt={t("career__schilgue__alt")}
+              alt={t("career__schwilgue__alt")}
               className='career__left' />
           </div>
           <div className='career__wrapper wrapper__career__right'>
@@ -72,15 +72,29 @@ function Career({ t }) {
           <div className='career__wrapper wrapper__career__left'>
               <CareerItem src='/images/career/iut-robert-schuman-2022.jpg'
                 text={t('career__iut__2023')}
-                year={'2023-' + t('career__today')}
+                year='2023-2024'
                 alt={t("career__iut__2023__alt")}
                 className='career__left' />
           </div>
           <div className='career__wrapper wrapper__career__right'>
             <CareerItem src='/images/career/abas-forterro.jpg'
               text={t('career__abas')}
-              year={'2023-' + t('career__today')}
-              alt={t("career__abas__2023__alt")}
+              year='2023-2024'
+              alt={t("career__abas__alt")}
+              className='career__right' />
+          </div>
+          <div className='career__wrapper wrapper__career__left'>
+            <CareerItem src='/images/career/cnam.jpg'
+              text={t('career__cnam')}
+              year={'2024-' + t('career__today')}
+              alt={t("career__cnam__alt")}
+              className='career__left' />
+          </div>
+          <div className='career__wrapper wrapper__career__right'>
+            <CareerItem src='/images/career/eid.jpg'
+              text={t('career__eid')}
+              year={'2024-' + t('career__today')}
+              alt={t("career__eid__alt")}
               className='career__right' />
           </div>
         </div>

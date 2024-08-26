@@ -9,20 +9,20 @@ import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Career from './components/Career';
 import Rain from './components/Rain';
-import { withTranslation  } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
-function App({t}) {
+function App({ t }) {
   return (
     <>
       <Router>
-        <Rain/>
-        <Navbar t={t}/>
-        <HeroSection t={t}/>
+        <Rain />
+        <Navbar t={t} />
+        <HeroSection t={t} />
         <Projects t={t} />
-        <Career  t={t}/>
-        <Skills  t={t}/>
-        <Contact  t={t}/>
-        <Footer  t={t}/>
+        <Career t={t} />
+        <Skills t={t} />
+        <Contact t={t} />
+        <Footer t={t} />
       </Router>
     </>
   );
