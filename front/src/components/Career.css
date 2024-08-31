@@ -281,3 +281,14 @@ body.dark .career__item {
         padding:2rem 2rem 6rem 4rem;
     }
 }
+
+@media screen and (max-width: 420px) {
+    .career__item{
+        display: flex;
+        flex-direction: column;
+    }
+    .career__text{
+        padding-top: 0;
+    }
+}
+
