@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .career h1 {
@@ -21,8 +22,8 @@
 
 
 .career{
-    --len-arrow: 130rem;
     --space-between-career: -2rem;
+    --number-of-children: 10;
 }
 /* Arrow */
 
@@ -44,7 +45,7 @@ body.dark .middle__bar__arrow.light {
 }
 
 .middle__bar__arrow {
-    margin-top: 15rem;
+    margin-top: 10rem;
     left: calc(50% - 1rem);
     width: 2rem;
     height: var(--len-arrow);
@@ -54,7 +55,7 @@ body.dark .middle__bar__arrow.light {
 }
 
 .right__side__arrow {
-    margin-top: 10.5rem;
+    margin-top: 5.5rem;
     left: calc(50% + 6.20rem);
     width: 2rem;
     height: 11rem;
@@ -66,7 +67,7 @@ body.dark .middle__bar__arrow.light {
 }
 
 .left__side__arrow {
-    margin-top: 10.5rem;
+    margin-top: 5.5rem;
     left: calc(50% - 7.95rem);
     width: 2rem;
     height: 11rem;
@@ -78,19 +79,21 @@ body.dark .middle__bar__arrow.light {
 }
 
 .start__round__arrow {
-    margin-top: calc(var(--len-arrow) + 12rem);
+    margin-top: calc(var(--len-arrow) + 7rem);
     left: calc(50% - 2rem);
     width: 4rem;
     aspect-ratio: 1;
     background-color: var(--background-secondary-color);
     position: absolute;
     border-radius: 50%;
-    z-index: 10;
+    z-index: 3;
 }
 
+
+
 @media screen and (max-width: 960px) {
-    .career{
-        --len-arrow: 178rem;
+    .career__container {
+        margin-bottom: 4rem !important;
     }
 
     .middle__bar__arrow {
@@ -101,7 +104,6 @@ body.dark .middle__bar__arrow.light {
     .right__side__arrow {
         width: 2rem;
         left: 4rem ;
-        margin-top: 10.5rem;
         height: 8rem;
     }
 
@@ -130,10 +132,12 @@ body.dark .middle__bar__arrow.light {
     padding: 4rem;
     padding-left: 6rem;
     padding-bottom: 0;
+    margin-bottom: calc(15rem +  (var(--space-between-career) * var(--number-of-children)) );
     display: flex;
     flex-flow: column;
     max-width: 1120px;
     font-size: 17px;
+    
 }
 
 .career__item {
@@ -197,8 +201,6 @@ body.dark .career__item {
             padding-bottom: 4rem;
         }
 }
-
-
 
 .career__text {
     padding-top: 2rem;
@@ -292,3 +294,48 @@ body.dark .career__item {
     }
 }
 
+
+/* Show more button*/
+
+.show__more__career {
+    height: 10rem;
+    z-index: 21;
+    position: absolute;
+    bottom: -3.5rem;
+    left: calc(50% - 6rem);
+    transform: rotate(-4deg);
+}
+
+.show__more__career__text{
+    font-size: 18px;
+    background-color: transparent;
+    color: var(--color-on-secondary);
+    position: relative;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-on-secondary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+    margin: 0.5rem 1rem;
+    text-align: center;
+    width: 12rem;
+    backdrop-filter: blur(5px);
+}
+
+.show__more__career__text:hover {
+    background-color: var(--color-on-secondary);
+    color: var(--background-secondary-color);
+}
+
+.show__more__career__text.active {
+    background-color: var(--color-on-secondary);
+    color: var(--background-secondary-color);
+}
+
+.career__wrapper.old{
+    display: none;
+}
+
+
+/* End of show more button*/

@@ -95,7 +95,6 @@ function Rain() {
             }
 
             if (needLeaf) {
-                console.log('in leaf');
 
                 //set image of leaf
                 for (let y = 0; y < 7; y++) {
@@ -108,7 +107,6 @@ function Rain() {
                 rainObject.style.height = 50 + 'px';
             }
             else if (needSakura) {
-                console.log('in sakura');
 
                 //set image of sakura
                 for (let y = 0; y < 7; y++) {
