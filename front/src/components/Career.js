@@ -68,7 +68,7 @@ function Career({ t }) {
 
         <div className='start__round__arrow' />
         <div className='start__round__arrow light' />
-        <div id='career__id' />
+        <div id='career' />
         <SlideInOnScroll>
           <h1>{t("career__title")}</h1>
         </SlideInOnScroll>

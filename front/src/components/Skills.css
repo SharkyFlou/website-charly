@@ -24,6 +24,13 @@
     background-color: var(--background-secondary-color);
 }
 
+@media screen and (min-width: 960px) {
+    .bar__skills {
+        border-top: 1px solid var(--color-on-secondary);
+
+    }
+}
+
 .skill__img{
     display: block;
     width: 100%;

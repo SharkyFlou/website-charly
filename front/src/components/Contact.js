@@ -8,7 +8,7 @@ function Contact({ t }) {
         <>
             <div className='bar__contact' />
             <div className='contact' >
-                <div  id='contact__id'/>
+                <div  id='contact'/>
                 <SlideInOnScroll>
                     <h1>{t("Contact")}</h1>
                 </SlideInOnScroll>
@@ -18,7 +18,7 @@ function Contact({ t }) {
                             <i className="fa-brands fa-linkedin"></i>
                             in/charlyflu/
                         </Link>
-                        <Link className='contact__item__link' to='mailto: charly.flu.67.150@gmail.com' target="_blank">
+                        <Link className='contact__item__link' to='mailto:charly.flu.67.150@gmail.com' target="_blank">
                             <i className="fa-solid fa-envelope"></i>
                             charly.flu.67.150@gmail.com
                         </Link>

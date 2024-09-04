@@ -11,6 +11,8 @@ function HeroSection({ t }) {
     const forwardToScroll = (idName) => () => {
         scrollTo(idName);
     };
+    const currentUrlParams = window.location.search; // Gets the query parameters, e.g., ?language=en
+
 
 
     return (
@@ -42,15 +44,15 @@ function HeroSection({ t }) {
                         <div className="hero-btns">
                             <Button className='btns' buttonStyle='btn--outline'
                                 buttonSize='btn--large'
-                                link='/#projects'
-                                onClick={forwardToScroll('projects__id')}
+                                link={currentUrlParams+ "#projects"}
+                                onClick={forwardToScroll('projects')}
                             >
                                 {t("home__projects__title")}
                             </Button>
                             <Button className='btns' buttonStyle='btn--primary'
                                 buttonSize='btn--large'
-                                link='/#skills'
-                                onClick={forwardToScroll('skills__id')}
+                                link={currentUrlParams+ "#skills"}
+                                onClick={forwardToScroll('skills')}
                             >
                                 {t("home__skills__title")}
                                 {/*<i className="fa-solid fa-address-book"></i>*/}

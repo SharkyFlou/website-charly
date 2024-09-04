@@ -338,4 +338,15 @@ body.dark .career__item {
 }
 
 
+@media screen and (max-width: 960px) {
+
+
+    .show__more__career {
+        transform: rotate(0);
+    }
+    
+}
+
+
+
 /* End of show more button*/
