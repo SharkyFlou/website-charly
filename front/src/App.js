@@ -10,8 +10,24 @@ import Skills from './components/Skills';
 import Career from './components/Career';
 import Rain from './components/Rain';
 import { withTranslation } from 'react-i18next';
+import { useLayoutEffect } from 'react';
+import { scrollTo } from './components/Scroll';
+
 
 function App({ t }) {
+  useLayoutEffect(() => {
+    const scrollToSomething = () => {
+      setTimeout(() => {
+        const objectId = window.location.hash.replace('#', '');
+        console.log('objectId', objectId);
+        scrollTo(objectId);
+      }, 100); 
+    };
+
+    scrollToSomething();
+  }, []);
+
+
   return (
     <>
       <Router>
