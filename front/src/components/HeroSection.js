@@ -36,11 +36,11 @@ function HeroSection({ t }) {
                     <div className='about__text'>
                         <h1>{t("home__title")}</h1>
                         <p>{t("home__intro__pt1")}</p>
-                        <p className="single__line__text">{t("home__intro__pt2")} <Link className="link__about" to="https://iutrs.unistra.fr" target="_blank">{t("home__intro__pt3")}</Link> {t("home__intro__pt4")} </p>
-                        <p className="single__line__text">{t("home__intro__pt6")} <Link className="link__about" to="https://abas-bs.com/fr" target="_blank">{t("home__intro__pt7")}</Link> {t("home__intro__pt8")} </p>
-                        <p>{t("home__intro__pt5")}</p>
-                        <p className="warning">{t("home__intro__pt9")}</p>
-
+                        <p className="single__line__text">{t("home__intro__pt2")} <Link className="link__about" to="https://www.cnam-grandest.fr/formations/ing3400a/" target="_blank">{t("home__intro__pt3")}</Link> {t("home__intro__pt4")} </p>
+                        <p className="single__line__text"><Link className="link__about" to="https://www.e-i.com/fr/index.html" target="_blank">{t("home__intro__pt5")} </Link> {t("home__intro__pt6")}</p>
+                        <p>{t("home__intro__pt7")}</p>
+                        {/*<p className="warning">{t("home__intro__pt8")}</p>*/}
+ 
                         <div className="hero-btns">
                             <Button className='btns' buttonStyle='btn--outline'
                                 buttonSize='btn--large'

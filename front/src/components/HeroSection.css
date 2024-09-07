@@ -125,7 +125,7 @@ p {
 }
 @media screen and (min-width: 1400px){
     .about__container{
-        padding: 4rem 1rem;
+        padding: 2.5rem 1rem;
     }
 
     .me__img {
