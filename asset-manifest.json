@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.e9db180d.css",
-    "main.js": "/static/js/main.32a82231.js",
+    "main.css": "/static/css/main.e23a501e.css",
+    "main.js": "/static/js/main.0a0a65b9.js",
     "static/media/charly-flu.jpg": "/static/media/charly-flu.59be36417b945613ca44.jpg",
     "static/media/toggle-dark-mode.jpg": "/static/media/toggle-dark-mode.d0860821f34d3f7c10ca.jpg",
     "static/media/logo.png": "/static/media/logo.ecfd1b18fd3c951d3c7d.png",
     "index.html": "/index.html",
-    "main.e9db180d.css.map": "/static/css/main.e9db180d.css.map",
-    "main.32a82231.js.map": "/static/js/main.32a82231.js.map"
+    "main.e23a501e.css.map": "/static/css/main.e23a501e.css.map",
+    "main.0a0a65b9.js.map": "/static/js/main.0a0a65b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9db180d.css",
-    "static/js/main.32a82231.js"
+    "static/css/main.e23a501e.css",
+    "static/js/main.0a0a65b9.js"
   ]
 }
