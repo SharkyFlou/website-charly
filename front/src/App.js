@@ -21,7 +21,7 @@ function App({ t }) {
         const objectId = window.location.hash.replace('#', '');
         console.log('objectId', objectId);
         scrollTo(objectId);
-      }, 100); 
+      }, 200); 
     };
 
     scrollToSomething();

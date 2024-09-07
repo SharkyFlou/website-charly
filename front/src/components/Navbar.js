@@ -90,13 +90,13 @@ function Navbar({ t }) {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#contact"} className="nav-links-mobile" onClick={closeMobileMenu('contact__id')}>
+                            <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#contact"} className="nav-links-mobile" onClick={closeMobileMenu('contact')}>
                                 {t("navbar__contact")}
                             </Link>
                         </li>
                     </ul>
                     {button &&
-                        <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#contact"} onClick={closeMobileMenu('contact__id')} className="contact-button" >
+                        <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#contact"} onClick={closeMobileMenu('contact')} className="contact-button" >
                             {t("navbar__contact")}
                             <span className="contact-animation"></span> {/* Animation element */}
                         </Link>}
