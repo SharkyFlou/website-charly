@@ -19,9 +19,13 @@ function App({ t }) {
     const scrollToSomething = () => {
       setTimeout(() => {
         const objectId = window.location.hash.replace('#', '');
-        console.log('objectId', objectId);
+        //document.documentElement.style.setProperty('--page-height', document.body.scrollHeight);
+        document.documentElement.style.setProperty('--page-height', `${document.body.scrollHeight}px`);
+
+        console.log(document.body.scrollHeight);
+        //console.log('objectId', objectId);
         scrollTo(objectId);
-      }, 200); 
+      }, 500); 
     };
 
     scrollToSomething();
