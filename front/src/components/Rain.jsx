@@ -51,9 +51,14 @@ function Rain() {
 
         setisRaining(true); // Set flag to true
 
-        const rainObjectCount = 50;
+        const rainObjectCount = 40 + Math.min(window.innerWidth/50, 30); // Calculate number of rain objects
 
+        const speedDifMax = Math.min (window.innerHeight / 100, 5); // Maximum speed difference based on window height
+        const speedBase = 15 + Math.max( ((1200-window.innerHeight) /500) *10, 0); // Slower speed between 1px/s and 2.5px/s
 
+        console.log("speedBase", speedBase);
+        console.log("speedDifMax", speedDifMax);
+        console.log("window.innerHeight", window.innerHeight);
         for (let i = 0; i < rainObjectCount; i++) {
 
             const rainObject = document.createElement('div');
@@ -70,13 +75,14 @@ function Rain() {
             rainObject.style.width = size + 'px';
             rainObject.style.height = size + 'px';
 
-            const speed = Math.random() * 5 + 15; // Slower speed between 1px/s and 2.5px/s
-            rainObject.style.animationDuration = speed + 's';
+            const speedDif = Math.random() * speedDifMax; // Random speed difference between 0 and speedDifMax
+            const currentSpeed = speedBase + speedDif; // Calculate current speed
+            rainObject.style.animationDuration = currentSpeed + 's';
 
             const opacity = Math.random() * 0.5 + 0.3; // Random opacity between 0.7 and 1
             rainObject.style.opacity = opacity;
 
-            const delay = Math.random() * speed; // Random delay between 0s and speed
+            const delay = Math.random() * currentSpeed; // Random delay between 0s and speed
             rainObject.style.animationDelay = delay + 's'; // Set animation delay
 
             container.appendChild(rainObject);
