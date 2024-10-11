@@ -185,6 +185,10 @@ p {
     .about_img_container {
         height: 25%;
     }
+
+    .inv-mobile {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 750px) {
