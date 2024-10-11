@@ -65,23 +65,23 @@ const ImageSlider = ({ slides, path, alt, widthMaxSize, timeWaitMore }) => {
   }, [goToNext, firstLoad, timeWaitMore]);
 
   return (
-    <div className="image__slider__container" ref={elRef}>
-      <div className="slider__arrow left__arrow " onClick={goToPrev}>
+    <div className="image_slider_container" ref={elRef}>
+      <div className="slider_arrow left_arrow " onClick={goToPrev}>
         <i className="fas fa-chevron-left"></i>
       </div>
-      <div className="slider__arrow right__arrow" onClick={goToNext}>
+      <div className="slider_arrow right_arrow" onClick={goToNext}>
         <i className="fas fa-chevron-right"></i>
       </div>
       <Link to={path} target="_blank">
-        <div className="slides__container" style={getSlidesContainerStyleWithWidth()}>
+        <div className="slides_container" style={getSlidesContainerStyleWithWidth()}>
           {slides.map((_, slideIndex) => (
-            <div key={slideIndex} className="image__slider" style={getSlideStylesWithBackground(slideIndex)} />
+            <div key={slideIndex} className="image_slider" style={getSlideStylesWithBackground(slideIndex)} />
           ))}
         </div>
       </Link>
-      <div className="slider__dots">
+      <div className="slider_dots">
         {slides.map((slide, slideIndex) => (
-          <div key={slideIndex} className={slideIndex === currentIndex ? "slider__dot active__dot" : "slider__dot"} onClick={() => setCurrentIndex(slideIndex)}></div>
+          <div key={slideIndex} className={slideIndex === currentIndex ? "slider_dot active_dot" : "slider_dot"} onClick={() => setCurrentIndex(slideIndex)}></div>
         ))}
       </div>
     </div>

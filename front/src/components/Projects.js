@@ -53,61 +53,61 @@ function Projects({ t }) {
     ];
 
     const slidesChess = [
-        { src: '/images/projects/chess-1.jpg', alt: t("project__chess__img__alt") },
-        { src: '/images/projects/chess-2.jpg', alt: t("project__chess__img__alt") },
-        { src: '/images/projects/chess-3.jpg', alt: t("project__chess__img__alt") },
-        { src: '/images/projects/chess-4.jpg', alt: t("project__chess__img__alt") },
-        { src: '/images/projects/chess-5.jpg', alt: t("project__chess__img__alt") }
+        { src: '/images/projects/chess-1.jpg', alt: t("project_chess_img_alt") },
+        { src: '/images/projects/chess-2.jpg', alt: t("project_chess_img_alt") },
+        { src: '/images/projects/chess-3.jpg', alt: t("project_chess_img_alt") },
+        { src: '/images/projects/chess-4.jpg', alt: t("project_chess_img_alt") },
+        { src: '/images/projects/chess-5.jpg', alt: t("project_chess_img_alt") }
     ]
 
     const slidesEspagnol = [
-        { src: '/images/projects/espagnol-1.jpg', alt: t("project__espagnol__img__alt") },
-        { src: '/images/projects/espagnol-2.jpg', alt: t("project__espagnol__img__alt") },
-        { src: '/images/projects/espagnol-3.jpg', alt: t("project__espagnol__img__alt") },
-        { src: '/images/projects/espagnol-4.jpg', alt: t("project__espagnol__img__alt") }
+        { src: '/images/projects/espagnol-1.jpg', alt: t("project_espagnol_img_alt") },
+        { src: '/images/projects/espagnol-2.jpg', alt: t("project_espagnol_img_alt") },
+        { src: '/images/projects/espagnol-3.jpg', alt: t("project_espagnol_img_alt") },
+        { src: '/images/projects/espagnol-4.jpg', alt: t("project_espagnol_img_alt") }
     ]
 
     const slidesMars = [
-        { src: '/images/projects/marsgriculteur-1.jpg', alt: t("project__mars__img__alt") },
-        { src: '/images/projects/marsgriculteur-2.jpg', alt: t("project__mars__img__alt") },
-        { src: '/images/projects/marsgriculteur-3.jpg', alt: t("project__mars__img__alt") },
-        { src: '/images/projects/marsgriculteur-4.jpg', alt: t("project__mars__img__alt") },
-        { src: '/images/projects/marsgriculteur-5.jpg', alt: t("project__mars__img__alt") }
+        { src: '/images/projects/marsgriculteur-1.jpg', alt: t("project_mars_img_alt") },
+        { src: '/images/projects/marsgriculteur-2.jpg', alt: t("project_mars_img_alt") },
+        { src: '/images/projects/marsgriculteur-3.jpg', alt: t("project_mars_img_alt") },
+        { src: '/images/projects/marsgriculteur-4.jpg', alt: t("project_mars_img_alt") },
+        { src: '/images/projects/marsgriculteur-5.jpg', alt: t("project_mars_img_alt") }
     ];
 
     const slidesSpotidata = [
-        { src: '/images/projects/spotidata-1.jpg', alt: t("project__spotidata__img__alt") },
-        { src: '/images/projects/spotidata-2.jpg', alt: t("project__spotidata__img__alt") },
-        { src: '/images/projects/spotidata-3.jpg', alt: t("project__spotidata__img__alt") },
-        { src: '/images/projects/spotidata-4.jpg', alt: t("project__spotidata__img__alt") },
-        { src: '/images/projects/spotidata-5.jpg', alt: t("project__spotidata__img__alt") }
+        { src: '/images/projects/spotidata-1.jpg', alt: t("project_spotidata_img_alt") },
+        { src: '/images/projects/spotidata-2.jpg', alt: t("project_spotidata_img_alt") },
+        { src: '/images/projects/spotidata-3.jpg', alt: t("project_spotidata_img_alt") },
+        { src: '/images/projects/spotidata-4.jpg', alt: t("project_spotidata_img_alt") },
+        { src: '/images/projects/spotidata-5.jpg', alt: t("project_spotidata_img_alt") }
     ];
 
     const slidesAsteroids = [
-        { src: '/images/projects/rec-asteroids-1.jpg', alt: t("project__asteroids__img__alt") },
-        { src: '/images/projects/rec-asteroids-2.jpg', alt: t("project__asteroids__img__alt") },
-        { src: '/images/projects/rec-asteroids-3.jpg', alt: t("project__asteroids__img__alt") }
+        { src: '/images/projects/rec-asteroids-1.jpg', alt: t("project_asteroids_img_alt") },
+        { src: '/images/projects/rec-asteroids-2.jpg', alt: t("project_asteroids_img_alt") },
+        { src: '/images/projects/rec-asteroids-3.jpg', alt: t("project_asteroids_img_alt") }
     ];
 
     const slidesIAstucieux = [
-        { src: '/images/projects/iastucieux-1.jpg', alt: t("project__iastucieux__img__alt") },
-        { src: '/images/projects/iastucieux-2.jpg', alt: t("project__iastucieux__img__alt") },
-        { src: '/images/projects/iastucieux-3.jpg', alt: t("project__iastucieux__img__alt") },
-        { src: '/images/projects/iastucieux-4.jpg', alt: t("project__iastucieux__img__alt") }
+        { src: '/images/projects/iastucieux-1.jpg', alt: t("project_iastucieux_img_alt") },
+        { src: '/images/projects/iastucieux-2.jpg', alt: t("project_iastucieux_img_alt") },
+        { src: '/images/projects/iastucieux-3.jpg', alt: t("project_iastucieux_img_alt") },
+        { src: '/images/projects/iastucieux-4.jpg', alt: t("project_iastucieux_img_alt") }
     ];
 
     const slidesPortfolio = [
-        { src: '/images/projects/portfolio-1.jpg', alt: t("project__portfolio__img__alt") },
-        { src: '/images/projects/portfolio-2.jpg', alt: t("project__portfolio__img__alt") },
-        { src: '/images/projects/portfolio-3.jpg', alt: t("project__portfolio__img__alt") },
-        { src: '/images/projects/portfolio-4.jpg', alt: t("project__portfolio__img__alt") }
+        { src: '/images/projects/portfolio-1.jpg', alt: t("project_portfolio_img_alt") },
+        { src: '/images/projects/portfolio-2.jpg', alt: t("project_portfolio_img_alt") },
+        { src: '/images/projects/portfolio-3.jpg', alt: t("project_portfolio_img_alt") },
+        { src: '/images/projects/portfolio-4.jpg', alt: t("project_portfolio_img_alt") }
     ];
 
     const projects = [
         {
-            title: t("project__chess__title"),
-            description: t("project__chess__desc"),
-            alt: t("project__chess__img__alt"),
+            title: t("project_chess_title"),
+            description: t("project_chess_desc"),
+            alt: t("project_chess_img_alt"),
             slides: slidesChess,
             timeWaitMore: 0,
             date: 2023,
@@ -116,9 +116,9 @@ function Projects({ t }) {
             rating: 3,
         },
         {
-            title: t("project__espagnol__title"),
-            description: t("project__espagnol__desc"),
-            alt: t("project__espagnol__img__alt"),
+            title: t("project_espagnol_title"),
+            description: t("project_espagnol_desc"),
+            alt: t("project_espagnol_img_alt"),
             slides: slidesEspagnol,
             timeWaitMore: 200,
             date: 2022,
@@ -127,9 +127,9 @@ function Projects({ t }) {
             rating: 3,
         },
         {
-            title: t("project__mars__title"),
-            description: t("project__mars__desc"),
-            alt: t("project__mars__img__alt"),
+            title: t("project_mars_title"),
+            description: t("project_mars_desc"),
+            alt: t("project_mars_img_alt"),
             slides: slidesMars,
             timeWaitMore: 400,
             date: 2022,
@@ -138,9 +138,9 @@ function Projects({ t }) {
             rating: 4,
         },
         {
-            title: t("project__spotidata__title"),
-            description: t("project__spotidata__desc"),
-            alt: t("project__spotidata__img__alt"),
+            title: t("project_spotidata_title"),
+            description: t("project_spotidata_desc"),
+            alt: t("project_spotidata_img_alt"),
             slides: slidesSpotidata,
             timeWaitMore: 600,
             date: 2023,
@@ -149,9 +149,9 @@ function Projects({ t }) {
             rating: 4,
         },
         {
-            title: t("project__asteroids__title"),
-            description: t("project__asteroids__desc"),
-            alt: t("project__asteroids__img__alt"),
+            title: t("project_asteroids_title"),
+            description: t("project_asteroids_desc"),
+            alt: t("project_asteroids_img_alt"),
             slides: slidesAsteroids,
             timeWaitMore: 800,
             date: 2022,
@@ -160,9 +160,9 @@ function Projects({ t }) {
             rating: 2,
         },
         {
-            title: t("project__iastucieux__title"),
-            description: t("project__iastucieux__desc"),
-            alt: t("project__iastucieux__img__alt"),
+            title: t("project_iastucieux_title"),
+            description: t("project_iastucieux_desc"),
+            alt: t("project_iastucieux_img_alt"),
             slides: slidesIAstucieux,
             timeWaitMore: 1000,
             date: 2024,
@@ -171,9 +171,9 @@ function Projects({ t }) {
             rating: 5,
         },
         {
-            title: t("project__portfolio__title"),
-            description: t("project__portfolio__desc"),
-            alt: t("project__portfolio__img__alt"),
+            title: t("project_portfolio_title"),
+            description: t("project_portfolio_desc"),
+            alt: t("project_portfolio_img_alt"),
             slides: slidesPortfolio,
             timeWaitMore: 1200,
             date: 2024,
@@ -190,17 +190,17 @@ function Projects({ t }) {
         //until there is no more project to display
         setVisible_projects(
             <>
-                <ul className='projects__items'>
+                <ul className='projects_items'>
                     {projects.slice(0, 2).map((project, index) => (
                         <ProjectItem key={index} project={project} widthMaxSize={(1120 / 2) - 40 * 1} />
                     ))}
                 </ul>
-                <ul className='projects__items'>
+                <ul className='projects_items'>
                     {projects.slice(2, 5).map((project, index) => (
                         <ProjectItem key={index} project={project} widthMaxSize={(1120 / 3) - 40 * 2} />
                     ))}
                 </ul>
-                <ul className='projects__items'>
+                <ul className='projects_items'>
                     {projects.slice(5, 7).map((project, index) => (
                         <ProjectItem key={index} project={project} widthMaxSize={(1120 / 2) - 40 * 1} />
                     ))}
@@ -246,12 +246,12 @@ function Projects({ t }) {
     function displayProject(projectsToDisplay) {
         setVisible_projects(
             <>
-                <ul className='projects__items'>
+                <ul className='projects_items'>
                     {projectsToDisplay.slice(0, 2).map((project, index) => (
                         <ProjectItem key={index} project={project} widthMaxSize={(1120 / 2) - 40 * 1} />
                     ))}
                 </ul>
-                <ul className='projects__items'>
+                <ul className='projects_items'>
                     {projectsToDisplay.slice(2, 5).map((project, index) => (
                         <ProjectItem key={index} project={project} widthMaxSize={(1120 / 3) - 40 * 2} />
                     ))}
@@ -268,19 +268,19 @@ function Projects({ t }) {
 
     return (
         <>
-            <div className='bar__projects' />
+            <div className='bar_projects' />
             <div className='projects'>
                 <div id='projects' />
                 <SlideInOnScroll>
-                    <h1>{t("projects__title")}</h1>
+                    <h1>{t("projects_title")}</h1>
                 </SlideInOnScroll>
-                <div className='projects__btns'>
-                    <button onClick={displayAllProject} className={isAllProjects ? "btn__prj active" :  "btn__prj"}>{t("projects__all")}</button>
-                    <button onClick={displayBestProject} className={isBestProjects ? "btn__prj active" :  "btn__prj"}>{t("projects__best")}</button>
-                    <button onClick={displayMostRecentProject} className={isRecentProjects ? "btn__prj active" :  "btn__prj"}>{t("projects__recent")}</button>
+                <div className='projects_btns'>
+                    <button onClick={displayAllProject} className={isAllProjects ? "btn_prj active" :  "btn_prj"}>{t("projects_all")}</button>
+                    <button onClick={displayBestProject} className={isBestProjects ? "btn_prj active" :  "btn_prj"}>{t("projects_best")}</button>
+                    <button onClick={displayMostRecentProject} className={isRecentProjects ? "btn_prj active" :  "btn_prj"}>{t("projects_recent")}</button>
                 </div>
-                <div className='projects__container'>
-                    <div className='projects__wrapper'>
+                <div className='projects_container'>
+                    <div className='projects_wrapper'>
                         {visible_projects}
                     </div>
                 </div>

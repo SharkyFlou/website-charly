@@ -24,10 +24,10 @@ export const DarkModeToggle = ({ t }) => {
   
 
   return (
-    <div className="dark-mode-toggle__container">
+    <div className="dark-mode-toggle_container">
       <div
         className={`dark-mode-toggle ${isDark ? "dark" : "light"}`}
-        alt={t("navbar__darkmode")}
+        alt={t("navbar_darkmode")}
         checked={isDark}
         onClick={toggleDark}
         aria-label="Dark mode toggle">

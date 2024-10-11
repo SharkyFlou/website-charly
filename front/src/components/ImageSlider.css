@@ -1,4 +1,4 @@
-.image__slider{
+.image_slider{
     position: relative;
     height: 27rem;
     display: block;
@@ -6,7 +6,7 @@
     background-position: center;
 }
 
-.slides__container{
+.slides_container{
     transition: all 0.5s ease-in-out;
     display: flex;
     flex-flow: row nowrap;
@@ -15,11 +15,11 @@
 }
 
 
-.slider__arrow.right__arrow{
+.slider_arrow.right_arrow{
     right: 25px;
 }
 
-.slider__arrow{
+.slider_arrow{
     position: absolute;
     color: var(--color-on-primary);
     top: calc(50% - ( 3rem / 2 ));
@@ -30,18 +30,18 @@
     font-size: 3rem;
 }
 
-.slider__arrow.left__arrow{
+.slider_arrow.left_arrow{
     left: 25px;
 }
 
-.slider__arrow:hover{
+.slider_arrow:hover{
     font-size: 3.5rem;
     text-shadow: 0 0 16px 10px rgb(0 0 0 0.5);
     top: calc(50% - ( 3.5rem / 2 ));
     transition: all 0.2s ease-in-out;
 }
 
-.slider__dots{
+.slider_dots{
     position: absolute;
     bottom: 15px;
     left: 50%;
@@ -53,7 +53,7 @@
     z-index: 100;
 }
 
-.slider__dot{
+.slider_dot{
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -64,13 +64,13 @@
     transition: all 0.2s ease-in-out;
 }
 
-.slider__dot:hover{
+.slider_dot:hover{
     width: 18px;
     height: 18px;
     transition: all 0.2s ease-in-out;
 }
 
-.slider__dot.active__dot{
+.slider_dot.active_dot{
     width: 22px;
     height: 22px;
     transition: all 0.2s ease-in-out;
@@ -80,58 +80,58 @@
 
 
 @media only screen and (max-width: 900px) {
-    .image__slider{
+    .image_slider{
         height: 25rem;
     }
 }
 
 @media only screen and (max-width: 700px) {
-    .image__slider{
+    .image_slider{
         height: 20rem;
     }
 }
 
 
 @media only screen and (max-width: 600px) {
-    .image__slider{
+    .image_slider{
         height: 16rem;
     }
 }
 
 
 @media only screen and (max-width: 500px) {
-    .image__slider{
+    .image_slider{
         height: 15rem;
     }
 }
 
 @media only screen and (max-width: 400px) {
-    .image__slider{
+    .image_slider{
         height: 10rem;
     }
 }
 
 
 @media only screen and (min-width: 1400px) {
-    ul:nth-child(1) .image__slider{
+    ul:nth-child(1) .image_slider{
         height: 20rem;
     }
 
-    ul:nth-child(2) .image__slider{
+    ul:nth-child(2) .image_slider{
         height: 15rem;
     }
 
-    ul:nth-child(1) .image__slider__container{
+    ul:nth-child(1) .image_slider_container{
         width: calc((1120px / 2) - 40px * 1);
         height: 20rem;
     }
 
-    ul:nth-child(2) .image__slider__container{
+    ul:nth-child(2) .image_slider_container{
         width: calc((1120px / 3) - 40px * 2);
         height: 15rem;
     }
 
-    ul:nth-child(3) .image__slider__container{
+    ul:nth-child(3) .image_slider_container{
         width: calc((1120px / 4) - 40px * 1);
         height: 15rem;
     }

@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-.footer__section{
+.footer_section{
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -16,7 +16,7 @@
     max-width: 1120px;
 }
 
-.footer__link{
+.footer_link{
     color: lightblue;
     text-decoration: none;
     text-align: center;
@@ -31,19 +31,19 @@
 }
 
 
-.footer__link:where(:hover, :focus-visible) {
+.footer_link:where(:hover, :focus-visible) {
     background-size: 100% var(--bg-h);
     background-position-x: left;
     color: var(--color-on-tertiary);
 }
 
 @media only screen and (max-width: 1024px) {
-    .footer__section {
+    .footer_section {
         flex-direction: column;
         padding: 0rem 2rem;
     }
 
-    .footer__link {
+    .footer_link {
         margin-bottom: 1rem;
     }
 }

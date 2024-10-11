@@ -1,24 +1,24 @@
-.language__selector{
+.language_selector{
     border-radius: 6px;
     margin-right: 1rem;
 }
 
-.language__selector img{
+.language_selector img{
     width: 2rem;
     height: 2rem;
 }
 
-.language__selector__dropdown{
+.language_selector_dropdown{
     width: 6rem;
     border-radius: 6px;
 }
 
-.country__option{
+.country_option{
     display: block;
     width:6rem;
 }
 
-.dropdown__selector__language{
+.dropdown_selector_language{
     display: block;
     width:1rem;
     height: 1rem;

@@ -41,7 +41,7 @@ function Rain() {
 
 
     const letItRain = (objectRaining) => {
-        const container = document.getElementById('rain__container__id');
+        const container = document.getElementById('rain_container_id');
 
         if (isRaining) {
             container.innerHTML = '';
@@ -131,7 +131,7 @@ function Rain() {
 
     return (
         <>
-            <div className="rain-container" id="rain__container__id">
+            <div className="rain-container" id="rain_container_id">
 
             </div>
             {objectRain === SNOW && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={() => letItRain()}>

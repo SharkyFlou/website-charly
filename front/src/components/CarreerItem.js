@@ -13,13 +13,13 @@ function CareerItem({ src, text, year, alt }) {
 
   return (
     <SlideInOnScroll>
-      <div className={click ? "career__item clicked":"career__item"} onClick={handleClick} onMouseLeave={() => setClick(false)}>
-        <div className='img__container'>
-          <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill__img' />
+      <div className={click ? "career_item clicked":"career_item"} onClick={handleClick} onMouseLeave={() => setClick(false)}>
+        <div className='img_container'>
+          <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill_img' />
         </div>
         <div className='career_caption'>
-          <h5 className='career__text'>{text}</h5>
-          <h5 className='career__date'>{year}</h5>
+          <h5 className='career_text'>{text}</h5>
+          <h5 className='career_date'>{year}</h5>
         </div>
       </div>
       </SlideInOnScroll>

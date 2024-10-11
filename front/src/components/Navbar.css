@@ -17,13 +17,13 @@ body.dark .navbar {
   border-bottom: 1px solid var(--color-on-primary);
 }
 
-.logo__home__img {
+.logo_home_img {
   width: 45px;
   height: 45px;
   margin-bottom: 4px;
 }
 
-.logo__englobe {
+.logo_englobe {
   background: url('/public/images/logo.png') center center/cover no-repeat;
 }
 
@@ -184,7 +184,7 @@ body.dark .navbar {
 
 /* Little thing to select language and dark mode */
 
-.utility__container {
+.utility_container {
   position: absolute;
   top: calc(60px + 1rem);
   right: calc(-20rem + 2rem);
@@ -203,23 +203,23 @@ body.dark .navbar {
   transition: all 0.3s ease-out;
 }
 
-.utility__container i {
+.utility_container i {
   padding: 1rem 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
 
-.utility__container:hover {
+.utility_container:hover {
   right: calc(-20rem + 14rem);
   transition: all 0.2s ease-out;
 }
 
-.utility__container:hover i {
+.utility_container:hover i {
   transform: rotate(180deg);
   transition: all 0.2s ease-out;
 }
 
-body.dark .utility__container {
+body.dark .utility_container {
   border: 1px solid #fff;
 }
 
@@ -267,7 +267,7 @@ body.dark .utility__container {
     display: none;
   } 
 
-  .logo__englobe {
+  .logo_englobe {
     margin-top: 0.4rem;
     margin-left: 1rem;
     position: absolute;

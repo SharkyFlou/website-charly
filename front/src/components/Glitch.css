@@ -1,7 +1,7 @@
 /* =Custom Styles
 ------------------------------------- */
 .c-glitch,
-.c-glitch__img {
+.c-glitch_img {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -13,7 +13,7 @@
   position: relative;
 }
 
-.c-glitch__img {
+.c-glitch_img {
   background-blend-mode: none;
   background-color: transparent;
   left: 0;
@@ -49,7 +49,7 @@
   }
 }
 
-.c-glitch__img:nth-child(n+2) {
+.c-glitch_img:nth-child(n+2) {
   opacity: 0;
 }
 

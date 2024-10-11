@@ -28,15 +28,15 @@ const LanguageSelector = ({ t }) => {
     }
 
     return (
-        <div className="language__selector">
+        <div className="language_selector">
             <Select
                 defaultValue={currentLanguageObj}
                 options={countries}
-                className="language__selector__dropdown"
+                className="language_selector_dropdown"
                 isSearchable={false}
                 formatOptionLabel={country => (
-                    <div className="country__option" onClick={() => changeLanguage(country.value)}>
-                        <img src={country.image} className="dropdown__selector__language" alt={`country-${country.value}`} />
+                    <div className="country_option" onClick={() => changeLanguage(country.value)}>
+                        <img src={country.image} className="dropdown_selector_language" alt={`country-${country.value}`} />
                     </div>
                 )}
             />

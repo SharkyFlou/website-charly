@@ -6,7 +6,7 @@ video {
     z-index: -1;
 }
 
-.link__about {
+.link_about {
     color: lightblue;
     text-decoration: none;
     background: linear-gradient(0deg, var(--background-tertiary-color), var(--background-tertiary-color)) no-repeat right bottom / 0 var(--bg-h);
@@ -14,13 +14,13 @@ video {
     --bg-h: 100%;
 }
 
-.link__about:where(:hover, :focus-visible) {
+.link_about:where(:hover, :focus-visible) {
     background-size: 100% var(--bg-h);
     background-position-x: left;
     color: var(--color-on-tertiary);
 }
 
-.single__line__text {
+.single_line_text {
     display: inline;
 }
 
@@ -39,7 +39,7 @@ body.dark .hero-container {
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.7);
 }
 
-.about__container {
+.about_container {
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.815);
     backdrop-filter: blur(8px);
@@ -55,27 +55,27 @@ body.dark .hero-container {
     width: 100%;
 }
 
-body.dark .about__container {
+body.dark .about_container {
     background-color: rgba(0, 0, 0, 0.8);
     /* slight blurry white shadow around it*/
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.1);
     width: 100%;
 }
 
-.about__img__container {
+.about_img_container {
     height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.me__englobe{
+.me_englobe{
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     background: url('/public/images/charly-flu.jpg') center center/cover no-repeat;
 }
 
-.me__img {
+.me_img {
     width: 14rem;
     height: 14rem;
     display: block;
@@ -84,7 +84,7 @@ body.dark .about__container {
     transition: all 0.3s;
 }
 
-.about__text {
+.about_text {
     width: fit-content;
 }
 
@@ -124,23 +124,23 @@ p {
     margin-left: 0.5rem;
 }
 @media screen and (min-width: 1400px){
-    .about__container{
+    .about_container{
         padding: 2.5rem 1rem;
     }
 
-    .me__img {
+    .me_img {
         width: 17rem;
         height: 17rem;
     }
 }
 
 @media screen and (max-width: 960px) {
-    .me__img {
+    .me_img {
         width: 13rem;
         height: 13rem;
     }
 
-    .me__englobe{
+    .me_englobe{
         margin-bottom: 3rem;
     }
 
@@ -176,13 +176,13 @@ p {
         margin-top: 0.5rem;
     }
 
-    .about__container {
+    .about_container {
         flex-direction: column;
         justify-content: center;
         text-align: center;
     }
 
-    .about__img__container {
+    .about_img_container {
         height: 25%;
     }
 }
@@ -202,12 +202,12 @@ p {
         font-size: 1.2rem;
     }
 
-    .me__img {
+    .me_img {
         width: 9rem;
         height: 9rem;
     }
 
-    .me__englobe{
+    .me_englobe{
         margin-bottom: 0;
     }
 }

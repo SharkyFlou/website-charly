@@ -13,7 +13,7 @@ const SlideInOnScroll = ({ children }) => {
         position: 'relative',
     });
 
-    return <animated.div ref={ref} style={props} className={"slide__in__on__scroll"}>{children}</animated.div>;
+    return <animated.div ref={ref} style={props} className={"slide_in_on_scroll"}>{children}</animated.div>;
 };
 
 export default SlideInOnScroll;
