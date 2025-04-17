@@ -134,15 +134,15 @@ function Rain() {
             <div className="rain-container" id="rain_container_id">
 
             </div>
-            {objectRain === SNOW && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={() => letItRain()}>
+            {objectRain === SNOW && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={() => letItRain(SNOW)}>
                 <img src={process.env.PUBLIC_URL + "/images/rains/snow_flake.png"} alt="" />
             </button>
             }
-            {objectRain === LEAF && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={() => letItRain()}>
+            {objectRain === LEAF && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={() => letItRain(LEAF)}>
                 <img src={process.env.PUBLIC_URL + "/images/rains/leaf1.png"} alt="" />
             </button>
             }
-            {objectRain === SAKURA && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={() => letItRain()}>
+            {objectRain === SAKURA && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={() => letItRain(SAKURA)}>
                 <img src={process.env.PUBLIC_URL + "/images/rains/sakura_big.png"} alt="" />
             </button>
             }
