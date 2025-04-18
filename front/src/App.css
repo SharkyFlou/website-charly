@@ -85,6 +85,7 @@ h1 {
 }
 
 
+
 /* Allow smooth transition between dark and light mode */
 p, h1{
   transition: color 0.35s ease-in-out;

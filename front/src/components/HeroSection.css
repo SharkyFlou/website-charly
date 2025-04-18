@@ -180,6 +180,12 @@ body.dark .about_container {
         border-radius: 6px;
     }
 
+    .hero-container h2 { 
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+
     .hero-container h1 {
         margin-top: 0;
         font-size: 2.2rem;
@@ -228,6 +234,10 @@ body.dark .about_container {
 @media screen and (max-width: 550px) {
     .hero-container h1 {
         font-size: 2rem;
+    }
+
+    .hero-container h2 {
+        font-size: 1.5rem;
     }
     
     .hero-container p {
