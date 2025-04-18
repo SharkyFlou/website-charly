@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from './Button'
 import './HeroSection.css'
 import './Glitch.css'
 import '../App.css'
@@ -12,8 +11,6 @@ function HeroSection({ t }) {
         scrollTo(idName);
     };
     const currentUrlParams = window.location.search; // Gets the query parameters, e.g., ?language=en
-
-
 
     return (
 
@@ -34,30 +31,29 @@ function HeroSection({ t }) {
                         </div>
                     </div>
                     <div className='about_text'>
-                        <h1>{t("home_title")}</h1>
-                        <p>{t("home_intro_pt1")}</p>
-                        <p className="single_line_text">{t("home_intro_pt2")} <Link className="link_about" to="https://www.cnam-grandest.fr/formations/ing3400a/" target="_blank">{t("home_intro_pt3")}</Link> {t("home_intro_pt4")} </p>
-                        <p className="single_line_text"><Link className="link_about" to="https://www.e-i.com/fr/index.html" target="_blank">{t("home_intro_pt5")} </Link> {t("home_intro_pt6")}</p>
-                        <p>{t("home_intro_pt7")}</p>
+                        <h1>{t("home_title_pt1")}</h1>
+                        <h2>{t("home_title_pt2")}</h2>
+                        <p>
+                            {t("home_intro_pt1")}
+                            {t("home_intro_pt2")} <Link className="link_about" to="https://www.cnam-grandest.fr/formations/ing3400a/" target="_blank">{t("home_intro_pt3")}</Link> {t("home_intro_pt4")} 
+                            <Link className="link_about" to="https://www.e-i.com/fr/index.html" target="_blank">{t("home_intro_pt5")} </Link> {t("home_intro_pt6")}
+                            {t("home_intro_pt7")}</p>
                         {/*<p className="warning">{t("home_intro_pt8")}</p>*/}
  
                         <div className="hero-btns inv-mobile">
-                            <Button className='btns' buttonStyle='btn--outline'
-                                buttonSize='btn--large'
-                                link={currentUrlParams+ "#projects"}
-                                onClick={forwardToScroll('projects')}
-                            >
-                                {t("home_projects_title")}
-                            </Button>
-                            <Button className='btns' buttonStyle='btn--primary'
-                                buttonSize='btn--large'
-                                link={currentUrlParams+ "#skills"}
-                                onClick={forwardToScroll('skills')}
-                            >
-                                {t("home_skills_title")}
-                                {/*<i className="fa-solid fa-address-book"></i>*/}
-                            </Button>
-
+                            <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#projects"} onClick={forwardToScroll('projects')} className="btn btn--large" >
+                                <span>
+                                    {t("home_projects_title")}
+                                </span>
+                                <img src={process.env.PUBLIC_URL + '/images/arrow_down.png'} alt='Flêche vers le bas' className='arrow_down' />
+                            </Link>
+                    
+                            <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#skills"} onClick={forwardToScroll('skills')} className="btn btn--large" >
+                                <span>
+                                    {t("home_skills_title")}
+                                </span>
+                                <img src={process.env.PUBLIC_URL + '/images/arrow_down.png'} alt='Flêche vers le bas' className='arrow_down' />
+                            </Link>
                         </div>
                     </div>
                 </div>
