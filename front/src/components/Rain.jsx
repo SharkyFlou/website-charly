@@ -1,5 +1,7 @@
 import './Rain.css';
 import React, { useState, useLayoutEffect } from 'react';
+import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
+
 
 function Rain() {
     const [isRaining, setisRaining] = useState(false);
