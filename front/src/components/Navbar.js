@@ -11,6 +11,13 @@ import { scrollTo } from './Scroll';
 function Navbar({ t }) {
     const [menuMobile, setMenuMobile] = useState(false);
     const [button, setButton] = useState(true);
+    /*Allow mobile to click for putting/removing the hover effect*/
+    const [clickUtility, setClickUtility] = useState(false);
+
+    const handleClickUtility = () => {
+        setClickUtility(!clickUtility);
+    };
+
     const currentUrlParams = window.location.search; // Gets the query parameters, e.g., ?language=en
 
     const handleClick = () => {
@@ -103,7 +110,7 @@ function Navbar({ t }) {
 
 
                 </div>
-                <div className={"utility_container"}>
+                <div className={clickUtility ? "utility_container clicked":"utility_container"} onClick={handleClickUtility} onMouseLeave={() => setClickUtility(false)}>
                     <i className="fa-solid fa-arrow-left"/>
                     <LanguageSelector />
                     <DarkModeToggle t={t} />

@@ -214,6 +214,15 @@ body.dark .navbar {
   transition: all 0.2s ease-out;
 }
 
+/* If on mobile*/
+@media screen and (max-width: 960px) {
+    /*Allow to unclick the hover effect*/
+    .utility_container .utility_container.clicked:hover{
+        right: calc(-20rem + 14rem);
+  transition: all 0.2s ease-out;
+    }
+}
+
 .utility_container:hover i {
   transform: rotate(180deg);
   transition: all 0.2s ease-out;
