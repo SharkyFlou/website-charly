@@ -42,6 +42,12 @@ function Skills({ t }) {
                                 alt='C sharp logo'
                             />
                             <SkillItem
+                                src='/images/logos/cobol.png'
+                                text='Cobol'
+                                level={t("skill_level_intermediate")}
+                                alt='Cobol logo'
+                            />
+                            <SkillItem
                                 src='/images/logos/python.png'
                                 text='Python'
                                 level={t("skill_level_intermediate")}
