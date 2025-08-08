@@ -23,6 +23,18 @@ body.dark .navbar {
   margin-bottom: 4px;
 }
 
+.logo_englobe:hover .logo_home_img {
+  animation: gelatine 0.8s infinite;
+}
+
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  20% { transform: scale(0.9, 1.1); }
+  40% { transform: scale(1.1, 0.9); }
+  60% { transform: scale(0.95, 1.05); }
+  80% { transform: scale(1, 1); }
+}
+
 .logo_englobe {
   background: url('/public/images/logo.png') center center/cover no-repeat;
 }
