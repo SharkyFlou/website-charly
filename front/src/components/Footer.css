@@ -1,6 +1,5 @@
 .footer{
     background-color: #202020;
-    color: #ffffff;
     padding: 2rem 2rem;
     text-align: center;
     display: flex;
@@ -28,6 +27,7 @@
 
 .footer p {
     z-index: 3;
+    color: var(--color-on-secondary);
 }
 
 

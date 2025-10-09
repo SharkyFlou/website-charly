@@ -57,7 +57,7 @@ function Navbar({ t }) {
             <nav className="navbar" id="navbar">
                 <div className="navbar-container">
                     <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#home"} className="navbar-logo" onClick={closeMobileMenu('home')}>
-                        <div src={process.env.PUBLIC_URL + "/images/logo.png"} className="logo_home_img logo_englobe">
+                        <div className="logo_home_img logo_englobe">
                             <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className="logo_home_img" />
                         </div>
                     </Link>
