@@ -52,6 +52,11 @@ function Projects({ t }) {
 
     ];
 
+    const languagesSlidingbg = [
+        { name: 'Unity', link: 'https://unity.com' },
+        { name: 'C#', link: 'https://learn.microsoft.com/en-us/dotnet/csharp/' }
+    ];
+
     const slidesChess = [
         { src: '/images/projects/chess-1.jpg', alt: t("project_chess_img_alt") },
         { src: '/images/projects/chess-2.jpg', alt: t("project_chess_img_alt") },
@@ -103,6 +108,16 @@ function Projects({ t }) {
         { src: '/images/projects/portfolio-4.jpg', alt: t("project_portfolio_img_alt") }
     ];
 
+    const slidesSlidingbg = [
+        { src: '/images/projects/slidingbg-1.jpg', alt: t("project_slidingbg_img_alt") },
+        { src: '/images/projects/slidingbg-2.jpg', alt: t("project_slidingbg_img_alt") },
+        { src: '/images/projects/slidingbg-3.jpg', alt: t("project_slidingbg_img_alt") },
+        { src: '/images/projects/slidingbg-4.jpg', alt: t("project_slidingbg_img_alt") },
+        { src: '/images/projects/slidingbg-5.jpg', alt: t("project_slidingbg_img_alt") },
+        { src: '/images/projects/slidingbg-6.jpg', alt: t("project_slidingbg_img_alt") },
+        { src: '/images/projects/slidingbg-7.jpg', alt: t("project_slidingbg_img_alt") }
+    ]
+
     const projects = [
         {
             title: t("project_chess_title"),
@@ -113,7 +128,7 @@ function Projects({ t }) {
             date: 2023,
             languages: languagesChess,
             path: 'https://github.com/SharkyFlou/chess-game',
-            rating: 3,
+            rating: 2,
         },
         {
             title: t("project_espagnol_title"),
@@ -179,6 +194,17 @@ function Projects({ t }) {
             date: 2024,
             languages: languagesPortfolio,
             path: 'https://github.com/SharkyFlou/website-charly',
+            rating: 4,
+        },
+        {
+            title: t("project_slidingbg_title"),
+            description: t("project_slidingbg_desc"),
+            alt: t("project_slidingbg_img_alt"),
+            slides: slidesSlidingbg,
+            timeWaitMore: 1400,
+            date: 2025,
+            languages: languagesSlidingbg,
+            path: 'https://github.com/SharkyFlou/slidingBurger',
             rating: 4,
         }
     ]

@@ -22,12 +22,12 @@ function HeroSection({ t }) {
             <SlideInOnScroll>
                 <div className='about_container'>
                     <div className='about_img_container'>
-                        <div src={process.env.PUBLIC_URL + "/images/charly_22.2.jpg"} className="me_img c-glitch me_englobe">
-                            <img src={process.env.PUBLIC_URL + '/images/charly_22.2.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
-                            <img src={process.env.PUBLIC_URL + '/images/charly_22.2.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
-                            <img src={process.env.PUBLIC_URL + '/images/charly_22.2.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
-                            <img src={process.env.PUBLIC_URL + '/images/charly_22.2.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
-                            <img src={process.env.PUBLIC_URL + '/images/charly_22.2.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
+                        <div src={process.env.PUBLIC_URL + "/images/charly_22.3.jpg"} className="me_img c-glitch me_englobe">
+                            <img src={process.env.PUBLIC_URL + '/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
+                            <img src={process.env.PUBLIC_URL + '/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
+                            <img src={process.env.PUBLIC_URL + '/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
+                            <img src={process.env.PUBLIC_URL + '/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
+                            <img src={process.env.PUBLIC_URL + '/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
                         </div>
                     </div>
                     <div className='about_text'>
