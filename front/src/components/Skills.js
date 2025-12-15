@@ -38,13 +38,13 @@ function Skills({ t }) {
                             <SkillItem
                                 src='/images/logos/csharp.png'
                                 text='C#'
-                                level={t("skill_level_intermediate") + " +"}
+                                level={t("skill_level_advanced")}
                                 alt='C sharp logo'
                             />
                             <SkillItem
                                 src='/images/logos/cobol.png'
                                 text='Cobol'
-                                level={t("skill_level_intermediate")}
+                                level={t("skill_level_intermediate")+ " +"}
                                 alt='Cobol logo'
                             />
                             <SkillItem
