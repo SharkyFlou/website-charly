@@ -6,7 +6,7 @@ import queryString from 'query-string';
 
 // Define the supported languages
 const supportedLanguages = ['en', 'fr'];
-const fallbackLng = 'fr';
+const fallbackLng = 'en';
 
 const getLanguageFromUrl = () => {
   const parsed = queryString.parse(window.location.search);
@@ -17,6 +17,15 @@ const getLanguageFromUrl = () => {
   return null;
 };
 
+const getDefaultBrowserLanguage = () => {
+  const navigatorLang = navigator.language || navigator.userLanguage;
+  const shortLang = navigatorLang.split('-')[0];
+  if (supportedLanguages.includes(shortLang)) {
+    return shortLang;
+  }
+  return null;
+}  
+
 // Function to update the URL with the default language if needed
 const setDefaultLanguageInUrl = (language) => {
   const url = new URL(window.location);
@@ -24,11 +33,11 @@ const setDefaultLanguageInUrl = (language) => {
   window.history.replaceState(null, '', url.toString());
 };
 
-const language = getLanguageFromUrl() || fallbackLng;
+const language = getLanguageFromUrl() || getDefaultBrowserLanguage() || fallbackLng;
 
 // If the language is not valid or missing, update the URL
 if (!getLanguageFromUrl()) {
-  setDefaultLanguageInUrl(fallbackLng);
+  setDefaultLanguageInUrl(language);
 }
 
 const resources = {
