@@ -3,7 +3,7 @@ import './ImageSlider.css';
 
 const SLIDE_INTERVAL_MS = 5000;
 
-const ImageSlider = ({ slides, path, alt, widthMaxSize, timeWaitMore }) => {
+const ImageSlider = ({ slides, path, alt, timeWaitMore }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [parentWidth, setParentWidth] = useState(0);
   const elRef = useRef(null);

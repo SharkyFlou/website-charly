@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Career.css';
-import CareerItem from './CarreerItem';
+import CareerItem from './CareerItem';
 import SlideInOnScroll from './SlideInOnScroll';
 import { CAREER_ENTRIES } from '../data/career';
 import { useArrowLength } from '../hooks/useArrowLength';

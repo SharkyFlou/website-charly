@@ -2,7 +2,7 @@ import './Projects.css';
 import ImageSlider from './ImageSlider';
 import SlideInOnScroll from './SlideInOnScroll';
 
-function ProjectItem({ project, widthMaxSize }) {
+function ProjectItem({ project }) {
     return (
         <SlideInOnScroll>
             <li className='projects_item'>
@@ -12,7 +12,6 @@ function ProjectItem({ project, widthMaxSize }) {
                             slides={project.slides}
                             path={project.path}
                             alt={project.alt}
-                            widthMaxSize={widthMaxSize}
                             timeWaitMore={project.timeWaitMore}
                         />
                     </figure>
