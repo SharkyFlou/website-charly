@@ -6,6 +6,14 @@
     position: relative;
 }
 
+.career .old_career {
+    display: none;
+}
+
+.career.show_old .old_career {
+    display: inherit;
+}
+
 .career h1 {
     font-size: 2.5rem;
     color: var(--color-on-tertiary);

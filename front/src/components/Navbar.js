@@ -1,119 +1,111 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Glitch.css';
 import './Navbar.css';
 import { DarkModeToggle } from './DarkModeToggle';
 import LanguageSelector from './LanguageSelector';
 import { scrollTo } from './Scroll';
+import { useNavbarVisibility } from '../hooks/useNavbarVisibility';
+import { useViewportBreakpoint } from '../hooks/useViewportBreakpoint';
 
+const NAV_ITEMS = [
+  { id: 'home', labelKey: 'navbar_home', mobileOnly: false },
+  { id: 'projects', labelKey: 'navbar_projects', mobileOnly: false },
+  { id: 'career', labelKey: 'navbar_career', mobileOnly: false },
+  { id: 'skills', labelKey: 'navbar_skills', mobileOnly: false },
+  { id: 'contact', labelKey: 'navbar_contact', mobileOnly: true },
+];
 
+const buildSectionLink = (sectionId, search) => `/${search}#${sectionId}`;
+
+function NavLink({ sectionId, label, search, onNavigate, mobileOnly }) {
+  return (
+    <li className="nav-item">
+      <Link
+        to={buildSectionLink(sectionId, search)}
+        className={mobileOnly ? 'nav-links-mobile' : 'nav-links'}
+        onClick={() => onNavigate(sectionId)}
+      >
+        {label}
+      </Link>
+    </li>
+  );
+}
 
 function Navbar({ t }) {
-    const [menuMobile, setMenuMobile] = useState(false);
-    const [button, setButton] = useState(true);
-    /*Allow mobile to click for putting/removing the hover effect*/
-    const [clickUtility, setClickUtility] = useState(false);
+  const [menuMobile, setMenuMobile] = useState(false);
+  const [clickUtility, setClickUtility] = useState(false);
 
-    const handleClickUtility = () => {
-        setClickUtility(!clickUtility);
-    };
+  const isVisible = useNavbarVisibility();
+  const showContactButton = useViewportBreakpoint(960);
+  const search = window.location.search;
 
-    const currentUrlParams = window.location.search; // Gets the query parameters, e.g., ?language=en
+  const handleNavigate = (sectionId) => {
+    setMenuMobile(false);
+    scrollTo(sectionId);
+  };
 
-    const handleClick = () => {
-        setMenuMobile(!menuMobile);
-    };
+  return (
+    <nav className={`navbar${isVisible ? '' : ' hidden'}`} id="navbar">
+      <div className="navbar-container">
+        <Link
+          to={buildSectionLink('home', search)}
+          className="navbar-logo"
+          onClick={() => handleNavigate('home')}
+        >
+          <div className="logo_home_img logo_englobe">
+            <img src="/images/logo.png" alt="my logo" className="logo_home_img" />
+          </div>
+        </Link>
 
-    const closeMobileMenu = (objectId) => () => {
-        setMenuMobile(false);
-        scrollTo(objectId);
-    };
+        <div
+          className={menuMobile ? 'menu-icon open' : 'menu-icon'}
+          id="nav-icon"
+          onClick={() => setMenuMobile((prev) => !prev)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-    const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    };
+        <ul className={menuMobile ? 'nav-menu active' : 'nav-menu'}>
+          {NAV_ITEMS.map((item) => (
+            <NavLink
+              key={item.id}
+              sectionId={item.id}
+              label={t(item.labelKey)}
+              search={search}
+              onNavigate={handleNavigate}
+              mobileOnly={item.mobileOnly}
+            />
+          ))}
+        </ul>
 
-    useEffect(() => {
-        showButton();
-    }, []);
-
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-        const currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-60px";
-        }
-        prevScrollpos = currentScrollPos;
-    }
-
-    return (
-        <>
-            <nav className="navbar" id="navbar">
-                <div className="navbar-container">
-                    <Link to={"/"+ currentUrlParams+ "#home"} className="navbar-logo" onClick={closeMobileMenu('home')}>
-                        <div className="logo_home_img logo_englobe">
-                            <img src={"/images/logo.png"} alt="my logo" className="logo_home_img" />
-                        </div>
-                    </Link>
-
-                    <div className={menuMobile ? 'menu-icon open' : 'menu-icon'} id="nav-icon" onClick={handleClick}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    <ul className={menuMobile ? 'nav-menu active' : 'nav-menu'}>
-                        <li className="nav-item">
-                            <Link to={"/"+ currentUrlParams+ "#home"  } className="nav-links" onClick={closeMobileMenu('home')}>
-                                {t("navbar_home")}
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={"/"+ currentUrlParams+ "#projects" } className="nav-links" onClick={closeMobileMenu('projects')}>
-                                {t("navbar_projects")}
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={"/"+ currentUrlParams+ "#career"} className="nav-links" onClick={closeMobileMenu('career')}>
-                                {t("navbar_career")}
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={"/"+ currentUrlParams+ "#skills"} className="nav-links" onClick={closeMobileMenu('skills')}>
-                                {t("navbar_skills")}
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={"/"+ currentUrlParams+ "#contact"} className="nav-links-mobile" onClick={closeMobileMenu('contact')}>
-                                {t("navbar_contact")}
-                            </Link>
-                        </li>
-                    </ul>
-                    {button &&
-                        <Link to={"/"+ currentUrlParams+ "#contact"} onClick={closeMobileMenu('contact')} className="contact-button" >
-                            {t("navbar_contact")}
-                            <span className="contact-animation"></span> {/* Animation element */}
-                        </Link>}
-
-
-                </div>
-                <div className={clickUtility ? "utility_container clicked":"utility_container"} onClick={handleClickUtility} onMouseLeave={() => setClickUtility(false)}>
-                    <i className="fa-solid fa-arrow-left"/>
-                    <LanguageSelector />
-                    <DarkModeToggle t={t} />
-                </div>
-            </nav>
-        </>
-    );
+        {showContactButton && (
+          <Link
+            to={buildSectionLink('contact', search)}
+            onClick={() => handleNavigate('contact')}
+            className="contact-button"
+          >
+            {t('navbar_contact')}
+            <span className="contact-animation"></span>
+          </Link>
+        )}
+      </div>
+      <div
+        className={clickUtility ? 'utility_container clicked' : 'utility_container'}
+        onClick={() => setClickUtility((prev) => !prev)}
+        onMouseLeave={() => setClickUtility(false)}
+      >
+        <i className="fa-solid fa-arrow-left" />
+        <LanguageSelector />
+        <DarkModeToggle t={t} />
+      </div>
+    </nav>
+  );
 }
 
 export default Navbar;

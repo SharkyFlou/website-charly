@@ -1,52 +1,21 @@
+import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Career.css';
 import CareerItem from './CarreerItem';
 import SlideInOnScroll from './SlideInOnScroll';
-import { Link } from 'react-router-dom';
-import { useRef, useEffect, useState, useLayoutEffect } from 'react';
 import { CAREER_ENTRIES } from '../data/career';
+import { useArrowLength } from '../hooks/useArrowLength';
 
 function Career({ t }) {
   const careerRef = useRef(null);
-  const [isShowMoreCareer, setIsShowMoreCareer] = useState(false);
+  const [showOld, setShowOld] = useState(false);
 
-  const setArrowLength = () => {
-    if (careerRef.current) {
-      const careerHeight = careerRef.current.offsetHeight;
-      const arrowLength = careerHeight - 400;
-      careerRef.current.style.setProperty('--len-arrow', `${arrowLength}px`);
-    }
-  };
+  const updateArrowLength = useArrowLength(careerRef, [showOld]);
 
   useEffect(() => {
-    document.querySelectorAll('.old_career').forEach((element) => {
-      element.style.display = isShowMoreCareer ? 'inherit' : 'none';
-    });
-  });
-
-  useLayoutEffect(() => {
-    const updateArrowLengthWithDelay = () => {
-      setTimeout(() => {
-        setArrowLength();
-      }, 100);
-    };
-
-    updateArrowLengthWithDelay();
-    window.addEventListener('resize', updateArrowLengthWithDelay);
-
-    return () => window.removeEventListener('resize', updateArrowLengthWithDelay);
-  }, []);
-
-  function showMoreCareer() {
-    setIsShowMoreCareer((prevState) => {
-      const newState = !prevState;
-      document.querySelectorAll('.old_career').forEach((element) => {
-        element.style.display = newState ? 'inherit' : 'none';
-      });
-      return newState;
-    });
-
-    setTimeout(setArrowLength, 0);
-  }
+    const id = window.setTimeout(updateArrowLength, 0);
+    return () => window.clearTimeout(id);
+  }, [showOld, updateArrowLength]);
 
   const formatYear = (entry) => {
     if (entry.yearEnd === 'today') return `${entry.yearStart}-${t('career_today')}`;
@@ -70,11 +39,13 @@ function Career({ t }) {
     </>
   );
 
+  const containerClassName = `career${showOld ? ' show_old' : ''}`;
+
   return (
     <>
       <div className='bar_career' />
 
-      <div className='career' ref={careerRef}>
+      <div className={containerClassName} ref={careerRef}>
         <div className='middle_bar_arrow' />
         <div className='middle_bar_arrow light' />
 
@@ -109,8 +80,8 @@ function Career({ t }) {
         </div>
 
         <div className='show_more_career'>
-          <button className='show_more_career_text' onClick={showMoreCareer}>
-            {isShowMoreCareer ? t('career_show_less') : t('career_show_more')}
+          <button className='show_more_career_text' onClick={() => setShowOld((prev) => !prev)}>
+            {showOld ? t('career_show_less') : t('career_show_more')}
           </button>
         </div>
       </div>
