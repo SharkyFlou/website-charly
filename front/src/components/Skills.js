@@ -1,10 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import './Skills.css';
 import SkillItem from './SkillItem';
 import Tabs from './Tabs';
 import SlideInOnScroll from './SlideInOnScroll';
 import { SKILLS_TABS } from '../data/skills';
 
-function Skills({ t }) {
+function Skills() {
+    const { t } = useTranslation();
     return (
         <>
             <div className='bar_skills' />

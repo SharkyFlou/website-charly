@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './Glitch.css';
 import './Navbar.css';
 import { DarkModeToggle } from './DarkModeToggle';
 import LanguageSelector from './LanguageSelector';
-import { scrollTo } from './Scroll';
 import { useNavbarVisibility } from '../hooks/useNavbarVisibility';
 import { useViewportBreakpoint } from '../hooks/useViewportBreakpoint';
+import { useScrollLink } from '../hooks/useScrollLink';
 
 const NAV_ITEMS = [
   { id: 'home', labelKey: 'navbar_home', mobileOnly: false },
@@ -16,15 +17,13 @@ const NAV_ITEMS = [
   { id: 'contact', labelKey: 'navbar_contact', mobileOnly: true },
 ];
 
-const buildSectionLink = (sectionId, search) => `/${search}#${sectionId}`;
-
-function NavLink({ sectionId, label, search, onNavigate, mobileOnly }) {
+function NavLink({ sectionId, label, mobileOnly, onNavigate }) {
+  const { linkProps } = useScrollLink();
   return (
-    <li className="nav-item">
+    <li className='nav-item'>
       <Link
-        to={buildSectionLink(sectionId, search)}
+        {...linkProps(sectionId, onNavigate)}
         className={mobileOnly ? 'nav-links-mobile' : 'nav-links'}
-        onClick={() => onNavigate(sectionId)}
       >
         {label}
       </Link>
@@ -32,35 +31,29 @@ function NavLink({ sectionId, label, search, onNavigate, mobileOnly }) {
   );
 }
 
-function Navbar({ t }) {
+function Navbar() {
+  const { t } = useTranslation();
   const [menuMobile, setMenuMobile] = useState(false);
   const [clickUtility, setClickUtility] = useState(false);
 
   const isVisible = useNavbarVisibility();
   const showContactButton = useViewportBreakpoint(960);
-  const search = window.location.search;
+  const { linkProps } = useScrollLink();
 
-  const handleNavigate = (sectionId) => {
-    setMenuMobile(false);
-    scrollTo(sectionId);
-  };
+  const closeMobileMenu = () => setMenuMobile(false);
 
   return (
-    <nav className={`navbar${isVisible ? '' : ' hidden'}`} id="navbar">
-      <div className="navbar-container">
-        <Link
-          to={buildSectionLink('home', search)}
-          className="navbar-logo"
-          onClick={() => handleNavigate('home')}
-        >
-          <div className="logo_home_img logo_englobe">
-            <img src="/images/logo.png" alt="my logo" className="logo_home_img" />
+    <nav className={`navbar${isVisible ? '' : ' hidden'}`} id='navbar'>
+      <div className='navbar-container'>
+        <Link {...linkProps('home', closeMobileMenu)} className='navbar-logo'>
+          <div className='logo_home_img logo_englobe'>
+            <img src='/images/logo.png' alt='my logo' className='logo_home_img' />
           </div>
         </Link>
 
         <div
           className={menuMobile ? 'menu-icon open' : 'menu-icon'}
-          id="nav-icon"
+          id='nav-icon'
           onClick={() => setMenuMobile((prev) => !prev)}
         >
           <span></span>
@@ -77,21 +70,16 @@ function Navbar({ t }) {
               key={item.id}
               sectionId={item.id}
               label={t(item.labelKey)}
-              search={search}
-              onNavigate={handleNavigate}
               mobileOnly={item.mobileOnly}
+              onNavigate={closeMobileMenu}
             />
           ))}
         </ul>
 
         {showContactButton && (
-          <Link
-            to={buildSectionLink('contact', search)}
-            onClick={() => handleNavigate('contact')}
-            className="contact-button"
-          >
+          <Link {...linkProps('contact', closeMobileMenu)} className='contact-button'>
             {t('navbar_contact')}
-            <span className="contact-animation"></span>
+            <span className='contact-animation'></span>
           </Link>
         )}
       </div>
@@ -100,9 +88,9 @@ function Navbar({ t }) {
         onClick={() => setClickUtility((prev) => !prev)}
         onMouseLeave={() => setClickUtility(false)}
       >
-        <i className="fa-solid fa-arrow-left" />
+        <i className='fa-solid fa-arrow-left' />
         <LanguageSelector />
-        <DarkModeToggle t={t} />
+        <DarkModeToggle />
       </div>
     </nav>
   );

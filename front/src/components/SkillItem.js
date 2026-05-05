@@ -1,25 +1,24 @@
-import React from 'react'
-import './Skills.css'
-import SlideInOnScroll from './SlideInOnScroll'
+import './Skills.css';
+import SlideInOnScroll from './SlideInOnScroll';
+import GlitchImage from './GlitchImage';
 
 function SkillItem({ src, text, level, alt }) {
     return (
         <SlideInOnScroll>
             <div className='skill'>
-                <div className='img_container'>
-                    <img src={src} alt={alt} className='skill_img' />
-                    <img src={src} alt={alt} className='skill_img' />
-                    <img src={src} alt={alt} className='skill_img' />
-                    <img src={src} alt={alt} className='skill_img' />
-                    <img src={src} alt={alt} className='skill_img' />
-                </div>
+                <GlitchImage
+                    src={src}
+                    alt={alt}
+                    wrapperClassName='img_container'
+                    imageClassName='skill_img'
+                />
                 <div className='skill_caption'>
                     <h5 className='skill_text'>{text}</h5>
                     <h5 className='skill_level'>{level}</h5>
                 </div>
             </div>
         </SlideInOnScroll>
-    )
+    );
 }
 
-export default SkillItem
+export default SkillItem;

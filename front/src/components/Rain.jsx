@@ -15,7 +15,7 @@ function Rain() {
 
   return (
     <>
-      <div className="rain-container" id="rain_container_id">
+      <div className="rain-container">
         {isActive && particles.map((p) => <RainParticle key={p.id} particle={p} />)}
       </div>
       <button

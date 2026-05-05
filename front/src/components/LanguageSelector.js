@@ -1,42 +1,44 @@
-import React from "react";
 import './LanguageSelector.css';
 import Select from 'react-select';
-import i18n from '../i18n';
-import { withTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useSearchParams } from 'react-router-dom';
 
-const LanguageSelector = ({ t }) => {
-    const navigate = useNavigate();
-    
-    const countries = [
-        { value: 'fr', image: "/flags/fr.png" },
-        { value: 'en', image: "/flags/en.png" }
-    ];
+const COUNTRIES = [
+    { value: 'fr', image: '/flags/fr.png' },
+    { value: 'en', image: '/flags/en.png' },
+];
+
+const findLanguageOption = (code) =>
+    COUNTRIES.find((c) => c.value === code) ?? COUNTRIES.find((c) => c.value === 'fr');
+
+const LanguageSelector = () => {
+    const { i18n } = useTranslation();
+    const [searchParams, setSearchParams] = useSearchParams();
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
-        const url = new URL(window.location);
-        url.searchParams.set('language', lng);
-        navigate(`${url.pathname}${url.search}`);
-        window.location.reload();
+        const next = new URLSearchParams(searchParams);
+        next.set('language', lng);
+        setSearchParams(next, { replace: true });
     };
 
-    const currentLanguage = i18n.language;
-    let currentLanguageObj = countries.find(country => country.value === currentLanguage);
-    if (!currentLanguageObj) {
-        currentLanguageObj = countries.find(country => country.value === 'fr');
-    }
+    const currentOption = findLanguageOption(i18n.language);
 
     return (
-        <div className="language_selector">
+        <div className='language_selector'>
             <Select
-                defaultValue={currentLanguageObj}
-                options={countries}
-                className="language_selector_dropdown"
+                value={currentOption}
+                options={COUNTRIES}
+                className='language_selector_dropdown'
                 isSearchable={false}
-                formatOptionLabel={country => (
-                    <div className="country_option" onClick={() => changeLanguage(country.value)}>
-                        <img src={country.image} className="dropdown_selector_language" alt={`country-${country.value}`} />
+                onChange={(option) => option && changeLanguage(option.value)}
+                formatOptionLabel={(country) => (
+                    <div className='country_option'>
+                        <img
+                            src={country.image}
+                            className='dropdown_selector_language'
+                            alt={`country-${country.value}`}
+                        />
                     </div>
                 )}
             />
@@ -44,4 +46,4 @@ const LanguageSelector = ({ t }) => {
     );
 };
 
-export default withTranslation()(LanguageSelector);
+export default LanguageSelector;

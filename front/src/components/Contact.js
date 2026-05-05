@@ -1,36 +1,54 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './Contact.css'
-import SlideInOnScroll from './SlideInOnScroll'
+import { useTranslation } from 'react-i18next';
+import './Contact.css';
+import SlideInOnScroll from './SlideInOnScroll';
 
-function Contact({ t }) {
+const CONTACT_LINKS = [
+    {
+        href: 'https://www.linkedin.com/in/charlyflu',
+        icon: 'fa-brands fa-linkedin',
+        label: 'in/charlyflu/',
+    },
+    {
+        href: 'mailto:charly.flu.67.150@gmail.com',
+        icon: 'fa-solid fa-envelope',
+        label: 'charly.flu.67.150@gmail.com',
+    },
+    {
+        href: 'https://github.com/SharkyFlou',
+        icon: 'fa-brands fa-github',
+        label: 'SharkyFlou',
+    },
+];
+
+function Contact() {
+    const { t } = useTranslation();
     return (
         <>
             <div className='bar_contact' />
-            <div className='contact' >
-                <div  id='contact'/>
+            <div className='contact'>
+                <div id='contact' />
                 <SlideInOnScroll>
-                    <h1>{t("Contact")}</h1>
+                    <h1>{t('Contact')}</h1>
                 </SlideInOnScroll>
                 <SlideInOnScroll>
                     <div className='contact_container'>
-                        <Link className='contact_item_link' to='https://www.linkedin.com/in/charlyflu' target="_blank">
-                            <i className="fa-brands fa-linkedin"></i>
-                            in/charlyflu/
-                        </Link>
-                        <Link className='contact_item_link' to='mailto:charly.flu.67.150@gmail.com' target="_blank">
-                            <i className="fa-solid fa-envelope"></i>
-                            charly.flu.67.150@gmail.com
-                        </Link>
-                        <Link className='contact_item_link' to='https://github.com/SharkyFlou' target="_blank">
-                            <i className="fa-brands fa-github"></i>
-                            SharkyFlou
-                        </Link>
+                        {CONTACT_LINKS.map((link) => (
+                            <a
+                                key={link.href}
+                                className='contact_item_link'
+                                href={link.href}
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <i className={link.icon}></i>
+                                {link.label}
+                            </a>
+                        ))}
                     </div>
                 </SlideInOnScroll>
             </div>
         </>
-    )
+    );
 }
 
-export default Contact
+export default Contact;

@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './Career.css';
 import CareerItem from './CarreerItem';
 import SlideInOnScroll from './SlideInOnScroll';
 import { CAREER_ENTRIES } from '../data/career';
 import { useArrowLength } from '../hooks/useArrowLength';
 
-function Career({ t }) {
+function Career() {
+  const { t } = useTranslation();
   const careerRef = useRef(null);
   const [showOld, setShowOld] = useState(false);
 
@@ -29,9 +30,9 @@ function Career({ t }) {
       {parts.map((part, index) => {
         if (part.type === 'link') {
           return (
-            <Link key={index} className='link_about' to={part.href} target='_blank'>
+            <a key={index} className='link_about' href={part.href} target='_blank' rel='noreferrer'>
               {t(part.key)}
-            </Link>
+            </a>
           );
         }
         return <span key={index}>{t(part.key)}</span>;

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { PROJECT_FILTERS } from '../hooks/useFilteredProjects';
 
 const FILTER_LABELS = [
@@ -6,7 +7,8 @@ const FILTER_LABELS = [
   { key: PROJECT_FILTERS.RECENT, labelKey: 'projects_recent' },
 ];
 
-function ProjectsFilterBar({ activeFilter, onChange, t }) {
+function ProjectsFilterBar({ activeFilter, onChange }) {
+  const { t } = useTranslation();
   return (
     <div className='projects_btns'>
       {FILTER_LABELS.map(({ key, labelKey }) => (

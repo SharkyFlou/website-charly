@@ -1,5 +1,7 @@
 import { animateScroll as scroll } from 'react-scroll';
 
+const SETTLE_DELAY_MS = 600;
+
 export const scrollTo = (elementId) => {
   const element = document.getElementById(elementId);
 
@@ -8,23 +10,21 @@ export const scrollTo = (elementId) => {
     return;
   }
 
-  // Flag to check if scrolling is currently happening
-  let isScrolling = false;
+  let hasReadjusted = false;
 
-  // Function to handle the scroll event
-  const handleScroll = () => {
-    if (!isScrolling) {
-      // When scrolling stops, initiate the second smooth scroll
-      isScrolling = true;
-      element.scrollIntoView({ behavior: 'smooth' });
-      window.removeEventListener('scroll', handleScroll);
-    }
+  const readjust = () => {
+    if (hasReadjusted) return;
+    hasReadjusted = true;
+    window.removeEventListener('scroll', onScroll);
+    element.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Add the scroll event listener
-  window.addEventListener('scroll', handleScroll);
+  const onScroll = () => {
+    window.requestAnimationFrame(readjust);
+  };
 
-  // Initiate the first smooth scroll
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.setTimeout(readjust, SETTLE_DELAY_MS);
+
   element.scrollIntoView({ behavior: 'smooth' });
 };
-
