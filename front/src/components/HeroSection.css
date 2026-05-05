@@ -29,7 +29,7 @@ body.dark .link_about{
 }
 
 .hero-container {
-    /*background: url('/public/images/img-cliff-2.jpg') center center/cover no-repeat;*/
+    /*background: url('/images/img-cliff-2.jpg') center center/cover no-repeat;*/
     background: var(--background-tertiary-color);
     width: 100%;
     display: flex;
@@ -71,7 +71,7 @@ body.dark .about_container {
 .me_englobe{
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    background: url('/public/images/charly_22.3.jpg') center center/cover no-repeat;
+    background: url('/images/charly_22.3.jpg') center center/cover no-repeat;
 }
 
 .me_img {

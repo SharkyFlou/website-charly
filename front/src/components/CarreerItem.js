@@ -15,7 +15,7 @@ function CareerItem({ src, text, year, alt }) {
     <SlideInOnScroll>
       <div className={click ? "career_item clicked":"career_item"} onClick={handleClick} onMouseLeave={() => setClick(false)}>
         <div className='img_container'>
-          <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill_img' />
+          <img src={src} alt={alt} className='skill_img' />
         </div>
         <div className='career_caption'>
           <h5 className='career_text'>{text}</h5>

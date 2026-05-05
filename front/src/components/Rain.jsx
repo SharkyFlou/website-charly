@@ -106,7 +106,7 @@ function Rain() {
                 //set image of leaf
                 for (let y = 0; y < 7; y++) {
                     if (i % 7 === y) {
-                        rainObject.style.backgroundImage = "url(" + process.env.PUBLIC_URL + "/images/rains/leaf" + (y + 1) + ".png)";
+                        rainObject.style.backgroundImage = "url(" + "/images/rains/leaf" + (y + 1) + ".png)";
                     }
                 }
                 //bigger size
@@ -118,7 +118,7 @@ function Rain() {
                 //set image of sakura
                 for (let y = 0; y < 7; y++) {
                     if (i % 7 === y) {
-                        rainObject.style.backgroundImage = "url(" + process.env.PUBLIC_URL + "/images/rains/sakura" + (y + 1) + ".png)";
+                        rainObject.style.backgroundImage = "url(" + "/images/rains/sakura" + (y + 1) + ".png)";
                     }
                 }
                 //bigger size
@@ -137,15 +137,15 @@ function Rain() {
 
             </div>
             {objectRain === SNOW && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={() => letItRain(SNOW)}>
-                <img src={process.env.PUBLIC_URL + "/images/rains/snow_flake.png"} alt="" />
+                <img src={"/images/rains/snow_flake.png"} alt="" />
             </button>
             }
             {objectRain === LEAF && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={() => letItRain(LEAF)}>
-                <img src={process.env.PUBLIC_URL + "/images/rains/leaf1.png"} alt="" />
+                <img src={"/images/rains/leaf1.png"} alt="" />
             </button>
             }
             {objectRain === SAKURA && <button className={isRaining ? "rain-button active" : "rain-button"} onClick={() => letItRain(SAKURA)}>
-                <img src={process.env.PUBLIC_URL + "/images/rains/sakura_big.png"} alt="" />
+                <img src={"/images/rains/sakura_big.png"} alt="" />
             </button>
             }
         </>

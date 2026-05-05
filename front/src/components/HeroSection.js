@@ -22,12 +22,12 @@ function HeroSection({ t }) {
             <SlideInOnScroll>
                 <div className='about_container'>
                     <div className='about_img_container'>
-                        <div src={process.env.PUBLIC_URL + "/images/charly_22.3.jpg"} className="me_img c-glitch me_englobe">
-                            <img src={process.env.PUBLIC_URL + '/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
-                            <img src={process.env.PUBLIC_URL + '/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
-                            <img src={process.env.PUBLIC_URL + '/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
-                            <img src={process.env.PUBLIC_URL + '/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
-                            <img src={process.env.PUBLIC_URL + '/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
+                        <div src={"/images/charly_22.3.jpg"} className="me_img c-glitch me_englobe">
+                            <img src={'/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
+                            <img src={'/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
+                            <img src={'/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
+                            <img src={'/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
+                            <img src={'/images/charly_22.3.jpg'} alt='Profile of Charly FLU' className='me_img c-glitch_img' />
                         </div>
                     </div>
                     <div className='about_text'>
@@ -41,18 +41,18 @@ function HeroSection({ t }) {
                         {/*<p className="warning">{t("home_intro_pt8")}</p>*/}
  
                         <div className="hero-btns inv-mobile">
-                            <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#projects"} onClick={forwardToScroll('projects')} className="btn btn--large" >
+                            <Link to={"/"+ currentUrlParams+ "#projects"} onClick={forwardToScroll('projects')} className="btn btn--large" >
                                 <span>
                                     {t("home_projects_title")}
                                 </span>
-                                <img src={process.env.PUBLIC_URL + '/images/arrow_down.png'} alt='Flêche vers le bas' className='arrow_down' />
+                                <img src={'/images/arrow_down.png'} alt='Flêche vers le bas' className='arrow_down' />
                             </Link>
                     
-                            <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#skills"} onClick={forwardToScroll('skills')} className="btn btn--large" >
+                            <Link to={"/"+ currentUrlParams+ "#skills"} onClick={forwardToScroll('skills')} className="btn btn--large" >
                                 <span>
                                     {t("home_skills_title")}
                                 </span>
-                                <img src={process.env.PUBLIC_URL + '/images/arrow_down.png'} alt='Flêche vers le bas' className='arrow_down' />
+                                <img src={'/images/arrow_down.png'} alt='Flêche vers le bas' className='arrow_down' />
                             </Link>
                         </div>
                     </div>

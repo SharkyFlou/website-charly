@@ -9,8 +9,8 @@ const LanguageSelector = ({ t }) => {
     const navigate = useNavigate();
     
     const countries = [
-        { value: 'fr', image: process.env.PUBLIC_URL + "/flags/fr.png" },
-        { value: 'en', image: process.env.PUBLIC_URL + "/flags/en.png" }
+        { value: 'fr', image: "/flags/fr.png" },
+        { value: 'en', image: "/flags/en.png" }
     ];
 
     const changeLanguage = (lng) => {

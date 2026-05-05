@@ -7,11 +7,11 @@ function SkillItem({ src, text, level, alt }) {
         <SlideInOnScroll>
             <div className='skill'>
                 <div className='img_container'>
-                    <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill_img' />
-                    <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill_img' />
-                    <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill_img' />
-                    <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill_img' />
-                    <img src={process.env.PUBLIC_URL + src} alt={alt} className='skill_img' />
+                    <img src={src} alt={alt} className='skill_img' />
+                    <img src={src} alt={alt} className='skill_img' />
+                    <img src={src} alt={alt} className='skill_img' />
+                    <img src={src} alt={alt} className='skill_img' />
+                    <img src={src} alt={alt} className='skill_img' />
                 </div>
                 <div className='skill_caption'>
                     <h5 className='skill_text'>{text}</h5>

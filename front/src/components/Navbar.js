@@ -56,9 +56,9 @@ function Navbar({ t }) {
         <>
             <nav className="navbar" id="navbar">
                 <div className="navbar-container">
-                    <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#home"} className="navbar-logo" onClick={closeMobileMenu('home')}>
+                    <Link to={"/"+ currentUrlParams+ "#home"} className="navbar-logo" onClick={closeMobileMenu('home')}>
                         <div className="logo_home_img logo_englobe">
-                            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="my logo" className="logo_home_img" />
+                            <img src={"/images/logo.png"} alt="my logo" className="logo_home_img" />
                         </div>
                     </Link>
 
@@ -73,33 +73,33 @@ function Navbar({ t }) {
 
                     <ul className={menuMobile ? 'nav-menu active' : 'nav-menu'}>
                         <li className="nav-item">
-                            <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#home"  } className="nav-links" onClick={closeMobileMenu('home')}>
+                            <Link to={"/"+ currentUrlParams+ "#home"  } className="nav-links" onClick={closeMobileMenu('home')}>
                                 {t("navbar_home")}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#projects" } className="nav-links" onClick={closeMobileMenu('projects')}>
+                            <Link to={"/"+ currentUrlParams+ "#projects" } className="nav-links" onClick={closeMobileMenu('projects')}>
                                 {t("navbar_projects")}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#career"} className="nav-links" onClick={closeMobileMenu('career')}>
+                            <Link to={"/"+ currentUrlParams+ "#career"} className="nav-links" onClick={closeMobileMenu('career')}>
                                 {t("navbar_career")}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#skills"} className="nav-links" onClick={closeMobileMenu('skills')}>
+                            <Link to={"/"+ currentUrlParams+ "#skills"} className="nav-links" onClick={closeMobileMenu('skills')}>
                                 {t("navbar_skills")}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#contact"} className="nav-links-mobile" onClick={closeMobileMenu('contact')}>
+                            <Link to={"/"+ currentUrlParams+ "#contact"} className="nav-links-mobile" onClick={closeMobileMenu('contact')}>
                                 {t("navbar_contact")}
                             </Link>
                         </li>
                     </ul>
                     {button &&
-                        <Link to={process.env.PUBLIC_URL + "/"+ currentUrlParams+ "#contact"} onClick={closeMobileMenu('contact')} className="contact-button" >
+                        <Link to={"/"+ currentUrlParams+ "#contact"} onClick={closeMobileMenu('contact')} className="contact-button" >
                             {t("navbar_contact")}
                             <span className="contact-animation"></span> {/* Animation element */}
                         </Link>}
