@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Projects.css';
-import SlideInOnScroll from './SlideInOnScroll';
+import SlideInOnScroll from '../ui/SlideInOnScroll';
 import ProjectsFilterBar from './ProjectsFilterBar';
 import ProjectsList from './ProjectsList';
-import { PROJECT_FILTERS, useFilteredProjects } from '../hooks/useFilteredProjects';
+import { PROJECT_FILTERS, useFilteredProjects } from '../../hooks/useFilteredProjects';
 
 function Projects() {
     const { t } = useTranslation();

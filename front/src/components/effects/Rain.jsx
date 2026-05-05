@@ -1,6 +1,6 @@
 import './Rain.css';
 import RainParticle from './RainParticle';
-import { RAIN_TYPES, useSeasonalRain } from '../hooks/useSeasonalRain';
+import { RAIN_TYPES, useSeasonalRain } from '../../hooks/useSeasonalRain';
 
 const TOGGLE_ICON_BY_TYPE = {
   [RAIN_TYPES.SNOW]: '/images/rains/snow_flake.png',

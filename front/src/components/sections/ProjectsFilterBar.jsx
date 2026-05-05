@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { PROJECT_FILTERS } from '../hooks/useFilteredProjects';
+import { PROJECT_FILTERS } from '../../hooks/useFilteredProjects';
 
 const FILTER_LABELS = [
   { key: PROJECT_FILTERS.ALL, labelKey: 'projects_all' },

@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import './Glitch.css';
+import '../ui/Glitch.css';
 import './Navbar.css';
-import { DarkModeToggle } from './DarkModeToggle';
-import LanguageSelector from './LanguageSelector';
-import { useNavbarVisibility } from '../hooks/useNavbarVisibility';
-import { useViewportBreakpoint } from '../hooks/useViewportBreakpoint';
-import { useScrollLink } from '../hooks/useScrollLink';
+import { DarkModeToggle } from '../ui/DarkModeToggle';
+import LanguageSelector from '../ui/LanguageSelector';
+import { useNavbarVisibility } from '../../hooks/useNavbarVisibility';
+import { useViewportBreakpoint } from '../../hooks/useViewportBreakpoint';
+import { useScrollLink } from '../../hooks/useScrollLink';
 
 const NAV_ITEMS = [
   { id: 'home', labelKey: 'navbar_home', mobileOnly: false },

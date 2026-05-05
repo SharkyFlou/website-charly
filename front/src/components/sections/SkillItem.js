@@ -1,6 +1,6 @@
 import './Skills.css';
-import SlideInOnScroll from './SlideInOnScroll';
-import GlitchImage from './GlitchImage';
+import SlideInOnScroll from '../ui/SlideInOnScroll';
+import GlitchImage from '../ui/GlitchImage';
 
 function SkillItem({ src, text, level, alt }) {
     return (

@@ -1,5 +1,5 @@
 import ProjectItem from './ProjectItem';
-import { PROJECT_FILTERS } from '../hooks/useFilteredProjects';
+import { PROJECT_FILTERS } from '../../hooks/useFilteredProjects';
 
 const LAYOUTS = {
   [PROJECT_FILTERS.ALL]: [

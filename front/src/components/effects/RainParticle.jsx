@@ -1,4 +1,4 @@
-import { RAIN_TYPES } from '../hooks/useSeasonalRain';
+import { RAIN_TYPES } from '../../hooks/useSeasonalRain';
 
 function RainParticle({ particle }) {
   const className = [

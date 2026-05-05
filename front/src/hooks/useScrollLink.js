@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
-import { scrollTo } from '../components/Scroll';
+import { scrollTo } from '../utils/scroll';
 
 export function useScrollLink() {
   const { search } = useLocation();

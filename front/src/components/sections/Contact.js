@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import './Contact.css';
-import SlideInOnScroll from './SlideInOnScroll';
+import SlideInOnScroll from '../ui/SlideInOnScroll';
 
 const CONTACT_LINKS = [
     {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Career.css';
-import SlideInOnScroll from './SlideInOnScroll';
+import SlideInOnScroll from '../ui/SlideInOnScroll';
 
 function CareerItem({ src, text, year, alt }) {
   const [isClicked, setIsClicked] = useState(false);

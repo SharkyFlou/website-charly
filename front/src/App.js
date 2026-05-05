@@ -1,15 +1,15 @@
 import { useLayoutEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
-import Projects from './components/Projects';
-import HeroSection from './components/HeroSection';
-import Footer from './components/Footer';
-import Contact from './components/Contact';
-import Skills from './components/Skills';
-import Career from './components/Career';
-import Rain from './components/Rain';
-import { scrollTo } from './components/Scroll';
+import './styles/globals.css';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import HeroSection from './components/sections/HeroSection';
+import Projects from './components/sections/Projects';
+import Career from './components/sections/Career';
+import Skills from './components/sections/Skills';
+import Contact from './components/sections/Contact';
+import Rain from './components/effects/Rain';
+import { scrollTo } from './utils/scroll';
 
 const INITIAL_SCROLL_DELAY_MS = 500;
 

@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import './HeroSection.css';
-import './Glitch.css';
-import '../App.css';
-import SlideInOnScroll from './SlideInOnScroll';
-import GlitchImage from './GlitchImage';
-import { useScrollLink } from '../hooks/useScrollLink';
+import '../ui/Glitch.css';
+import '../../styles/globals.css';
+import SlideInOnScroll from '../ui/SlideInOnScroll';
+import GlitchImage from '../ui/GlitchImage';
+import { useScrollLink } from '../../hooks/useScrollLink';
 
 const PROFILE_IMG = '/images/charly_22.3.jpg';
 

@@ -1,6 +1,6 @@
 import './Projects.css';
-import ImageSlider from './ImageSlider';
-import SlideInOnScroll from './SlideInOnScroll';
+import ImageSlider from '../ui/ImageSlider';
+import SlideInOnScroll from '../ui/SlideInOnScroll';
 
 function ProjectItem({ project }) {
     return (
