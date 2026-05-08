@@ -28,7 +28,7 @@ function Contact() {
             <div className='contact'>
                 <div id='contact' />
                 <SlideInOnScroll>
-                    <h1>{t('Contact')}</h1>
+                    <h1>{t('contact_title')}</h1>
                 </SlideInOnScroll>
                 <SlideInOnScroll>
                     <div className='contact_container'>

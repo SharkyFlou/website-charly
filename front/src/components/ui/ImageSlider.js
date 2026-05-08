@@ -57,7 +57,7 @@ const ImageSlider = ({ slides, path, alt, timeWaitMore }) => {
   });
 
   return (
-    <div className='image_slider_container' ref={elRef}>
+    <div className='image_slider_container' ref={elRef} aria-hidden='true'>
       <div className='slider_arrow left_arrow' onClick={goToPrev}>
         <i className='fas fa-chevron-left'></i>
       </div>

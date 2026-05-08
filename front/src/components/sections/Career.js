@@ -73,7 +73,6 @@ function Career() {
                   text={renderParts(entry.parts)}
                   year={formatYear(entry)}
                   alt={t(entry.altKey)}
-                  className={itemSideClass}
                 />
               </div>
             );

@@ -8,7 +8,7 @@ function Tabs({ children }) {
 
     return (
         <div className='tabs'>
-            <ol className='tab-list'>
+            <ol className='tab-list' role='tablist'>
                 {tabs.map((child) => {
                     const { id, label } = child.props;
                     return (
@@ -22,7 +22,7 @@ function Tabs({ children }) {
                     );
                 })}
             </ol>
-            <div className='tab-content'>
+            <div className='tab-content' role='tabpanel'>
                 {tabs
                     .filter((child) => child.props.id === activeTab)
                     .map((child) => child.props.children)}
