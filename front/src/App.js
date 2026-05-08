@@ -1,51 +1,44 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
-import Projects from './components/Projects';
-import HeroSection from './components/HeroSection';
-import Footer from './components/Footer';
-import Contact from './components/Contact';
-import Skills from './components/Skills';
-import Career from './components/Career';
-import Rain from './components/Rain';
-import { withTranslation } from 'react-i18next';
 import { useLayoutEffect } from 'react';
-import { scrollTo } from './components/Scroll';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './styles/globals.css';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import HeroSection from './components/sections/HeroSection';
+import Projects from './components/sections/Projects';
+import Career from './components/sections/Career';
+import Skills from './components/sections/Skills';
+import Contact from './components/sections/Contact';
+import Rain from './components/effects/Rain';
+import { scrollTo } from './utils/scroll';
 
+const INITIAL_SCROLL_DELAY_MS = 500;
 
-function App({ t }) {
+function App() {
   useLayoutEffect(() => {
-    const scrollToSomething = () => {
-      setTimeout(() => {
-        const objectId = window.location.hash.replace('#', '');
-        //document.documentElement.style.setProperty('--page-height', document.body.scrollHeight);
-        document.documentElement.style.setProperty('--page-height', `${document.body.scrollHeight}px`);
+    const id = window.setTimeout(() => {
+      const objectId = window.location.hash.replace('#', '');
+      document.documentElement.style.setProperty(
+        '--page-height',
+        `${document.body.scrollHeight}px`
+      );
+      scrollTo(objectId);
+    }, INITIAL_SCROLL_DELAY_MS);
 
-        console.log(document.body.scrollHeight);
-        //console.log('objectId', objectId);
-        scrollTo(objectId);
-      }, 500); 
-    };
-
-    scrollToSomething();
+    return () => window.clearTimeout(id);
   }, []);
 
-
   return (
-    <>
-      <Router>
-        <Rain />
-        <Navbar t={t} />
-        <HeroSection t={t} />
-        <Projects t={t} />
-        <Career t={t} />
-        <Skills t={t} />
-        <Contact t={t} />
-        <Footer t={t} />
-      </Router>
-    </>
+    <Router>
+      <Rain />
+      <Navbar />
+      <HeroSection />
+      <Projects />
+      <Career />
+      <Skills />
+      <Contact />
+      <Footer />
+    </Router>
   );
 }
 
-export default withTranslation()(App);
+export default App;
