@@ -113,5 +113,10 @@
     "games_not_found": "Game not found",
     "games_rps_war_title": "Rock Paper Scissors War",
     "games_rps_war_desc": "An all-out war between armies of rock, paper, and scissors. Who will come out on top?",
-    "games_rps_war_placeholder": "This game is not implemented yet. Come back soon to watch the battle unfold!"
+    "games_rps_war_winner_rock": "The rocks dominate!",
+    "games_rps_war_winner_paper": "The paper take the crown!",
+    "games_rps_war_winner_scissors": "The scissors triumph!",
+    "games_rps_war_start": "Start the battle",
+    "games_rps_war_restart": "Restart the battle",
+    "games_rps_war_slider_count": "Entities per type"
 }

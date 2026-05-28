@@ -8,7 +8,7 @@ export const games = [
     titleKey: 'games_rps_war_title',
     descriptionKey: 'games_rps_war_desc',
     component: RockPaperScissorsWar,
-    available: false,
+    available: true,
   },
 ];
 

@@ -112,6 +112,11 @@
     "games_coming_soon": "Bientôt",
     "games_not_found": "Jeu introuvable",
     "games_rps_war_title": "Rock Paper Scissors War",
-    "games_rps_war_desc": "Une guerre totale entre deux armées de pierre, papier et ciseaux. Qui prendra le dessus ?",
-    "games_rps_war_placeholder": "Ce jeu n'est pas encore implémenté. Revenez bientôt pour assister à la bataille !"
+    "games_rps_war_desc": "Une guerre totale entre des armées de pierre, papier et ciseaux. Qui prendra le dessus ?",
+    "games_rps_war_winner_rock": "Les pierres dominent !",
+    "games_rps_war_winner_paper": "Les feuilles l'emportent !",
+    "games_rps_war_winner_scissors": "Les ciseaux triomphent !",
+    "games_rps_war_start": "Lancer la bataille",
+    "games_rps_war_restart": "Relancer la bataille",
+    "games_rps_war_slider_count": "Nombre d'entités par type"
 }

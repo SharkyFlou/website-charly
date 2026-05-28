@@ -1,33 +1,167 @@
 .rps-war {
-  display: flex;
-  justify-content: center;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
 }
 
-.rps-war__placeholder {
-  background-color: var(--background-secondary-color);
-  border: 1px dashed var(--background-tertiary-color);
-  border-radius: 12px;
-  padding: 3rem 2rem;
-  text-align: center;
+.rps-war__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: stretch;
+  background-color: var(--background-primary-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 100%;
   max-width: 540px;
-  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
-.rps-war__icons {
-  font-size: 3rem;
+body.dark .rps-war__controls {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.rps-war__slider {
   display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--color-on-primary);
+}
+
+.rps-war__slider-emoji {
+  font-size: 1.4rem;
+  white-space: nowrap;
+  letter-spacing: 0.15rem;
+}
+
+.rps-war__slider-input {
+  flex: 1;
+  accent-color: var(--cyan-color);
+  cursor: pointer;
+  height: 4px;
+}
+
+.rps-war__slider-value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  min-width: 2.2rem;
+  text-align: right;
+  color: var(--color-on-primary);
+}
+
+.rps-war__start {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  padding: 0.6rem 1.4rem;
+  border: 2px solid var(--cyan-color);
+  border-radius: 6px;
+  color: var(--cyan-color);
+  background: linear-gradient(0deg, var(--cyan-color), var(--cyan-color)) no-repeat right bottom /
+    0 100%;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: inherit;
+  transition: background-size 0.35s ease-in-out, color 0.35s ease-in-out,
+    box-shadow 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.rps-war__start:where(:hover, :focus-visible):not(:disabled) {
+  background-size: 100% 100%;
+  background-position-x: left;
+  color: var(--color-on-tertiary);
+  box-shadow: 0 4px 12px rgba(0, 177, 255, 0.35);
+}
+
+.rps-war__start:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.rps-war__hud {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
-.rps-war__heading {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+.rps-war__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--background-primary-color);
+  color: var(--color-on-primary);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
-.rps-war__text {
-  opacity: 0.85;
-  line-height: 1.5;
+.rps-war__chip-emoji {
+  font-size: 1.4rem;
+}
+
+.rps-war__chip.is-extinct {
+  opacity: 0.35;
+}
+
+.rps-war__chip.is-winner {
+  border-color: var(--cyan-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 177, 255, 0.4);
+}
+
+.rps-war__arena {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 8 / 5;
+  background-color: var(--background-primary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .rps-war__arena {
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+}
+
+.rps-war__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.rps-war__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  color: var(--color-on-primary);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.rps-war__winner-emoji {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.rps-war__winner-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-on-primary);
 }
