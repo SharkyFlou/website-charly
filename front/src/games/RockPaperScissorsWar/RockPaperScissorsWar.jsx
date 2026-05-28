@@ -5,8 +5,8 @@ import { EMOJI, TYPE_LIST } from './entities';
 import './RockPaperScissorsWar.css';
 
 const MIN_COUNT = 5;
-const MAX_COUNT = 20;
-const DEFAULT_COUNT = 10;
+const MAX_COUNT = 60;
+const DEFAULT_COUNT = 20;
 
 function RockPaperScissorsWar() {
   const { t } = useTranslation();
