@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
@@ -28,6 +29,9 @@ function Footer() {
                 <br />
                 {t('footer_thanks')}
             </p>
+            <Link to='/hidden-games' className='footer_hidden_games' aria-label={t('footer_hidden_games')}>
+                {t('footer_hidden_games')}
+            </Link>
         </div>
     );
 }

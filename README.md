@@ -58,11 +58,17 @@ Le site est ensuite accessible sur [http://localhost:5173](http://localhost:5173
 
 ```
 front/
-├── index.html              # Point d'entrée HTML (inclut le tag Google Analytics)
-├── public/                 # Assets statiques servis tels quels
+├── index.html              # Point d'entrée HTML (inclut le tag Google Analytics + décodeur SPA)
+├── public/
+│   ├── 404.html            # Trick GitHub Pages SPA (redirige toutes les routes inconnues vers index.html)
+│   └── ...                 # Autres assets statiques servis tels quels
 ├── src/
 │   ├── main.tsx            # Bootstrap React
-│   ├── App.js              # Composant racine et routes
+│   ├── App.js              # Composant racine et déclaration des routes
+│   ├── pages/
+│   │   ├── HomePage.jsx    # Page principale (Hero, Projects, Career, Skills, Contact)
+│   │   └── HiddenGames/    # Hub des jeux cachés + route dynamique /hidden-games/:gameId
+│   ├── games/              # Registry des jeux + composants jeu par jeu
 │   ├── components/
 │   │   ├── layout/         # Navbar, Footer
 │   │   ├── sections/       # HeroSection, Projects, Skills, Career, Contact
@@ -76,6 +82,35 @@ front/
 │   └── utils/              # Fonctions utilitaires
 └── vite.config.ts          # Configuration Vite
 ```
+
+## Hidden Games
+
+Un petit bouton discret en pied de page mène vers `/hidden-games`, un hub qui liste les
+mini-jeux cachés du site. Pour ajouter un nouveau jeu :
+
+1. Créer un dossier `front/src/games/MonJeu/` avec son composant React.
+2. Ajouter une entrée dans [front/src/games/games.js](front/src/games/games.js) :
+   ```js
+   { id: 'mon-jeu', titleKey: '...', descriptionKey: '...', component: MonJeu, available: true }
+   ```
+3. Ajouter les clés de traduction associées dans les deux fichiers de `locales/`.
+
+La route `/hidden-games/:gameId` est dynamique et récupère le bon composant depuis le registry.
+
+## Routing & déploiement GitHub Pages
+
+Le site utilise `BrowserRouter` (URLs propres comme `/hidden-games`). GitHub Pages, par défaut,
+renvoie une 404 quand on rafraîchit une sous-route — il cherche un fichier qui n'existe pas.
+
+Pour contourner ce problème, on utilise le pattern [spa-github-pages](https://github.com/rafgraph/spa-github-pages) :
+
+- [front/public/404.html](front/public/404.html) intercepte les 404 et encode l'URL demandée
+  dans la query string avant de rediriger vers `/`.
+- Un petit script en tête de [front/index.html](front/index.html) décode cette query string et
+  restaure l'URL d'origine via `history.replaceState`, avant que React Router ne démarre.
+
+Aucune configuration côté OVH n'est nécessaire — la redirection de domaine pointe simplement
+vers GitHub Pages, qui gère tout.
 
 ## Internationalisation
 

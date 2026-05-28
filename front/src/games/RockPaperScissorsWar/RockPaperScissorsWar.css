@@ -1,0 +1,33 @@
+.rps-war {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.rps-war__placeholder {
+  background-color: var(--background-secondary-color);
+  border: 1px dashed var(--background-tertiary-color);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 540px;
+  width: 100%;
+}
+
+.rps-war__icons {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.rps-war__heading {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.rps-war__text {
+  opacity: 0.85;
+  line-height: 1.5;
+}

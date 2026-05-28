@@ -103,5 +103,15 @@
     "footer_license_pt2": "MIT License",
     "footer_github": "See the project on GitHub",
     "footer_built": "Built by Charly FLU using only React.js, HTML, and CSS.",
-    "footer_thanks": "Thank you for reading until the end, I hope you enjoyed this website."
+    "footer_thanks": "Thank you for reading until the end, I hope you enjoyed this website.",
+    "footer_hidden_games": "Games 🤫",
+    "games_hub_title": "Hidden Games",
+    "games_hub_subtitle": "A few games tucked away at the bottom of the site. Have fun!",
+    "games_back_home": "← Back to home",
+    "games_back_hub": "← Back to games",
+    "games_coming_soon": "Coming soon",
+    "games_not_found": "Game not found",
+    "games_rps_war_title": "Rock Paper Scissors War",
+    "games_rps_war_desc": "An all-out war between armies of rock, paper, and scissors. Who will come out on top?",
+    "games_rps_war_placeholder": "This game is not implemented yet. Come back soon to watch the battle unfold!"
 }
