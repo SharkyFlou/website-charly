@@ -1,42 +1,78 @@
 .hidden-games {
   min-height: 100vh;
-  background-color: var(--background-primary-color);
-  color: var(--color-on-primary);
-  padding: 4rem 2rem 6rem;
+  background-color: var(--background-secondary-color);
+  color: var(--color-on-secondary);
+  padding: 3rem 2rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.hidden-games__header {
+body.dark .hidden-games {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+.hidden-games__topbar {
   width: 100%;
-  max-width: 960px;
-  margin-bottom: 3rem;
-  text-align: center;
+  max-width: 1120px;
+  display: flex;
+  margin-bottom: 2.5rem;
+  z-index: 3;
   position: relative;
 }
 
-.hidden-games__back {
-  position: absolute;
-  left: 0;
-  top: 0;
+/* Back button — same "sliding background" hover pattern as .link_about / .footer_link */
+.games-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  padding: 0.55rem 1.2rem;
+  border: 2px solid var(--cyan-color);
+  border-radius: 6px;
   color: var(--cyan-color);
   text-decoration: none;
-  font-size: 0.95rem;
+  background: linear-gradient(0deg, var(--cyan-color), var(--cyan-color)) no-repeat right bottom / 0 var(--bg-h);
+  --bg-h: 100%;
+  transition: background-size 0.35s ease-in-out, color 0.35s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  z-index: 4;
+  position: relative;
 }
 
-.hidden-games__back:hover {
-  text-decoration: underline;
+.games-back-button:where(:hover, :focus-visible) {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+  color: var(--color-on-tertiary);
+  box-shadow: 0 4px 12px rgba(0, 177, 255, 0.35);
+}
+
+.games-back-button i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.games-back-button:hover i,
+.games-back-button:focus-visible i {
+  transform: translateX(-4px);
 }
 
 .hidden-games__title {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: var(--color-on-secondary);
+  z-index: 3;
+  position: relative;
 }
 
 .hidden-games__subtitle {
   color: var(--color-on-secondary);
   opacity: 0.8;
+  text-align: center;
+  margin-bottom: 3rem;
+  z-index: 3;
+  position: relative;
+  font-size: 1.1rem;
 }
 
 .hidden-games__list {
@@ -44,73 +80,87 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75rem;
   width: 100%;
-  max-width: 960px;
+  max-width: 1120px;
 }
 
 .hidden-games__card {
-  background-color: var(--background-secondary-color);
-  border-radius: 8px;
+  background-color: var(--background-primary-color);
+  border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.17);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 3;
+  position: relative;
+}
+
+body.dark .hidden-games__card {
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
 }
 
 .hidden-games__card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+body.dark .hidden-games__card:hover {
+  box-shadow: 0 12px 28px rgba(255, 255, 255, 0.22);
 }
 
 .hidden-games__card-link {
   display: block;
-  padding: 1.5rem;
-  color: inherit;
+  padding: 1.75rem;
+  color: var(--color-on-primary);
   text-decoration: none;
   height: 100%;
-  position: relative;
 }
 
 .hidden-games__card-title {
   margin-bottom: 0.75rem;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
+  color: var(--color-on-primary);
 }
 
 .hidden-games__card-desc {
   font-size: 0.95rem;
   opacity: 0.85;
-  line-height: 1.4;
+  line-height: 1.5;
+  color: var(--color-on-primary);
 }
 
 .hidden-games__badge {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.2rem 0.6rem;
+  margin-top: 1.25rem;
+  padding: 0.25rem 0.7rem;
   background-color: var(--cyan-color);
   color: var(--color-on-tertiary);
   border-radius: 999px;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  font-weight: 700;
 }
 
 .hidden-games__game-host {
   width: 100%;
-  max-width: 960px;
+  max-width: 1120px;
+  z-index: 3;
+  position: relative;
 }
 
 @media only screen and (max-width: 600px) {
   .hidden-games {
-    padding: 3rem 1rem 4rem;
-  }
-
-  .hidden-games__back {
-    position: static;
-    display: inline-block;
-    margin-bottom: 1rem;
+    padding: 2rem 1rem 3rem;
   }
 
   .hidden-games__title {
     font-size: 2rem;
+  }
+
+  .games-back-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
 }
