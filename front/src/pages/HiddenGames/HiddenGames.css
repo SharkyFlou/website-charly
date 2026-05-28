@@ -8,6 +8,14 @@
   align-items: center;
 }
 
+/* SlideInOnScroll injects an <animated.div> wrapper without a width. Without
+   this rule it shrinks to max-content of its children, which on small screens
+   means the 800px arena overflows the viewport. */
+.hidden-games > .slide_in_on_scroll {
+  width: 100%;
+  max-width: 1120px;
+}
+
 body.dark .hidden-games {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
 }
@@ -80,7 +88,7 @@ body.dark .hidden-games {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
   gap: 1.75rem;
   width: 100%;
   max-width: 1120px;
@@ -152,15 +160,46 @@ body.dark .hidden-games__card:hover {
 
 @media only screen and (max-width: 600px) {
   .hidden-games {
-    padding: 2rem 1rem 3rem;
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .hidden-games__topbar {
+    margin-bottom: 1.5rem;
   }
 
   .hidden-games__title {
-    font-size: 2rem;
+    font-size: 1.85rem;
+  }
+
+  .hidden-games__subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   .games-back-button {
+    font-size: 0.95rem;
+    padding: 0.65rem 1.1rem;
+  }
+
+  .hidden-games__list {
+    gap: 1rem;
+  }
+
+  .hidden-games__card-link {
+    padding: 1.5rem;
+  }
+
+  .hidden-games__card-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .hidden-games__title {
+    font-size: 1.55rem;
+  }
+
+  .games-back-button span {
     font-size: 0.9rem;
-    padding: 0.5rem 1rem;
   }
 }

@@ -38,9 +38,9 @@ body.dark .rps-war__controls {
 
 .rps-war__slider-input {
   flex: 1;
+  min-width: 0;
   accent-color: var(--cyan-color);
   cursor: pointer;
-  height: 4px;
 }
 
 .rps-war__slider-value {
@@ -164,4 +164,61 @@ body.dark .rps-war__arena {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-on-primary);
+}
+
+@media only screen and (max-width: 600px) {
+  .rps-war {
+    gap: 1rem;
+  }
+
+  .rps-war__controls {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .rps-war__slider {
+    gap: 0.6rem;
+  }
+
+  .rps-war__slider-emoji {
+    font-size: 1.15rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .rps-war__slider-value {
+    min-width: 1.8rem;
+    font-size: 0.95rem;
+  }
+
+  .rps-war__start {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .rps-war__hud {
+    gap: 0.5rem;
+  }
+
+  .rps-war__chip {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .rps-war__chip-emoji {
+    font-size: 1.15rem;
+  }
+
+  .rps-war__arena {
+    aspect-ratio: 4 / 3;
+  }
+
+  .rps-war__winner-emoji {
+    font-size: 3rem;
+  }
+
+  .rps-war__winner-text {
+    font-size: 1.15rem;
+  }
 }
