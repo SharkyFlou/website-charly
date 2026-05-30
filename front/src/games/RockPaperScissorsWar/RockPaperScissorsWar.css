@@ -83,40 +83,68 @@ body.dark .rps-war__controls {
 }
 
 .rps-war__hud {
+  width: 100%;
+  max-width: 800px;
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.rps-war__hud-emojis {
+  display: flex;
+  align-items: flex-end;
+  min-height: 3rem;
+}
+
+.rps-war__hud-emoji-cell {
+  display: flex;
   justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  min-width: 0;
+  transition: flex-grow 0.4s ease-out;
 }
 
-.rps-war__chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--background-primary-color);
-  color: var(--color-on-primary);
-  border: 2px solid transparent;
+.rps-war__hud-emoji {
+  --fraction: 0.33;
+  font-size: calc(0.7rem + 2rem * var(--fraction));
+  line-height: 1;
+  transition: font-size 0.4s ease-out;
+}
+
+.rps-war__hud-bar {
+  display: flex;
+  height: 1.25rem;
+  width: 100%;
   border-radius: 999px;
+  overflow: hidden;
+  background-color: var(--background-primary-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
 }
 
-.rps-war__chip-emoji {
-  font-size: 1.4rem;
+body.dark .rps-war__hud-bar {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
-.rps-war__chip.is-extinct {
-  opacity: 0.35;
+.rps-war__hud-segment {
+  height: 100%;
+  transition: flex-grow 0.4s ease-out, box-shadow 0.3s ease-in-out;
 }
 
-.rps-war__chip.is-winner {
-  border-color: var(--cyan-color);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 177, 255, 0.4);
+.rps-war__hud-segment--rock {
+  background-color: #8a8378;
+}
+
+.rps-war__hud-segment--paper {
+  background-color: #c9a875;
+}
+
+.rps-war__hud-segment--scissors {
+  background-color: #fb5642;
+}
+
+.rps-war__hud-segment.is-winner {
+  box-shadow: inset 0 0 0 2px var(--color-on-primary);
 }
 
 .rps-war__arena {
@@ -197,17 +225,16 @@ body.dark .rps-war__arena {
     justify-content: center;
   }
 
-  .rps-war__hud {
-    gap: 0.5rem;
+  .rps-war__hud-emojis {
+    min-height: 2.2rem;
   }
 
-  .rps-war__chip {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+  .rps-war__hud-emoji {
+    font-size: calc(0.6rem + 1.4rem * var(--fraction));
   }
 
-  .rps-war__chip-emoji {
-    font-size: 1.15rem;
+  .rps-war__hud-bar {
+    height: 1rem;
   }
 
   .rps-war__arena {

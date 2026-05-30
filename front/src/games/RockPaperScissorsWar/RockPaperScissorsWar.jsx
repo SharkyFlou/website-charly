@@ -18,6 +18,8 @@ function RockPaperScissorsWar() {
     stats.status === 'idle'
       ? { rock: count, paper: count, scissors: count }
       : stats.counts;
+  const total =
+    displayCounts.rock + displayCounts.paper + displayCounts.scissors;
   const buttonLabel =
     stats.status === 'idle' ? t('games_rps_war_start') : t('games_rps_war_restart');
 
@@ -49,19 +51,44 @@ function RockPaperScissorsWar() {
       </div>
 
       <div className='rps-war__hud'>
-        {TYPE_LIST.map((type) => (
-          <div
-            key={type}
-            className={`rps-war__chip rps-war__chip--${type}${
-              stats.winner === type ? ' is-winner' : ''
-            }${displayCounts[type] === 0 ? ' is-extinct' : ''}`}
-          >
-            <span className='rps-war__chip-emoji' aria-hidden='true'>
-              {EMOJI[type]}
-            </span>
-            <span className='rps-war__chip-count'>{displayCounts[type]}</span>
-          </div>
-        ))}
+        <div className='rps-war__hud-emojis'>
+          {TYPE_LIST.map((type) => {
+            const c = displayCounts[type];
+            const fraction = total === 0 ? 0 : c / total;
+            return (
+              <div
+                key={type}
+                className='rps-war__hud-emoji-cell'
+                style={{ flexGrow: c, flexBasis: 0 }}
+              >
+                {c > 0 && (
+                  <span
+                    className='rps-war__hud-emoji'
+                    style={{ '--fraction': fraction }}
+                    aria-hidden='true'
+                  >
+                    {EMOJI[type]}
+                  </span>
+                )}
+              </div>
+            );
+          })}
+        </div>
+        <div
+          className='rps-war__hud-bar'
+          role='img'
+          aria-label={`${displayCounts.rock} / ${displayCounts.paper} / ${displayCounts.scissors}`}
+        >
+          {TYPE_LIST.map((type) => (
+            <div
+              key={type}
+              className={`rps-war__hud-segment rps-war__hud-segment--${type}${
+                stats.winner === type ? ' is-winner' : ''
+              }`}
+              style={{ flexGrow: displayCounts[type], flexBasis: 0 }}
+            />
+          ))}
+        </div>
       </div>
 
       <div className='rps-war__arena'>
