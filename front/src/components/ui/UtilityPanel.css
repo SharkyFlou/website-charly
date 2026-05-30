@@ -1,0 +1,56 @@
+/* Standalone slide-out panel for pages that don't render the Navbar.
+   Mirrors .utility_container from Navbar.css but uses position: fixed
+   so it anchors to the viewport instead of the (absent) navbar. */
+.utility-panel {
+  position: fixed;
+  top: 1rem;
+  right: calc(-20rem + 2rem);
+  width: 20rem;
+  height: 4.5rem;
+  border-radius: 2.25rem;
+  border: 1px solid rgb(26, 23, 23);
+  background-color: rgb(26, 23, 23);
+  color: var(--color-on-primary);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  align-content: center;
+  transition: all 0.3s ease-out;
+  z-index: 999;
+}
+
+.utility-panel i {
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+body.dark .utility-panel {
+  border: 1px solid #fff;
+}
+
+@media screen and (min-width: 960px) {
+  .utility-panel:hover {
+    right: calc(-20rem + 14rem);
+    transition: all 0.2s ease-out;
+  }
+
+  .utility-panel:hover i {
+    transform: rotate(180deg);
+    transition: all 0.2s ease-out;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .utility-panel.clicked:hover {
+    right: calc(-20rem + 14rem);
+    transition: all 0.2s ease-out;
+  }
+
+  .utility-panel.clicked:hover i {
+    transform: rotate(180deg);
+    transition: all 0.2s ease-out;
+  }
+}

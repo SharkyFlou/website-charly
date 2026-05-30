@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SlideInOnScroll from '../../components/ui/SlideInOnScroll';
+import UtilityPanel from '../../components/ui/UtilityPanel';
 import { games } from '../../games/games';
 import './HiddenGames.css';
 
@@ -9,6 +10,7 @@ function HiddenGames() {
 
   return (
     <div className='hidden-games'>
+      <UtilityPanel />
       <div className='hidden-games__topbar'>
         <Link to='/' className='games-back-button'>
           <i className='fa-solid fa-arrow-left' aria-hidden='true'></i>

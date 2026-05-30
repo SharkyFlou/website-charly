@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SlideInOnScroll from '../../components/ui/SlideInOnScroll';
+import UtilityPanel from '../../components/ui/UtilityPanel';
 import { findGame } from '../../games/games';
 import './HiddenGames.css';
 
@@ -12,6 +13,7 @@ function GamePage() {
   if (!game) {
     return (
       <div className='hidden-games'>
+        <UtilityPanel />
         <div className='hidden-games__topbar'>
           <Link to='/hidden-games' className='games-back-button'>
             <i className='fa-solid fa-arrow-left' aria-hidden='true'></i>
@@ -29,6 +31,7 @@ function GamePage() {
 
   return (
     <div className='hidden-games'>
+      <UtilityPanel />
       <div className='hidden-games__topbar'>
         <Link to='/hidden-games' className='games-back-button'>
           <i className='fa-solid fa-arrow-left' aria-hidden='true'></i>
