@@ -88,6 +88,24 @@ describe('collisions', () => {
     expect(world.entities[0].type).toBe('rock');
     expect(world.entities[1].type).toBe('rock');
   });
+
+  it('returns the number of transformations from step', () => {
+    const world = worldWith([
+      { id: 0, type: 'rock', x: 100, y: 100, vx: 0, vy: 0 },
+      { id: 1, type: 'scissors', x: 110, y: 100, vx: 0, vy: 0 },
+      { id: 2, type: 'paper', x: 200, y: 100, vx: 0, vy: 0 },
+      { id: 3, type: 'rock', x: 210, y: 100, vx: 0, vy: 0 },
+    ]);
+    expect(step(world, 0)).toBe(2);
+  });
+
+  it('returns 0 from step when no entities collide', () => {
+    const world = worldWith([
+      { id: 0, type: 'rock', x: 100, y: 100, vx: 0, vy: 0 },
+      { id: 1, type: 'scissors', x: 300, y: 300, vx: 0, vy: 0 },
+    ]);
+    expect(step(world, 0)).toBe(0);
+  });
 });
 
 describe('getWinner', () => {

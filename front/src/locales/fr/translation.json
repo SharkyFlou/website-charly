@@ -118,5 +118,6 @@
     "games_rps_war_winner_scissors": "Les ciseaux triomphent !",
     "games_rps_war_start": "Lancer la bataille",
     "games_rps_war_restart": "Relancer la bataille",
-    "games_rps_war_slider_count": "Nombre d'entités par type"
+    "games_rps_war_slider_count": "Nombre d'entités par type",
+    "games_rps_war_shake_toggle": "Tremblement d'écran"
 }

@@ -12,7 +12,8 @@ function RockPaperScissorsWar() {
   const { t } = useTranslation();
   const canvasRef = useRef(null);
   const [count, setCount] = useState(DEFAULT_COUNT);
-  const { stats, start } = useRpsWar(canvasRef);
+  const [shakeEnabled, setShakeEnabled] = useState(true);
+  const { stats, start } = useRpsWar(canvasRef, { shakeEnabled });
 
   const displayCounts =
     stats.status === 'idle'
@@ -20,6 +21,8 @@ function RockPaperScissorsWar() {
       : stats.counts;
   const total =
     displayCounts.rock + displayCounts.paper + displayCounts.scissors;
+  const activeTypes = TYPE_LIST.filter((type) => displayCounts[type] > 0).length;
+  const isFast = stats.status === 'running' && activeTypes === 2;
   const buttonLabel =
     stats.status === 'idle' ? t('games_rps_war_start') : t('games_rps_war_restart');
 
@@ -44,6 +47,15 @@ function RockPaperScissorsWar() {
             aria-label={t('games_rps_war_slider_count')}
           />
           <span className='rps-war__slider-value'>{count}</span>
+        </label>
+        <label className='rps-war__option'>
+          <input
+            type='checkbox'
+            checked={shakeEnabled}
+            onChange={(event) => setShakeEnabled(event.target.checked)}
+            className='rps-war__option-input'
+          />
+          <span>{t('games_rps_war_shake_toggle')}</span>
         </label>
         <button type='button' className='rps-war__start' onClick={handleStart}>
           {buttonLabel}
@@ -91,7 +103,7 @@ function RockPaperScissorsWar() {
         </div>
       </div>
 
-      <div className='rps-war__arena'>
+      <div className={`rps-war__arena${isFast ? ' is-fast' : ''}`}>
         <canvas ref={canvasRef} className='rps-war__canvas' />
         {stats.winner && (
           <div className='rps-war__overlay'>

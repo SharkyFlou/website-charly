@@ -118,5 +118,6 @@
     "games_rps_war_winner_scissors": "The scissors triumph!",
     "games_rps_war_start": "Start the battle",
     "games_rps_war_restart": "Restart the battle",
-    "games_rps_war_slider_count": "Entities per type"
+    "games_rps_war_slider_count": "Entities per type",
+    "games_rps_war_shake_toggle": "Screen shake"
 }

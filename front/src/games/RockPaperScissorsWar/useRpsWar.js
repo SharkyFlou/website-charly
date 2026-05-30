@@ -5,17 +5,31 @@ import { EMOJI } from './entities';
 const MAX_DT = 1 / 30;
 const STATS_THROTTLE_MS = 100;
 
+// Screen-shake tuning. Each transformation adds SHAKE_PER_HIT to a running
+// intensity that decays multiplicatively each frame; MAX_SHAKE caps how
+// strong it can get when many entities are eaten at once.
+const SHAKE_PER_HIT = 1.2;
+const SHAKE_DECAY = 0.82;
+const MAX_SHAKE = 8;
+const SHAKE_PIXELS_PER_UNIT = 1.5;
+const SHAKE_MIN_VISIBLE = 0.05;
+
 const initialStats = () => ({
   counts: { rock: 0, paper: 0, scissors: 0 },
   winner: null,
   status: 'idle',
 });
 
-export function useRpsWar(canvasRef) {
+export function useRpsWar(canvasRef, { shakeEnabled = true } = {}) {
   const worldRef = useRef(null);
   const rafRef = useRef(0);
   const lastStatsAtRef = useRef(0);
+  const shakeEnabledRef = useRef(shakeEnabled);
   const [stats, setStats] = useState(initialStats);
+
+  useEffect(() => {
+    shakeEnabledRef.current = shakeEnabled;
+  }, [shakeEnabled]);
 
   const start = useCallback(
     (countsOverride) => {
@@ -30,6 +44,7 @@ export function useRpsWar(canvasRef) {
       const config = { ...DEFAULT_CONFIG, counts };
       worldRef.current = createWorld(config);
       const ctx = setupCanvas(canvas, config);
+      canvas.style.transform = '';
 
       setStats({
         counts: countByType(worldRef.current.entities),
@@ -38,6 +53,7 @@ export function useRpsWar(canvasRef) {
       });
 
       let lastTime = performance.now();
+      let shake = 0;
       lastStatsAtRef.current = lastTime;
 
       const loop = (now) => {
@@ -45,8 +61,14 @@ export function useRpsWar(canvasRef) {
         lastTime = now;
 
         const world = worldRef.current;
-        step(world, dt);
+        const transformations = step(world, dt);
+        if (shakeEnabledRef.current) {
+          shake = Math.min(MAX_SHAKE, shake * SHAKE_DECAY + transformations * SHAKE_PER_HIT);
+        } else {
+          shake = 0;
+        }
         render(ctx, world);
+        applyShake(canvas, shake);
 
         const winner = getWinner(world.entities);
         if (now - lastStatsAtRef.current > STATS_THROTTLE_MS || winner) {
@@ -91,4 +113,14 @@ function render(ctx, world) {
   for (const e of entities) {
     ctx.fillText(EMOJI[e.type], e.x, e.y);
   }
+}
+
+function applyShake(canvas, intensity) {
+  if (intensity < SHAKE_MIN_VISIBLE) {
+    if (canvas.style.transform) canvas.style.transform = '';
+    return;
+  }
+  const dx = (Math.random() - 0.5) * intensity * SHAKE_PIXELS_PER_UNIT;
+  const dy = (Math.random() - 0.5) * intensity * SHAKE_PIXELS_PER_UNIT;
+  canvas.style.transform = `translate(${dx}px, ${dy}px)`;
 }

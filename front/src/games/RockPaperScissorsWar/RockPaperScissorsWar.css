@@ -51,6 +51,24 @@ body.dark .rps-war__controls {
   color: var(--color-on-primary);
 }
 
+.rps-war__option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-on-primary);
+  cursor: pointer;
+  font-size: 0.95rem;
+  user-select: none;
+}
+
+.rps-war__option-input {
+  accent-color: var(--cyan-color);
+  cursor: pointer;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+}
+
 .rps-war__start {
   align-self: center;
   display: inline-flex;
@@ -156,10 +174,52 @@ body.dark .rps-war__hud-bar {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.4s ease-in-out;
 }
 
 body.dark .rps-war__arena {
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+}
+
+.rps-war__arena.is-fast {
+  animation: rps-war-fast-pulse 0.9s ease-in-out infinite;
+}
+
+.rps-war__arena.is-fast::after {
+  content: '×2';
+  position: absolute;
+  top: 0.6rem;
+  right: 0.9rem;
+  color: var(--cyan-color);
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: -0.05em;
+  text-shadow: 0 0 10px rgba(0, 177, 255, 0.7);
+  pointer-events: none;
+  z-index: 2;
+  animation: rps-war-fast-badge 0.9s ease-in-out infinite;
+}
+
+@keyframes rps-war-fast-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 2px var(--cyan-color), 0 0 25px rgba(0, 177, 255, 0.5),
+      0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 2px var(--cyan-color), 0 0 45px rgba(0, 177, 255, 0.85),
+      0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes rps-war-fast-badge {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
 }
 
 .rps-war__canvas {

@@ -30,10 +30,22 @@ export function createWorld(config = DEFAULT_CONFIG, rng = Math.random) {
   return { entities, config };
 }
 
+// Once a type goes extinct, the cycle collapses to a 2-way chase; we scale
+// the simulation timestep so the remaining entities visibly speed up.
+const SPEED_BOOST_MULTIPLIER = 2;
+
 export function step(world, dt) {
-  applyForces(world, dt);
-  integrate(world, dt);
-  resolveCollisions(world);
+  const activeTypes = countActiveTypes(world.entities);
+  const effectiveDt = activeTypes <= 2 ? dt * SPEED_BOOST_MULTIPLIER : dt;
+  applyForces(world, effectiveDt);
+  integrate(world, effectiveDt);
+  return resolveCollisions(world);
+}
+
+function countActiveTypes(entities) {
+  const seen = new Set();
+  for (const e of entities) seen.add(e.type);
+  return seen.size;
 }
 
 function applyForces(world, dt) {
@@ -116,6 +128,7 @@ function resolveCollisions(world) {
   const { entities, config } = world;
   const collideDist = config.radius * 2;
   const collideDistSq = collideDist * collideDist;
+  let transformations = 0;
 
   for (let i = 0; i < entities.length; i++) {
     for (let j = i + 1; j < entities.length; j++) {
@@ -127,11 +140,14 @@ function resolveCollisions(world) {
       if (dx * dx + dy * dy > collideDistSq) continue;
       if (BEATS[a.type] === b.type) {
         b.type = a.type;
+        transformations++;
       } else if (BEATS[b.type] === a.type) {
         a.type = b.type;
+        transformations++;
       }
     }
   }
+  return transformations;
 }
 
 export function countByType(entities) {
